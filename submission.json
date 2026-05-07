@@ -1,7 +1,9 @@
 [
   {
+    "id": "test_super_01",
     "question_id": "test_super_01",
     "graph": "superhero_universe",
+    "difficulty": "easy",
     "question_de": "Nenne alle Antiheld:innen.",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x a ex:Antihero .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -39,8 +41,10 @@
     ]
   },
   {
+    "id": "test_super_02",
     "question_id": "test_super_02",
     "graph": "superhero_universe",
+    "difficulty": "easy",
     "question_de": "Welche Figuren gehoeren zur Justice League?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:memberOf ex:JusticeLeague .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -90,8 +94,10 @@
     ]
   },
   {
+    "id": "test_super_03",
     "question_id": "test_super_03",
     "graph": "superhero_universe",
+    "difficulty": "easy",
     "question_de": "Welche Figuren stammen aus Marvel?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:publishedBy ex:Marvel .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -312,8 +318,10 @@
     ]
   },
   {
+    "id": "test_super_04",
     "question_id": "test_super_04",
     "graph": "superhero_universe",
+    "difficulty": "medium",
     "question_de": "Welche Figuren haben Super Strength?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:hasPower ex:SuperStrength .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -405,8 +413,10 @@
     ]
   },
   {
+    "id": "test_super_05",
     "question_id": "test_super_05",
     "graph": "superhero_universe",
+    "difficulty": "medium",
     "question_de": "Welche Figuren nutzen ein Artefakt?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:usesArtifact ?artifact .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -471,8 +481,10 @@
     ]
   },
   {
+    "id": "test_super_06",
     "question_id": "test_super_06",
     "graph": "superhero_universe",
+    "difficulty": "medium",
     "question_de": "Welche Figuren sind in New York City aktiv?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:operatesIn ex:NewYorkCity .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -600,8 +612,10 @@
     ]
   },
   {
+    "id": "test_super_07",
     "question_id": "test_super_07",
     "graph": "superhero_universe",
+    "difficulty": "medium",
     "question_de": "Welche Figuren sind Kryptonian?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:species ex:Kryptonian .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -618,8 +632,10 @@
     ]
   },
   {
+    "id": "test_super_08",
     "question_id": "test_super_08",
     "graph": "superhero_universe",
+    "difficulty": "medium",
     "question_de": "Welche Figuren gehoeren zu den X-Men und sind Mutant:innen?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:memberOf ex:XMen .\n  ?x ex:species ex:Mutant .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -651,8 +667,10 @@
     ]
   },
   {
+    "id": "test_super_09",
     "question_id": "test_super_09",
     "graph": "superhero_universe",
+    "difficulty": "medium",
     "question_de": "Welche Figuren koennen fliegen und stammen von Marvel?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:publishedBy ex:Marvel .\n  ?x ex:hasPower ex:Flight .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -690,8 +708,10 @@
     ]
   },
   {
+    "id": "test_super_10",
     "question_id": "test_super_10",
     "graph": "superhero_universe",
+    "difficulty": "hard",
     "question_de": "Wie viele Figuren gibt es pro Rolle?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?role (COUNT(?x) AS ?count)\nWHERE {\n  ?x ex:roleLabel ?role .\n}\nGROUP BY ?role\nORDER BY DESC(?count) ?role",
     "execution_success": true,
@@ -715,8 +735,10 @@
     ]
   },
   {
+    "id": "test_super_11",
     "question_id": "test_super_11",
     "graph": "superhero_universe",
+    "difficulty": "hard",
     "question_de": "Welche Figuren haben mindestens drei Powers?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name (COUNT(?power) AS ?powerCount)\nWHERE {\n  ?x schema:name ?name ;\n     ex:hasPower ?power .\n}\nGROUP BY ?x ?name\nHAVING (COUNT(?power) >= 3)\nORDER BY DESC(?powerCount) ?name",
     "execution_success": true,
@@ -808,8 +830,10 @@
     ]
   },
   {
+    "id": "test_super_12",
     "question_id": "test_super_12",
     "graph": "superhero_universe",
+    "difficulty": "hard",
     "question_de": "Welche Verbuendeten hat Batman?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?allyName\nWHERE {\n  ex:Batman ex:allyOf ?ally .\n  ?ally schema:name ?allyName .\n}\nORDER BY ?allyName",
     "execution_success": true,
@@ -820,8 +844,10 @@
     ]
   },
   {
+    "id": "test_super_13",
     "question_id": "test_super_13",
     "graph": "superhero_universe",
+    "difficulty": "hard",
     "question_de": "Welche Gegner:innen hat Spider-Man?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?enemyName\nWHERE {\n  ex:SpiderMan ex:enemyOf ?enemy .\n  ?enemy schema:name ?enemyName .\n}\nORDER BY ?enemyName",
     "execution_success": true,
@@ -835,8 +861,10 @@
     ]
   },
   {
+    "id": "test_super_14",
     "question_id": "test_super_14",
     "graph": "superhero_universe",
+    "difficulty": "hard",
     "question_de": "Welche Publisher haben mehr als zehn Figuren?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?publisherName (COUNT(?x) AS ?count)\nWHERE {\n  ?x ex:publishedBy ?publisher .\n  ?publisher schema:name ?publisherName .\n}\nGROUP BY ?publisherName\nHAVING (COUNT(?x) > 10)\nORDER BY DESC(?count) ?publisherName",
     "execution_success": true,
@@ -852,16 +880,20 @@
     ]
   },
   {
+    "id": "test_super_15",
     "question_id": "test_super_15",
     "graph": "superhero_universe",
+    "difficulty": "hard",
     "question_de": "Welche Figuren traten ab 1980 erstmals auf?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name ?year\nWHERE {\n  ?x schema:name ?name ;\n     ex:firstAppearanceYear ?year .\n  FILTER(?year >= \"1980\"^^xsd:gYear)\n}\nORDER BY ?year ?name",
     "execution_success": true,
     "predicted_result": []
   },
   {
+    "id": "test_recipe_01",
     "question_id": "test_recipe_01",
     "graph": "recipes_100",
+    "difficulty": "easy",
     "question_de": "Nenne alle vegetarischen Rezepte.",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:diet ex:Vegetarian .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -974,8 +1006,10 @@
     ]
   },
   {
+    "id": "test_recipe_02",
     "question_id": "test_recipe_02",
     "graph": "recipes_100",
+    "difficulty": "easy",
     "question_de": "Welche Rezepte sind Dinner?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:mealType ex:Dinner .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -1178,8 +1212,10 @@
     ]
   },
   {
+    "id": "test_recipe_03",
     "question_id": "test_recipe_03",
     "graph": "recipes_100",
+    "difficulty": "easy",
     "question_de": "Welche Rezepte enthalten Chickpeas?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:hasIngredient ex:Chickpeas .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -1232,8 +1268,10 @@
     ]
   },
   {
+    "id": "test_recipe_04",
     "question_id": "test_recipe_04",
     "graph": "recipes_100",
+    "difficulty": "medium",
     "question_de": "Welche japanischen Rezepte gibt es?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:cuisineType ex:Japanese .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -1286,8 +1324,10 @@
     ]
   },
   {
+    "id": "test_recipe_05",
     "question_id": "test_recipe_05",
     "graph": "recipes_100",
+    "difficulty": "medium",
     "question_de": "Welche Rezepte haben weniger als 500 Kalorien?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name ?calories\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:calories ?calories .\n  FILTER(?calories < 500)\n}\nORDER BY ?calories ?name",
     "execution_success": true,
@@ -1419,8 +1459,10 @@
     ]
   },
   {
+    "id": "test_recipe_06",
     "question_id": "test_recipe_06",
     "graph": "recipes_100",
+    "difficulty": "medium",
     "question_de": "Welche Rezepte haben Tofu und sind vegan?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:hasIngredient ex:Tofu .\n  ?r ex:diet ex:Vegan .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -1443,8 +1485,10 @@
     ]
   },
   {
+    "id": "test_recipe_07",
     "question_id": "test_recipe_07",
     "graph": "recipes_100",
+    "difficulty": "medium",
     "question_de": "Welche Rezepte sind Breakfast und Easy?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:mealType ex:Breakfast .\n  ?r ex:difficulty ex:Easy .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -1482,8 +1526,10 @@
     ]
   },
   {
+    "id": "test_recipe_08",
     "question_id": "test_recipe_08",
     "graph": "recipes_100",
+    "difficulty": "medium",
     "question_de": "Welche Rezepte dauern zwischen 20 und 35 Minuten insgesamt?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name ?time\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:totalTimeMinutes ?time .\n  FILTER(?time >= 20 && ?time <= 35)\n}\nORDER BY ?time ?name",
     "execution_success": true,
@@ -1695,8 +1741,10 @@
     ]
   },
   {
+    "id": "test_recipe_09",
     "question_id": "test_recipe_09",
     "graph": "recipes_100",
+    "difficulty": "medium",
     "question_de": "Welche Rezepte haben Spice Level genau 0?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name ?level\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:spiceLevel ?level .\n  FILTER(?level = 0)\n}\nORDER BY ?level ?name",
     "execution_success": true,
@@ -1736,8 +1784,10 @@
     ]
   },
   {
+    "id": "test_recipe_10",
     "question_id": "test_recipe_10",
     "graph": "recipes_100",
+    "difficulty": "hard",
     "question_de": "Wie viele Rezepte gibt es pro Cuisine?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?cuisineName (COUNT(?r) AS ?count)\nWHERE {\n  ?r a schema:Recipe ;\n     ex:cuisineType ?cuisine .\n  ?cuisine schema:name ?cuisineName .\n}\nGROUP BY ?cuisineName\nORDER BY DESC(?count) ?cuisineName",
     "execution_success": true,
@@ -1809,8 +1859,10 @@
     ]
   },
   {
+    "id": "test_recipe_11",
     "question_id": "test_recipe_11",
     "graph": "recipes_100",
+    "difficulty": "hard",
     "question_de": "Welche Cuisines haben im Durchschnitt mehr als 550 Kalorien?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?cuisineName (AVG(?cal) AS ?avgCalories)\nWHERE {\n  ?r a schema:Recipe ;\n     ex:cuisineType ?cuisine ;\n     ex:calories ?cal .\n  ?cuisine schema:name ?cuisineName .\n}\nGROUP BY ?cuisineName\nHAVING (AVG(?cal) > 550)\nORDER BY DESC(?avgCalories) ?cuisineName",
     "execution_success": true,
@@ -1846,8 +1898,10 @@
     ]
   },
   {
+    "id": "test_recipe_12",
     "question_id": "test_recipe_12",
     "graph": "recipes_100",
+    "difficulty": "hard",
     "question_de": "Welche Rezepte haben mindestens sieben Zutaten?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name (COUNT(?ingredient) AS ?ingredientCount)\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:hasIngredient ?ingredient .\n}\nGROUP BY ?r ?name\nHAVING (COUNT(?ingredient) >= 7)\nORDER BY DESC(?ingredientCount) ?name",
     "execution_success": true,
@@ -2079,8 +2133,10 @@
     ]
   },
   {
+    "id": "test_recipe_13",
     "question_id": "test_recipe_13",
     "graph": "recipes_100",
+    "difficulty": "hard",
     "question_de": "Welche Diet-Typen kommen vor und wie viele Rezepte gibt es je Typ?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?dietName (COUNT(?r) AS ?count)\nWHERE {\n  ?r a schema:Recipe ;\n     ex:diet ?diet .\n  ?diet schema:name ?dietName .\n}\nGROUP BY ?dietName\nORDER BY DESC(?count) ?dietName",
     "execution_success": true,
@@ -2108,8 +2164,10 @@
     ]
   },
   {
+    "id": "test_recipe_14",
     "question_id": "test_recipe_14",
     "graph": "recipes_100",
+    "difficulty": "hard",
     "question_de": "Welche Rezepte enthalten sowohl Rice als auch Soy Sauce?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:hasIngredient ex:SoySauce .\n  ?r ex:hasIngredient ex:Rice .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
     "execution_success": true,
@@ -2162,8 +2220,10 @@
     ]
   },
   {
+    "id": "test_recipe_15",
     "question_id": "test_recipe_15",
     "graph": "recipes_100",
+    "difficulty": "hard",
     "question_de": "Welche Rezepte haben mehr als 3 Portionen?",
     "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name ?servings\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:servings ?servings .\n  FILTER(?servings > 3)\n}\nORDER BY DESC(?servings) ?name",
     "execution_success": true,

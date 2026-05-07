@@ -89,8 +89,10 @@ def test_public_submission_executes_every_question_with_expected_counts() -> Non
     submission = build_submission(PUBLIC_SET)
 
     assert len(submission) == 30
+    assert {entry["id"] for entry in submission} == set(EXPECTED_PUBLIC_COUNTS)
     assert {entry["question_id"] for entry in submission} == set(EXPECTED_PUBLIC_COUNTS)
     for entry in submission:
+        assert entry["id"] == entry["question_id"]
         assert entry["execution_success"] is True, entry["question_id"]
         assert entry["generated_sparql"].strip(), entry["question_id"]
         assert len(entry["predicted_result"]) == EXPECTED_PUBLIC_COUNTS[entry["question_id"]]

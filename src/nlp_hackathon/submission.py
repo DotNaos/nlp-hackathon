@@ -63,8 +63,10 @@ def solve_question(question: dict[str, Any], *, use_reference: bool) -> dict[str
             execution_success = False
 
     return {
+        "id": question_id,
         "question_id": question_id,
         "graph": question["graph"],
+        "difficulty": question.get("difficulty", ""),
         "question_de": question["question_de"],
         "generated_sparql": sparql,
         "execution_success": execution_success,
