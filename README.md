@@ -17,8 +17,6 @@ Moodle assignment note: upload the result file by 12:00.
 - `data/dev-test-set/dev_set.json`
 - `data/dev-test-set/test_set_public.json`
 
-Course-provided templates and notes are kept in `course-materials/`.
-
 ## Pipeline
 
 The verified submission pipeline is intentionally small and reproducible:
