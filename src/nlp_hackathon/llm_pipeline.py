@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 from nlp_hackathon.submission import DEFAULT_INPUT, load_graph, run_query
+from nlp_hackathon.query_generation import generate_sparql
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -98,6 +99,13 @@ def extract_sparql(response_text: str) -> str:
     return query.strip()
 
 
+def prepare_sparql_for_local_graph(query: str) -> str:
+    query = re.sub(r"(?im)^\s*FROM\s+\S+\s*$", "", query)
+    query = re.sub(r"(?is)GRAPH\s+<[^>]+>\s*\{", "{", query)
+    query = re.sub(r"(?is)GRAPH\s+\w+\s*\{", "{", query)
+    return re.sub(r"\n{3,}", "\n\n", query).strip()
+
+
 class LmStudioClient:
     def __init__(
         self,
@@ -161,20 +169,35 @@ def solve_question_with_llm(question: dict[str, Any], client: LmStudioClient) ->
     duration_seconds = time.time() - started
     message = response_message(completion)
     response_text = str(message.get("content") or message.get("reasoning_content") or "")
-    sparql = extract_sparql(response_text)
+    raw_sparql = extract_sparql(response_text)
+    sparql = prepare_sparql_for_local_graph(raw_sparql)
 
     execution_success = False
     predicted_result: list[dict[str, Any]] = []
     error = ""
+    query_source = "gemma4"
     if request_error and not completion:
         error = request_error
-    elif sparql:
-        try:
-            graph = load_graph(question["graph"])
-            predicted_result = run_query(graph, sparql)
-            execution_success = True
-        except Exception as exc:  # noqa: BLE001 - pipeline report should keep failures.
-            error = str(exc)
+    else:
+        graph = load_graph(question["graph"])
+        if sparql:
+            try:
+                predicted_result = run_query(graph, sparql)
+                execution_success = True
+            except Exception as exc:  # noqa: BLE001 - pipeline report should keep failures.
+                error = str(exc)
+
+        if not execution_success:
+            fallback_sparql = generate_sparql(question)
+            if fallback_sparql:
+                try:
+                    predicted_result = run_query(graph, fallback_sparql)
+                    sparql = fallback_sparql
+                    execution_success = True
+                    query_source = "rules_fallback_after_gemma4"
+                    error = ""
+                except Exception as exc:  # noqa: BLE001 - keep final failure in report.
+                    error = str(exc)
 
     result = {
         "id": question["id"],
@@ -196,7 +219,9 @@ def solve_question_with_llm(question: dict[str, Any], client: LmStudioClient) ->
         "completion_model": completion.get("model", ""),
         "usage": completion.get("usage", {}),
         "duration_seconds": round(duration_seconds, 3),
+        "raw_sparql": raw_sparql,
         "generated_sparql": sparql,
+        "query_source": query_source,
         "execution_success": execution_success,
         "execution_error": error,
         "result_count": len(predicted_result),

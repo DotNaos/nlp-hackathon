@@ -1,6 +1,11 @@
 from __future__ import annotations
 
-from nlp_hackathon.llm_pipeline import SYSTEM_MESSAGE, build_prompt, extract_sparql
+from nlp_hackathon.llm_pipeline import (
+    SYSTEM_MESSAGE,
+    build_prompt,
+    extract_sparql,
+    prepare_sparql_for_local_graph,
+)
 
 
 def test_build_prompt_contains_question_schema_and_output_contract() -> None:
@@ -62,3 +67,24 @@ Explanation: this selects antiheroes."""
 
     assert "Explanation" not in query
     assert "SELECT ?name" in query
+
+
+def test_prepare_sparql_removes_from_and_graph_wrappers() -> None:
+    query = """PREFIX ex: <http://example.org/>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?name
+FROM recipes_100
+WHERE {
+  GRAPH <recipes_100> {
+    ?recipe a schema:Recipe ;
+            schema:name ?name .
+  }
+}"""
+
+    prepared = prepare_sparql_for_local_graph(query)
+
+    assert "FROM recipes_100" not in prepared
+    assert "GRAPH <recipes_100>" not in prepared
+    assert "SELECT ?name" in prepared
+    assert "schema:name ?name" in prepared
