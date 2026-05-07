@@ -1,0 +1,2164 @@
+[
+  {
+    "id": "dev_super_01",
+    "graph": "superhero_universe",
+    "difficulty": "easy",
+    "question_de": "Welche Figuren sind Superheld:innen?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name\nWHERE {\n  ?x a ex:Superhero ;\n     schema:name ?name .\n}\nORDER BY ?name",
+    "gold_result": [
+      {
+        "name": "Ant-Man"
+      },
+      {
+        "name": "Aquaman"
+      },
+      {
+        "name": "Batgirl"
+      },
+      {
+        "name": "Batman"
+      },
+      {
+        "name": "Beast Boy"
+      },
+      {
+        "name": "Black Canary"
+      },
+      {
+        "name": "Black Panther"
+      },
+      {
+        "name": "Black Widow"
+      },
+      {
+        "name": "Blue Beetle"
+      },
+      {
+        "name": "Booster Gold"
+      },
+      {
+        "name": "Captain America"
+      },
+      {
+        "name": "Captain Marvel"
+      },
+      {
+        "name": "Cyborg"
+      },
+      {
+        "name": "Cyclops"
+      },
+      {
+        "name": "Daredevil"
+      },
+      {
+        "name": "Doctor Fate"
+      },
+      {
+        "name": "Doctor Strange"
+      },
+      {
+        "name": "Drax"
+      },
+      {
+        "name": "Flash"
+      },
+      {
+        "name": "Gambit"
+      },
+      {
+        "name": "Gamora"
+      },
+      {
+        "name": "Green Arrow"
+      },
+      {
+        "name": "Green Lantern"
+      },
+      {
+        "name": "Groot"
+      },
+      {
+        "name": "Hawkeye"
+      },
+      {
+        "name": "Hulk"
+      },
+      {
+        "name": "Human Torch"
+      },
+      {
+        "name": "Huntress"
+      },
+      {
+        "name": "Invisible Woman"
+      },
+      {
+        "name": "Iron Fist"
+      },
+      {
+        "name": "Iron Man"
+      },
+      {
+        "name": "Jean Grey"
+      },
+      {
+        "name": "Jessica Jones"
+      },
+      {
+        "name": "Luke Cage"
+      },
+      {
+        "name": "Magik"
+      },
+      {
+        "name": "Martian Manhunter"
+      },
+      {
+        "name": "Mr. Fantastic"
+      },
+      {
+        "name": "Ms. Marvel"
+      },
+      {
+        "name": "Nightwing"
+      },
+      {
+        "name": "Professor X"
+      },
+      {
+        "name": "Raven"
+      },
+      {
+        "name": "Rocket Raccoon"
+      },
+      {
+        "name": "Rogue"
+      },
+      {
+        "name": "Scarlet Witch"
+      },
+      {
+        "name": "Shazam"
+      },
+      {
+        "name": "She-Hulk"
+      },
+      {
+        "name": "Silver Surfer"
+      },
+      {
+        "name": "Spider-Man"
+      },
+      {
+        "name": "Star-Lord"
+      },
+      {
+        "name": "Starfire"
+      },
+      {
+        "name": "Static"
+      },
+      {
+        "name": "Storm"
+      },
+      {
+        "name": "Supergirl"
+      },
+      {
+        "name": "Superman"
+      },
+      {
+        "name": "Thing"
+      },
+      {
+        "name": "Thor"
+      },
+      {
+        "name": "Vision"
+      },
+      {
+        "name": "Wasp"
+      },
+      {
+        "name": "Wolverine"
+      },
+      {
+        "name": "Wonder Woman"
+      },
+      {
+        "name": "Zatanna"
+      }
+    ],
+    "gold_result_size": 61
+  },
+  {
+    "id": "dev_super_02",
+    "graph": "superhero_universe",
+    "difficulty": "easy",
+    "question_de": "Welche Figuren gehoeren zu den Avengers?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name\nWHERE {\n  ?x ex:memberOf ex:Avengers ;\n     schema:name ?name .\n}\nORDER BY ?name",
+    "gold_result": [
+      {
+        "name": "Ant-Man"
+      },
+      {
+        "name": "Black Panther"
+      },
+      {
+        "name": "Black Widow"
+      },
+      {
+        "name": "Captain America"
+      },
+      {
+        "name": "Captain Marvel"
+      },
+      {
+        "name": "Hawkeye"
+      },
+      {
+        "name": "Hulk"
+      },
+      {
+        "name": "Iron Man"
+      },
+      {
+        "name": "Ms. Marvel"
+      },
+      {
+        "name": "Nick Fury"
+      },
+      {
+        "name": "Pepper Potts"
+      },
+      {
+        "name": "Scarlet Witch"
+      },
+      {
+        "name": "She-Hulk"
+      },
+      {
+        "name": "Spider-Man"
+      },
+      {
+        "name": "Thor"
+      },
+      {
+        "name": "Vision"
+      },
+      {
+        "name": "Wasp"
+      }
+    ],
+    "gold_result_size": 17
+  },
+  {
+    "id": "dev_super_03",
+    "graph": "superhero_universe",
+    "difficulty": "easy",
+    "question_de": "Welche Figuren stammen von DC Comics?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name\nWHERE {\n  ?x ex:publishedBy ex:DCComics ;\n     schema:name ?name .\n}\nORDER BY ?name",
+    "gold_result": [
+      {
+        "name": "Alfred Pennyworth"
+      },
+      {
+        "name": "Aquaman"
+      },
+      {
+        "name": "Bane"
+      },
+      {
+        "name": "Batgirl"
+      },
+      {
+        "name": "Batman"
+      },
+      {
+        "name": "Beast Boy"
+      },
+      {
+        "name": "Black Adam"
+      },
+      {
+        "name": "Black Canary"
+      },
+      {
+        "name": "Black Manta"
+      },
+      {
+        "name": "Blue Beetle"
+      },
+      {
+        "name": "Booster Gold"
+      },
+      {
+        "name": "Brainiac"
+      },
+      {
+        "name": "Captain Cold"
+      },
+      {
+        "name": "Catwoman"
+      },
+      {
+        "name": "Cheetah"
+      },
+      {
+        "name": "Commissioner Gordon"
+      },
+      {
+        "name": "Cyborg"
+      },
+      {
+        "name": "Darkseid"
+      },
+      {
+        "name": "Deathstroke"
+      },
+      {
+        "name": "Doctor Fate"
+      },
+      {
+        "name": "Doctor Poison"
+      },
+      {
+        "name": "Flash"
+      },
+      {
+        "name": "General Zod"
+      },
+      {
+        "name": "Green Arrow"
+      },
+      {
+        "name": "Green Lantern"
+      },
+      {
+        "name": "Harley Quinn"
+      },
+      {
+        "name": "Huntress"
+      },
+      {
+        "name": "Jimmy Olsen"
+      },
+      {
+        "name": "John Constantine"
+      },
+      {
+        "name": "Joker"
+      },
+      {
+        "name": "Lex Luthor"
+      },
+      {
+        "name": "Lois Lane"
+      },
+      {
+        "name": "Martian Manhunter"
+      },
+      {
+        "name": "Nightwing"
+      },
+      {
+        "name": "Oracle"
+      },
+      {
+        "name": "Poison Ivy"
+      },
+      {
+        "name": "Ra's al Ghul"
+      },
+      {
+        "name": "Raven"
+      },
+      {
+        "name": "Reverse Flash"
+      },
+      {
+        "name": "Riddler"
+      },
+      {
+        "name": "Scarecrow"
+      },
+      {
+        "name": "Shazam"
+      },
+      {
+        "name": "Sinestro"
+      },
+      {
+        "name": "Starfire"
+      },
+      {
+        "name": "Static"
+      },
+      {
+        "name": "Supergirl"
+      },
+      {
+        "name": "Superman"
+      },
+      {
+        "name": "Two-Face"
+      },
+      {
+        "name": "Wonder Woman"
+      },
+      {
+        "name": "Zatanna"
+      }
+    ],
+    "gold_result_size": 50
+  },
+  {
+    "id": "dev_super_04",
+    "graph": "superhero_universe",
+    "difficulty": "medium",
+    "question_de": "Welche Figuren haben die Power Flight?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name\nWHERE {\n  ?x ex:hasPower ex:Flight ;\n     schema:name ?name .\n}\nORDER BY ?name",
+    "gold_result": [
+      {
+        "name": "Black Adam"
+      },
+      {
+        "name": "Booster Gold"
+      },
+      {
+        "name": "Captain Marvel"
+      },
+      {
+        "name": "Doctor Fate"
+      },
+      {
+        "name": "General Zod"
+      },
+      {
+        "name": "Green Lantern"
+      },
+      {
+        "name": "Human Torch"
+      },
+      {
+        "name": "Magneto"
+      },
+      {
+        "name": "Martian Manhunter"
+      },
+      {
+        "name": "Rogue"
+      },
+      {
+        "name": "Shazam"
+      },
+      {
+        "name": "Silver Surfer"
+      },
+      {
+        "name": "Sinestro"
+      },
+      {
+        "name": "Starfire"
+      },
+      {
+        "name": "Storm"
+      },
+      {
+        "name": "Supergirl"
+      },
+      {
+        "name": "Superman"
+      },
+      {
+        "name": "Thor"
+      },
+      {
+        "name": "Vision"
+      },
+      {
+        "name": "Vulture"
+      },
+      {
+        "name": "Wasp"
+      },
+      {
+        "name": "Wonder Woman"
+      }
+    ],
+    "gold_result_size": 22
+  },
+  {
+    "id": "dev_super_05",
+    "graph": "superhero_universe",
+    "difficulty": "medium",
+    "question_de": "Welche Figuren operieren in Gotham City?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name\nWHERE {\n  ?x ex:operatesIn ex:GothamCity ;\n     schema:name ?name .\n}\nORDER BY ?name",
+    "gold_result": [
+      {
+        "name": "Alfred Pennyworth"
+      },
+      {
+        "name": "Bane"
+      },
+      {
+        "name": "Batgirl"
+      },
+      {
+        "name": "Batman"
+      },
+      {
+        "name": "Catwoman"
+      },
+      {
+        "name": "Commissioner Gordon"
+      },
+      {
+        "name": "Harley Quinn"
+      },
+      {
+        "name": "Huntress"
+      },
+      {
+        "name": "John Constantine"
+      },
+      {
+        "name": "Joker"
+      },
+      {
+        "name": "Oracle"
+      },
+      {
+        "name": "Poison Ivy"
+      },
+      {
+        "name": "Ra's al Ghul"
+      },
+      {
+        "name": "Raven"
+      },
+      {
+        "name": "Riddler"
+      },
+      {
+        "name": "Scarecrow"
+      },
+      {
+        "name": "Two-Face"
+      },
+      {
+        "name": "Zatanna"
+      }
+    ],
+    "gold_result_size": 18
+  },
+  {
+    "id": "dev_super_06",
+    "graph": "superhero_universe",
+    "difficulty": "medium",
+    "question_de": "Welche Figuren sind Mutant:innen?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name\nWHERE {\n  ?x ex:species ex:Mutant ;\n     schema:name ?name .\n}\nORDER BY ?name",
+    "gold_result": [
+      {
+        "name": "Apocalypse"
+      },
+      {
+        "name": "Cyclops"
+      },
+      {
+        "name": "Gambit"
+      },
+      {
+        "name": "Jean Grey"
+      },
+      {
+        "name": "Magik"
+      },
+      {
+        "name": "Magneto"
+      },
+      {
+        "name": "Mystique"
+      },
+      {
+        "name": "Professor X"
+      },
+      {
+        "name": "Rogue"
+      },
+      {
+        "name": "Sabretooth"
+      },
+      {
+        "name": "Scarlet Witch"
+      },
+      {
+        "name": "Storm"
+      },
+      {
+        "name": "Wolverine"
+      }
+    ],
+    "gold_result_size": 13
+  },
+  {
+    "id": "dev_super_07",
+    "graph": "superhero_universe",
+    "difficulty": "medium",
+    "question_de": "Welche Gegner:innen hat Batman?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?enemyName\nWHERE {\n  ex:Batman ex:enemyOf ?enemy .\n  ?enemy schema:name ?enemyName .\n}\nORDER BY ?enemyName",
+    "gold_result": [
+      {
+        "enemyName": "Joker"
+      }
+    ],
+    "gold_result_size": 1
+  },
+  {
+    "id": "dev_super_08",
+    "graph": "superhero_universe",
+    "difficulty": "hard",
+    "question_de": "Welche Figuren haben mindestens zwei Powers?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name (COUNT(?power) AS ?powerCount)\nWHERE {\n  ?x schema:name ?name ;\n     ex:hasPower ?power .\n}\nGROUP BY ?x ?name\nHAVING (COUNT(?power) >= 2)\nORDER BY DESC(?powerCount) ?name",
+    "gold_result": [
+      {
+        "name": "Apocalypse",
+        "powerCount": 2
+      },
+      {
+        "name": "Aquaman",
+        "powerCount": 3
+      },
+      {
+        "name": "Batgirl",
+        "powerCount": 2
+      },
+      {
+        "name": "Batman",
+        "powerCount": 2
+      },
+      {
+        "name": "Black Adam",
+        "powerCount": 3
+      },
+      {
+        "name": "Black Canary",
+        "powerCount": 2
+      },
+      {
+        "name": "Black Panther",
+        "powerCount": 2
+      },
+      {
+        "name": "Blade",
+        "powerCount": 2
+      },
+      {
+        "name": "Blue Beetle",
+        "powerCount": 2
+      },
+      {
+        "name": "Booster Gold",
+        "powerCount": 2
+      },
+      {
+        "name": "Brainiac",
+        "powerCount": 2
+      },
+      {
+        "name": "Captain America",
+        "powerCount": 2
+      },
+      {
+        "name": "Captain Marvel",
+        "powerCount": 3
+      },
+      {
+        "name": "Carnage",
+        "powerCount": 2
+      },
+      {
+        "name": "Cheetah",
+        "powerCount": 2
+      },
+      {
+        "name": "Cyborg",
+        "powerCount": 3
+      },
+      {
+        "name": "Daredevil",
+        "powerCount": 2
+      },
+      {
+        "name": "Darkseid",
+        "powerCount": 3
+      },
+      {
+        "name": "Deadpool",
+        "powerCount": 2
+      },
+      {
+        "name": "Deathstroke",
+        "powerCount": 2
+      },
+      {
+        "name": "Doctor Doom",
+        "powerCount": 3
+      },
+      {
+        "name": "Doctor Fate",
+        "powerCount": 2
+      },
+      {
+        "name": "Doctor Octopus",
+        "powerCount": 2
+      },
+      {
+        "name": "Doctor Strange",
+        "powerCount": 3
+      },
+      {
+        "name": "Drax",
+        "powerCount": 2
+      },
+      {
+        "name": "Flash",
+        "powerCount": 2
+      },
+      {
+        "name": "Gambit",
+        "powerCount": 2
+      },
+      {
+        "name": "Gamora",
+        "powerCount": 2
+      },
+      {
+        "name": "General Zod",
+        "powerCount": 3
+      },
+      {
+        "name": "Ghost Rider",
+        "powerCount": 2
+      },
+      {
+        "name": "Green Goblin",
+        "powerCount": 2
+      },
+      {
+        "name": "Green Lantern",
+        "powerCount": 2
+      },
+      {
+        "name": "Groot",
+        "powerCount": 2
+      },
+      {
+        "name": "Hela",
+        "powerCount": 2
+      },
+      {
+        "name": "Hulk",
+        "powerCount": 2
+      },
+      {
+        "name": "Human Torch",
+        "powerCount": 2
+      },
+      {
+        "name": "Invisible Woman",
+        "powerCount": 2
+      },
+      {
+        "name": "Iron Fist",
+        "powerCount": 2
+      },
+      {
+        "name": "Iron Man",
+        "powerCount": 2
+      },
+      {
+        "name": "Jean Grey",
+        "powerCount": 2
+      },
+      {
+        "name": "Killmonger",
+        "powerCount": 2
+      },
+      {
+        "name": "Kingpin",
+        "powerCount": 2
+      },
+      {
+        "name": "Kraven the Hunter",
+        "powerCount": 2
+      },
+      {
+        "name": "Lex Luthor",
+        "powerCount": 2
+      },
+      {
+        "name": "Loki",
+        "powerCount": 2
+      },
+      {
+        "name": "Luke Cage",
+        "powerCount": 2
+      },
+      {
+        "name": "Magik",
+        "powerCount": 2
+      },
+      {
+        "name": "Magneto",
+        "powerCount": 2
+      },
+      {
+        "name": "Martian Manhunter",
+        "powerCount": 4
+      },
+      {
+        "name": "Mr. Fantastic",
+        "powerCount": 2
+      },
+      {
+        "name": "Ms. Marvel",
+        "powerCount": 2
+      },
+      {
+        "name": "Raven",
+        "powerCount": 3
+      },
+      {
+        "name": "Reverse Flash",
+        "powerCount": 2
+      },
+      {
+        "name": "Rocket Raccoon",
+        "powerCount": 2
+      },
+      {
+        "name": "Rogue",
+        "powerCount": 3
+      },
+      {
+        "name": "Sabretooth",
+        "powerCount": 2
+      },
+      {
+        "name": "Scarlet Witch",
+        "powerCount": 2
+      },
+      {
+        "name": "Shazam",
+        "powerCount": 3
+      },
+      {
+        "name": "She-Hulk",
+        "powerCount": 2
+      },
+      {
+        "name": "Silver Surfer",
+        "powerCount": 2
+      },
+      {
+        "name": "Sinestro",
+        "powerCount": 2
+      },
+      {
+        "name": "Spider-Man",
+        "powerCount": 3
+      },
+      {
+        "name": "Starfire",
+        "powerCount": 3
+      },
+      {
+        "name": "Storm",
+        "powerCount": 2
+      },
+      {
+        "name": "Supergirl",
+        "powerCount": 4
+      },
+      {
+        "name": "Superman",
+        "powerCount": 4
+      },
+      {
+        "name": "Thanos",
+        "powerCount": 2
+      },
+      {
+        "name": "Thing",
+        "powerCount": 2
+      },
+      {
+        "name": "Thor",
+        "powerCount": 3
+      },
+      {
+        "name": "Ultron",
+        "powerCount": 2
+      },
+      {
+        "name": "Venom",
+        "powerCount": 3
+      },
+      {
+        "name": "Vision",
+        "powerCount": 3
+      },
+      {
+        "name": "Wasp",
+        "powerCount": 2
+      },
+      {
+        "name": "Winter Soldier",
+        "powerCount": 2
+      },
+      {
+        "name": "Wolverine",
+        "powerCount": 3
+      },
+      {
+        "name": "Wonder Woman",
+        "powerCount": 3
+      },
+      {
+        "name": "Zatanna",
+        "powerCount": 2
+      }
+    ],
+    "gold_result_size": 77
+  },
+  {
+    "id": "dev_super_09",
+    "graph": "superhero_universe",
+    "difficulty": "hard",
+    "question_de": "Wie viele Figuren gibt es pro Publisher?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?publisherName (COUNT(?x) AS ?count)\nWHERE {\n  ?x ex:publishedBy ?publisher .\n  ?publisher schema:name ?publisherName .\n}\nGROUP BY ?publisherName\nORDER BY DESC(?count) ?publisherName",
+    "gold_result": [
+      {
+        "publisherName": "DC Comics",
+        "count": 50
+      },
+      {
+        "publisherName": "Marvel",
+        "count": 71
+      }
+    ],
+    "gold_result_size": 2
+  },
+  {
+    "id": "dev_super_10",
+    "graph": "superhero_universe",
+    "difficulty": "hard",
+    "question_de": "Welche Figuren hatten ihren ersten Auftritt vor 1970?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name ?year\nWHERE {\n  ?x schema:name ?name ;\n     ex:firstAppearanceYear ?year .\n  FILTER(?year < \"1970\"^^xsd:gYear)\n}\nORDER BY ?year ?name",
+    "gold_result": [],
+    "gold_result_size": 0
+  },
+  {
+    "id": "dev_recipe_01",
+    "graph": "recipes_100",
+    "difficulty": "easy",
+    "question_de": "Welche Rezepte sind vegan?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe ;\n     ex:diet ex:Vegan ;\n     schema:name ?name .\n}\nORDER BY ?name",
+    "gold_result": [
+      {
+        "name": "Classic Chickpea Curry"
+      },
+      {
+        "name": "Classic Falafel Wrap"
+      },
+      {
+        "name": "Classic Lentil Stew"
+      },
+      {
+        "name": "Classic Moroccan Couscous"
+      },
+      {
+        "name": "Classic Roesti Bowl"
+      },
+      {
+        "name": "Classic Thai Peanut Noodles"
+      },
+      {
+        "name": "Classic Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Green Chickpea Curry"
+      },
+      {
+        "name": "Green Falafel Wrap"
+      },
+      {
+        "name": "Green Lentil Stew"
+      },
+      {
+        "name": "Green Moroccan Couscous"
+      },
+      {
+        "name": "Green Roesti Bowl"
+      },
+      {
+        "name": "Green Thai Peanut Noodles"
+      },
+      {
+        "name": "Green Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Quick Chickpea Curry"
+      },
+      {
+        "name": "Quick Falafel Wrap"
+      },
+      {
+        "name": "Quick Lentil Stew"
+      },
+      {
+        "name": "Quick Moroccan Couscous"
+      },
+      {
+        "name": "Quick Roesti Bowl"
+      },
+      {
+        "name": "Quick Thai Peanut Noodles"
+      },
+      {
+        "name": "Quick Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Roasted Chickpea Curry"
+      },
+      {
+        "name": "Roasted Falafel Wrap"
+      },
+      {
+        "name": "Roasted Lentil Stew"
+      },
+      {
+        "name": "Roasted Moroccan Couscous"
+      },
+      {
+        "name": "Roasted Roesti Bowl"
+      },
+      {
+        "name": "Roasted Thai Peanut Noodles"
+      },
+      {
+        "name": "Roasted Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Spicy Chickpea Curry"
+      },
+      {
+        "name": "Spicy Falafel Wrap"
+      },
+      {
+        "name": "Spicy Lentil Stew"
+      },
+      {
+        "name": "Spicy Moroccan Couscous"
+      },
+      {
+        "name": "Spicy Roesti Bowl"
+      },
+      {
+        "name": "Spicy Thai Peanut Noodles"
+      },
+      {
+        "name": "Spicy Tofu Udon Stir Fry"
+      }
+    ],
+    "gold_result_size": 35
+  },
+  {
+    "id": "dev_recipe_02",
+    "graph": "recipes_100",
+    "difficulty": "easy",
+    "question_de": "Welche Rezepte enthalten Tofu?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe ;\n     ex:hasIngredient ex:Tofu ;\n     schema:name ?name .\n}\nORDER BY ?name",
+    "gold_result": [
+      {
+        "name": "Classic Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Green Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Quick Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Roasted Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Spicy Tofu Udon Stir Fry"
+      }
+    ],
+    "gold_result_size": 5
+  },
+  {
+    "id": "dev_recipe_03",
+    "graph": "recipes_100",
+    "difficulty": "easy",
+    "question_de": "Welche Rezepte sind Fruehstueck?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe ;\n     ex:mealType ex:Breakfast ;\n     schema:name ?name .\n}\nORDER BY ?name",
+    "gold_result": [
+      {
+        "name": "Classic Berry Pancakes"
+      },
+      {
+        "name": "Classic Breakfast Oat Bowl"
+      },
+      {
+        "name": "Green Berry Pancakes"
+      },
+      {
+        "name": "Green Breakfast Oat Bowl"
+      },
+      {
+        "name": "Quick Berry Pancakes"
+      },
+      {
+        "name": "Quick Breakfast Oat Bowl"
+      },
+      {
+        "name": "Roasted Berry Pancakes"
+      },
+      {
+        "name": "Roasted Breakfast Oat Bowl"
+      },
+      {
+        "name": "Spicy Berry Pancakes"
+      },
+      {
+        "name": "Spicy Breakfast Oat Bowl"
+      }
+    ],
+    "gold_result_size": 10
+  },
+  {
+    "id": "dev_recipe_04",
+    "graph": "recipes_100",
+    "difficulty": "medium",
+    "question_de": "Welche italienischen Rezepte gibt es?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe ;\n     ex:cuisineType ex:Italian ;\n     schema:name ?name .\n}\nORDER BY ?name",
+    "gold_result": [
+      {
+        "name": "Classic Pomodoro Pasta"
+      },
+      {
+        "name": "Green Pomodoro Pasta"
+      },
+      {
+        "name": "Quick Pomodoro Pasta"
+      },
+      {
+        "name": "Roasted Pomodoro Pasta"
+      },
+      {
+        "name": "Spicy Pomodoro Pasta"
+      }
+    ],
+    "gold_result_size": 5
+  },
+  {
+    "id": "dev_recipe_05",
+    "graph": "recipes_100",
+    "difficulty": "medium",
+    "question_de": "Welche Rezepte haben maximal 30 Minuten Gesamtzeit?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name ?time\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:totalTimeMinutes ?time .\n  FILTER(?time <= 30)\n}\nORDER BY ?time ?name",
+    "gold_result": [
+      {
+        "name": "Classic Bean Tacos",
+        "time": 25
+      },
+      {
+        "name": "Classic Berry Pancakes",
+        "time": 25
+      },
+      {
+        "name": "Classic Breakfast Oat Bowl",
+        "time": 15
+      },
+      {
+        "name": "Classic Chicken Stir Fry",
+        "time": 30
+      },
+      {
+        "name": "Classic Greek Salad Plate",
+        "time": 15
+      },
+      {
+        "name": "Classic Halloumi Burger",
+        "time": 20
+      },
+      {
+        "name": "Classic Kimchi Fried Rice",
+        "time": 25
+      },
+      {
+        "name": "Classic Pomodoro Pasta",
+        "time": 25
+      },
+      {
+        "name": "Classic Thai Peanut Noodles",
+        "time": 30
+      },
+      {
+        "name": "Classic Tofu Udon Stir Fry",
+        "time": 30
+      },
+      {
+        "name": "Green Bean Tacos",
+        "time": 25
+      },
+      {
+        "name": "Green Berry Pancakes",
+        "time": 25
+      },
+      {
+        "name": "Green Breakfast Oat Bowl",
+        "time": 15
+      },
+      {
+        "name": "Green Chicken Stir Fry",
+        "time": 30
+      },
+      {
+        "name": "Green Greek Salad Plate",
+        "time": 15
+      },
+      {
+        "name": "Green Halloumi Burger",
+        "time": 20
+      },
+      {
+        "name": "Green Kimchi Fried Rice",
+        "time": 25
+      },
+      {
+        "name": "Green Pomodoro Pasta",
+        "time": 25
+      },
+      {
+        "name": "Green Thai Peanut Noodles",
+        "time": 30
+      },
+      {
+        "name": "Green Tofu Udon Stir Fry",
+        "time": 30
+      },
+      {
+        "name": "Quick Bean Tacos",
+        "time": 17
+      },
+      {
+        "name": "Quick Berry Pancakes",
+        "time": 17
+      },
+      {
+        "name": "Quick Breakfast Oat Bowl",
+        "time": 10
+      },
+      {
+        "name": "Quick Chicken Stir Fry",
+        "time": 22
+      },
+      {
+        "name": "Quick Greek Salad Plate",
+        "time": 12
+      },
+      {
+        "name": "Quick Halloumi Burger",
+        "time": 12
+      },
+      {
+        "name": "Quick Kimchi Fried Rice",
+        "time": 17
+      },
+      {
+        "name": "Quick Moroccan Couscous",
+        "time": 27
+      },
+      {
+        "name": "Quick Pomodoro Pasta",
+        "time": 17
+      },
+      {
+        "name": "Quick Ramen Comfort Bowl",
+        "time": 27
+      },
+      {
+        "name": "Quick Teriyaki Salmon Bowl",
+        "time": 27
+      },
+      {
+        "name": "Quick Thai Peanut Noodles",
+        "time": 22
+      },
+      {
+        "name": "Quick Tofu Udon Stir Fry",
+        "time": 22
+      },
+      {
+        "name": "Roasted Breakfast Oat Bowl",
+        "time": 22
+      },
+      {
+        "name": "Roasted Greek Salad Plate",
+        "time": 22
+      },
+      {
+        "name": "Roasted Halloumi Burger",
+        "time": 27
+      },
+      {
+        "name": "Spicy Bean Tacos",
+        "time": 25
+      },
+      {
+        "name": "Spicy Berry Pancakes",
+        "time": 25
+      },
+      {
+        "name": "Spicy Breakfast Oat Bowl",
+        "time": 15
+      },
+      {
+        "name": "Spicy Chicken Stir Fry",
+        "time": 30
+      },
+      {
+        "name": "Spicy Greek Salad Plate",
+        "time": 15
+      },
+      {
+        "name": "Spicy Halloumi Burger",
+        "time": 20
+      },
+      {
+        "name": "Spicy Kimchi Fried Rice",
+        "time": 25
+      },
+      {
+        "name": "Spicy Pomodoro Pasta",
+        "time": 25
+      },
+      {
+        "name": "Spicy Thai Peanut Noodles",
+        "time": 30
+      },
+      {
+        "name": "Spicy Tofu Udon Stir Fry",
+        "time": 30
+      }
+    ],
+    "gold_result_size": 46
+  },
+  {
+    "id": "dev_recipe_06",
+    "graph": "recipes_100",
+    "difficulty": "medium",
+    "question_de": "Welche Rezepte haben Spice Level mindestens 3?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name ?level\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:spiceLevel ?level .\n  FILTER(?level >= 3)\n}\nORDER BY DESC(?level) ?name",
+    "gold_result": [
+      {
+        "name": "Classic Chickpea Curry",
+        "level": 3
+      },
+      {
+        "name": "Classic Kimchi Fried Rice",
+        "level": 3
+      },
+      {
+        "name": "Classic Lentil Stew",
+        "level": 3
+      },
+      {
+        "name": "Classic Thai Peanut Noodles",
+        "level": 3
+      },
+      {
+        "name": "Green Chickpea Curry",
+        "level": 3
+      },
+      {
+        "name": "Green Kimchi Fried Rice",
+        "level": 3
+      },
+      {
+        "name": "Green Lentil Stew",
+        "level": 3
+      },
+      {
+        "name": "Green Thai Peanut Noodles",
+        "level": 3
+      },
+      {
+        "name": "Quick Chickpea Curry",
+        "level": 3
+      },
+      {
+        "name": "Quick Kimchi Fried Rice",
+        "level": 3
+      },
+      {
+        "name": "Quick Lentil Stew",
+        "level": 3
+      },
+      {
+        "name": "Quick Thai Peanut Noodles",
+        "level": 3
+      },
+      {
+        "name": "Roasted Chickpea Curry",
+        "level": 3
+      },
+      {
+        "name": "Roasted Kimchi Fried Rice",
+        "level": 3
+      },
+      {
+        "name": "Roasted Lentil Stew",
+        "level": 3
+      },
+      {
+        "name": "Roasted Thai Peanut Noodles",
+        "level": 3
+      },
+      {
+        "name": "Spicy Bean Tacos",
+        "level": 3
+      },
+      {
+        "name": "Spicy Chicken Stir Fry",
+        "level": 3
+      },
+      {
+        "name": "Spicy Falafel Wrap",
+        "level": 3
+      },
+      {
+        "name": "Spicy Moroccan Couscous",
+        "level": 3
+      },
+      {
+        "name": "Spicy Paella Express",
+        "level": 3
+      },
+      {
+        "name": "Spicy Tofu Udon Stir Fry",
+        "level": 3
+      },
+      {
+        "name": "Spicy Chickpea Curry",
+        "level": 4
+      },
+      {
+        "name": "Spicy Kimchi Fried Rice",
+        "level": 4
+      },
+      {
+        "name": "Spicy Lentil Stew",
+        "level": 4
+      },
+      {
+        "name": "Spicy Thai Peanut Noodles",
+        "level": 4
+      }
+    ],
+    "gold_result_size": 26
+  },
+  {
+    "id": "dev_recipe_07",
+    "graph": "recipes_100",
+    "difficulty": "medium",
+    "question_de": "Welche Rezepte sind Easy?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe ;\n     ex:difficulty ex:Easy ;\n     schema:name ?name .\n}\nORDER BY ?name",
+    "gold_result": [
+      {
+        "name": "Classic Bean Tacos"
+      },
+      {
+        "name": "Classic Berry Pancakes"
+      },
+      {
+        "name": "Classic Breakfast Oat Bowl"
+      },
+      {
+        "name": "Classic Chicken Stir Fry"
+      },
+      {
+        "name": "Classic Chickpea Curry"
+      },
+      {
+        "name": "Classic Greek Salad Plate"
+      },
+      {
+        "name": "Classic Halloumi Burger"
+      },
+      {
+        "name": "Classic Kimchi Fried Rice"
+      },
+      {
+        "name": "Classic Lentil Stew"
+      },
+      {
+        "name": "Classic Pomodoro Pasta"
+      },
+      {
+        "name": "Classic Thai Peanut Noodles"
+      },
+      {
+        "name": "Classic Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Green Bean Tacos"
+      },
+      {
+        "name": "Green Berry Pancakes"
+      },
+      {
+        "name": "Green Breakfast Oat Bowl"
+      },
+      {
+        "name": "Green Chicken Stir Fry"
+      },
+      {
+        "name": "Green Chickpea Curry"
+      },
+      {
+        "name": "Green Greek Salad Plate"
+      },
+      {
+        "name": "Green Halloumi Burger"
+      },
+      {
+        "name": "Green Kimchi Fried Rice"
+      },
+      {
+        "name": "Green Lentil Stew"
+      },
+      {
+        "name": "Green Pomodoro Pasta"
+      },
+      {
+        "name": "Green Thai Peanut Noodles"
+      },
+      {
+        "name": "Green Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Quick Bean Tacos"
+      },
+      {
+        "name": "Quick Berry Pancakes"
+      },
+      {
+        "name": "Quick Breakfast Oat Bowl"
+      },
+      {
+        "name": "Quick Chicken Stir Fry"
+      },
+      {
+        "name": "Quick Chickpea Curry"
+      },
+      {
+        "name": "Quick Greek Salad Plate"
+      },
+      {
+        "name": "Quick Halloumi Burger"
+      },
+      {
+        "name": "Quick Kimchi Fried Rice"
+      },
+      {
+        "name": "Quick Lentil Stew"
+      },
+      {
+        "name": "Quick Pomodoro Pasta"
+      },
+      {
+        "name": "Quick Thai Peanut Noodles"
+      },
+      {
+        "name": "Quick Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Roasted Bean Tacos"
+      },
+      {
+        "name": "Roasted Berry Pancakes"
+      },
+      {
+        "name": "Roasted Breakfast Oat Bowl"
+      },
+      {
+        "name": "Roasted Chicken Stir Fry"
+      },
+      {
+        "name": "Roasted Chickpea Curry"
+      },
+      {
+        "name": "Roasted Greek Salad Plate"
+      },
+      {
+        "name": "Roasted Halloumi Burger"
+      },
+      {
+        "name": "Roasted Kimchi Fried Rice"
+      },
+      {
+        "name": "Roasted Lentil Stew"
+      },
+      {
+        "name": "Roasted Pomodoro Pasta"
+      },
+      {
+        "name": "Roasted Thai Peanut Noodles"
+      },
+      {
+        "name": "Roasted Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Spicy Bean Tacos"
+      },
+      {
+        "name": "Spicy Berry Pancakes"
+      },
+      {
+        "name": "Spicy Breakfast Oat Bowl"
+      },
+      {
+        "name": "Spicy Chicken Stir Fry"
+      },
+      {
+        "name": "Spicy Chickpea Curry"
+      },
+      {
+        "name": "Spicy Greek Salad Plate"
+      },
+      {
+        "name": "Spicy Halloumi Burger"
+      },
+      {
+        "name": "Spicy Kimchi Fried Rice"
+      },
+      {
+        "name": "Spicy Lentil Stew"
+      },
+      {
+        "name": "Spicy Pomodoro Pasta"
+      },
+      {
+        "name": "Spicy Thai Peanut Noodles"
+      },
+      {
+        "name": "Spicy Tofu Udon Stir Fry"
+      }
+    ],
+    "gold_result_size": 60
+  },
+  {
+    "id": "dev_recipe_08",
+    "graph": "recipes_100",
+    "difficulty": "hard",
+    "question_de": "Wie viele Rezepte gibt es pro Diet-Typ?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?dietName (COUNT(?r) AS ?count)\nWHERE {\n  ?r a schema:Recipe ;\n     ex:diet ?diet .\n  ?diet schema:name ?dietName .\n}\nGROUP BY ?dietName\nORDER BY DESC(?count) ?dietName",
+    "gold_result": [
+      {
+        "dietName": "High Protein",
+        "count": 10
+      },
+      {
+        "dietName": "Omnivore",
+        "count": 10
+      },
+      {
+        "dietName": "Pescatarian",
+        "count": 10
+      },
+      {
+        "dietName": "Vegan",
+        "count": 35
+      },
+      {
+        "dietName": "Vegetarian",
+        "count": 35
+      }
+    ],
+    "gold_result_size": 5
+  },
+  {
+    "id": "dev_recipe_09",
+    "graph": "recipes_100",
+    "difficulty": "hard",
+    "question_de": "Welche Rezepte haben mindestens sechs Zutaten?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?name (COUNT(?ingredient) AS ?ingredientCount)\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:hasIngredient ?ingredient .\n}\nGROUP BY ?r ?name\nHAVING (COUNT(?ingredient) >= 6)\nORDER BY DESC(?ingredientCount) ?name",
+    "gold_result": [
+      {
+        "name": "Classic Bean Tacos",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Berry Pancakes",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Breakfast Oat Bowl",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Chicken Stir Fry",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Chickpea Curry",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Falafel Wrap",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Greek Salad Plate",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Halloumi Burger",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Kimchi Fried Rice",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Lentil Stew",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Moroccan Couscous",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Paella Express",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Pomodoro Pasta",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Ramen Comfort Bowl",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Teriyaki Salmon Bowl",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Thai Peanut Noodles",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Tofu Udon Stir Fry",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Classic Turkey Meatballs",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Green Roesti Bowl",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Bean Tacos",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Berry Pancakes",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Breakfast Oat Bowl",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Chicken Stir Fry",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Chickpea Curry",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Falafel Wrap",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Greek Salad Plate",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Halloumi Burger",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Kimchi Fried Rice",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Lentil Stew",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Moroccan Couscous",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Paella Express",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Pomodoro Pasta",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Ramen Comfort Bowl",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Teriyaki Salmon Bowl",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Thai Peanut Noodles",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Tofu Udon Stir Fry",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Quick Turkey Meatballs",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Spicy French Mushroom Soup",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Spicy Roesti Bowl",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Spicy Thai Peanut Noodles",
+        "ingredientCount": 6
+      },
+      {
+        "name": "Green Falafel Wrap",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Green French Mushroom Soup",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Green Greek Salad Plate",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Green Lentil Stew",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Green Paella Express",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Roasted Chicken Stir Fry",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Roasted French Mushroom Soup",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Roasted Paella Express",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Roasted Roesti Bowl",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Bean Tacos",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Berry Pancakes",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Breakfast Oat Bowl",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Chicken Stir Fry",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Chickpea Curry",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Falafel Wrap",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Greek Salad Plate",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Halloumi Burger",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Kimchi Fried Rice",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Lentil Stew",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Moroccan Couscous",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Paella Express",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Pomodoro Pasta",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Ramen Comfort Bowl",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Teriyaki Salmon Bowl",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Tofu Udon Stir Fry",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Turkey Meatballs",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Green Bean Tacos",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Berry Pancakes",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Breakfast Oat Bowl",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Chicken Stir Fry",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Chickpea Curry",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Halloumi Burger",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Kimchi Fried Rice",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Moroccan Couscous",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Pomodoro Pasta",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Ramen Comfort Bowl",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Teriyaki Salmon Bowl",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Thai Peanut Noodles",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Tofu Udon Stir Fry",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Turkey Meatballs",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Bean Tacos",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Berry Pancakes",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Breakfast Oat Bowl",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Chickpea Curry",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Falafel Wrap",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Greek Salad Plate",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Halloumi Burger",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Kimchi Fried Rice",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Lentil Stew",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Moroccan Couscous",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Pomodoro Pasta",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Ramen Comfort Bowl",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Teriyaki Salmon Bowl",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Thai Peanut Noodles",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Tofu Udon Stir Fry",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Turkey Meatballs",
+        "ingredientCount": 8
+      }
+    ],
+    "gold_result_size": 96
+  },
+  {
+    "id": "dev_recipe_10",
+    "graph": "recipes_100",
+    "difficulty": "hard",
+    "question_de": "Wie hoch sind die durchschnittlichen Kalorien pro Cuisine?",
+    "reference_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?cuisineName (AVG(?cal) AS ?avgCalories)\nWHERE {\n  ?r a schema:Recipe ;\n     ex:cuisineType ?cuisine ;\n     ex:calories ?cal .\n  ?cuisine schema:name ?cuisineName .\n}\nGROUP BY ?cuisineName\nORDER BY DESC(?avgCalories) ?cuisineName",
+    "gold_result": [
+      {
+        "cuisineName": "Greek",
+        "avgCalories": "382"
+      },
+      {
+        "cuisineName": "Swiss",
+        "avgCalories": "432"
+      },
+      {
+        "cuisineName": "Ethiopian",
+        "avgCalories": "462"
+      },
+      {
+        "cuisineName": "French",
+        "avgCalories": "487"
+      },
+      {
+        "cuisineName": "Mexican",
+        "avgCalories": "492"
+      },
+      {
+        "cuisineName": "Moroccan",
+        "avgCalories": "502"
+      },
+      {
+        "cuisineName": "Italian",
+        "avgCalories": "522"
+      },
+      {
+        "cuisineName": "American",
+        "avgCalories": "537"
+      },
+      {
+        "cuisineName": "Korean",
+        "avgCalories": "542"
+      },
+      {
+        "cuisineName": "Middle Eastern",
+        "avgCalories": "562"
+      },
+      {
+        "cuisineName": "Chinese",
+        "avgCalories": "582"
+      },
+      {
+        "cuisineName": "Thai",
+        "avgCalories": "592"
+      },
+      {
+        "cuisineName": "Japanese",
+        "avgCalories": "595.3333333333333333333333333"
+      },
+      {
+        "cuisineName": "Indian",
+        "avgCalories": "612"
+      },
+      {
+        "cuisineName": "British",
+        "avgCalories": "652"
+      },
+      {
+        "cuisineName": "Spanish",
+        "avgCalories": "672"
+      }
+    ],
+    "gold_result_size": 16
+  }
+]

@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+submission.json
+dev_submission.json
+*.log
+
+.env
+.env.*
+!.env.example

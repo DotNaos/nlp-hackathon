@@ -1,0 +1,182 @@
+[
+  {
+    "id": "test_super_01",
+    "graph": "superhero_universe",
+    "difficulty": "easy",
+    "question_de": "Nenne alle Antiheld:innen."
+  },
+  {
+    "id": "test_super_02",
+    "graph": "superhero_universe",
+    "difficulty": "easy",
+    "question_de": "Welche Figuren gehoeren zur Justice League?"
+  },
+  {
+    "id": "test_super_03",
+    "graph": "superhero_universe",
+    "difficulty": "easy",
+    "question_de": "Welche Figuren stammen aus Marvel?"
+  },
+  {
+    "id": "test_super_04",
+    "graph": "superhero_universe",
+    "difficulty": "medium",
+    "question_de": "Welche Figuren haben Super Strength?"
+  },
+  {
+    "id": "test_super_05",
+    "graph": "superhero_universe",
+    "difficulty": "medium",
+    "question_de": "Welche Figuren nutzen ein Artefakt?"
+  },
+  {
+    "id": "test_super_06",
+    "graph": "superhero_universe",
+    "difficulty": "medium",
+    "question_de": "Welche Figuren sind in New York City aktiv?"
+  },
+  {
+    "id": "test_super_07",
+    "graph": "superhero_universe",
+    "difficulty": "medium",
+    "question_de": "Welche Figuren sind Kryptonian?"
+  },
+  {
+    "id": "test_super_08",
+    "graph": "superhero_universe",
+    "difficulty": "medium",
+    "question_de": "Welche Figuren gehoeren zu den X-Men und sind Mutant:innen?"
+  },
+  {
+    "id": "test_super_09",
+    "graph": "superhero_universe",
+    "difficulty": "medium",
+    "question_de": "Welche Figuren koennen fliegen und stammen von Marvel?"
+  },
+  {
+    "id": "test_super_10",
+    "graph": "superhero_universe",
+    "difficulty": "hard",
+    "question_de": "Wie viele Figuren gibt es pro Rolle?"
+  },
+  {
+    "id": "test_super_11",
+    "graph": "superhero_universe",
+    "difficulty": "hard",
+    "question_de": "Welche Figuren haben mindestens drei Powers?"
+  },
+  {
+    "id": "test_super_12",
+    "graph": "superhero_universe",
+    "difficulty": "hard",
+    "question_de": "Welche Verbuendeten hat Batman?"
+  },
+  {
+    "id": "test_super_13",
+    "graph": "superhero_universe",
+    "difficulty": "hard",
+    "question_de": "Welche Gegner:innen hat Spider-Man?"
+  },
+  {
+    "id": "test_super_14",
+    "graph": "superhero_universe",
+    "difficulty": "hard",
+    "question_de": "Welche Publisher haben mehr als zehn Figuren?"
+  },
+  {
+    "id": "test_super_15",
+    "graph": "superhero_universe",
+    "difficulty": "hard",
+    "question_de": "Welche Figuren traten ab 1980 erstmals auf?"
+  },
+  {
+    "id": "test_recipe_01",
+    "graph": "recipes_100",
+    "difficulty": "easy",
+    "question_de": "Nenne alle vegetarischen Rezepte."
+  },
+  {
+    "id": "test_recipe_02",
+    "graph": "recipes_100",
+    "difficulty": "easy",
+    "question_de": "Welche Rezepte sind Dinner?"
+  },
+  {
+    "id": "test_recipe_03",
+    "graph": "recipes_100",
+    "difficulty": "easy",
+    "question_de": "Welche Rezepte enthalten Chickpeas?"
+  },
+  {
+    "id": "test_recipe_04",
+    "graph": "recipes_100",
+    "difficulty": "medium",
+    "question_de": "Welche japanischen Rezepte gibt es?"
+  },
+  {
+    "id": "test_recipe_05",
+    "graph": "recipes_100",
+    "difficulty": "medium",
+    "question_de": "Welche Rezepte haben weniger als 500 Kalorien?"
+  },
+  {
+    "id": "test_recipe_06",
+    "graph": "recipes_100",
+    "difficulty": "medium",
+    "question_de": "Welche Rezepte haben Tofu und sind vegan?"
+  },
+  {
+    "id": "test_recipe_07",
+    "graph": "recipes_100",
+    "difficulty": "medium",
+    "question_de": "Welche Rezepte sind Breakfast und Easy?"
+  },
+  {
+    "id": "test_recipe_08",
+    "graph": "recipes_100",
+    "difficulty": "medium",
+    "question_de": "Welche Rezepte dauern zwischen 20 und 35 Minuten insgesamt?"
+  },
+  {
+    "id": "test_recipe_09",
+    "graph": "recipes_100",
+    "difficulty": "medium",
+    "question_de": "Welche Rezepte haben Spice Level genau 0?"
+  },
+  {
+    "id": "test_recipe_10",
+    "graph": "recipes_100",
+    "difficulty": "hard",
+    "question_de": "Wie viele Rezepte gibt es pro Cuisine?"
+  },
+  {
+    "id": "test_recipe_11",
+    "graph": "recipes_100",
+    "difficulty": "hard",
+    "question_de": "Welche Cuisines haben im Durchschnitt mehr als 550 Kalorien?"
+  },
+  {
+    "id": "test_recipe_12",
+    "graph": "recipes_100",
+    "difficulty": "hard",
+    "question_de": "Welche Rezepte haben mindestens sieben Zutaten?"
+  },
+  {
+    "id": "test_recipe_13",
+    "graph": "recipes_100",
+    "difficulty": "hard",
+    "question_de": "Welche Diet-Typen kommen vor und wie viele Rezepte gibt es je Typ?"
+  },
+  {
+    "id": "test_recipe_14",
+    "graph": "recipes_100",
+    "difficulty": "hard",
+    "question_de": "Welche Rezepte enthalten sowohl Rice als auch Soy Sauce?"
+  },
+  {
+    "id": "test_recipe_15",
+    "graph": "recipes_100",
+    "difficulty": "hard",
+    "question_de": "Welche Rezepte haben mehr als 3 Portionen?"
+  }
+]

@@ -1,0 +1,2816 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Cuisine a rdfs:Class ;
+    rdfs:label "Cuisine"@en ;
+    rdfs:comment "A culinary tradition or cuisine style."@en .
+
+ex:DietType a rdfs:Class ;
+    rdfs:label "Diet type"@en ;
+    rdfs:comment "A dietary category such as vegan or vegetarian."@en .
+
+ex:Ingredient a rdfs:Class ;
+    rdfs:label "Ingredient"@en ;
+    rdfs:comment "A food ingredient used in a recipe."@en .
+
+ex:MealType a rdfs:Class ;
+    rdfs:label "Meal type"@en ;
+    rdfs:comment "The type of meal, such as breakfast or dinner."@en .
+
+ex:RecipeCategory a rdfs:Class ;
+    rdfs:label "Recipe category"@en ;
+    rdfs:comment "A category such as soup, salad, or pasta."@en .
+
+ex:SkillLevel a rdfs:Class .
+
+ex:Antihero rdfs:label "Antihero"@en ;
+    rdfs:comment "A character with ambiguous morals who may act heroically."@en .
+
+ex:Apple a ex:Ingredient ;
+    schema:name "Apple" .
+
+ex:Artifact rdfs:label "Artifact"@en ;
+    rdfs:comment "A notable object or weapon used by characters."@en .
+
+ex:Bacon a ex:Ingredient ;
+    schema:name "Bacon" .
+
+ex:BakingPowder a ex:Ingredient ;
+    schema:name "Baking Powder" .
+
+ex:Beans a ex:Ingredient ;
+    schema:name "Beans" .
+
+ex:Beef a ex:Ingredient ;
+    schema:name "Beef" .
+
+ex:Brazilian a ex:Cuisine ;
+    schema:name "Brazilian" .
+
+ex:Cauliflower a ex:Ingredient ;
+    schema:name "Cauliflower" .
+
+ex:Chocolate a ex:Ingredient ;
+    schema:name "Chocolate" .
+
+ex:City rdfs:label "City"@en ;
+    rdfs:comment "A fictional or real location where characters operate."@en .
+
+ex:Civilian rdfs:label "Civilian"@en ;
+    rdfs:comment "A non-superpowered supporting character."@en .
+
+ex:ClassicBeanTacos a schema:Recipe ;
+    ex:calories 490 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "Mexican" ;
+    ex:cuisineType ex:Mexican ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Avocado,
+        ex:BlackBeans,
+        ex:Cheese,
+        ex:Corn,
+        ex:Lime,
+        ex:Tortilla ;
+    ex:mainProtein "Black Beans" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Wrap ;
+    ex:servings 2 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 25 ;
+    schema:name "Classic Bean Tacos" .
+
+ex:ClassicBerryPancakes a schema:Recipe ;
+    ex:calories 520 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "French" ;
+    ex:cuisineType ex:French ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Blueberries,
+        ex:Egg,
+        ex:Flour,
+        ex:MapleSyrup,
+        ex:Milk,
+        ex:Strawberries ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Breakfast ;
+    ex:prepTimeMinutes 10 ;
+    ex:recipeCategory ex:Dessert ;
+    ex:servings 2 ;
+    ex:spiceLevel 0 ;
+    ex:totalTimeMinutes 25 ;
+    schema:name "Classic Berry Pancakes" .
+
+ex:ClassicBreakfastOatBowl a schema:Recipe ;
+    ex:calories 390 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "American" ;
+    ex:cuisineType ex:American ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Banana,
+        ex:Blueberries,
+        ex:Cinnamon,
+        ex:Honey,
+        ex:Milk,
+        ex:Oats ;
+    ex:mainProtein "Milk" ;
+    ex:mealType ex:Breakfast ;
+    ex:prepTimeMinutes 5 ;
+    ex:recipeCategory ex:Dessert ;
+    ex:servings 2 ;
+    ex:spiceLevel 0 ;
+    ex:totalTimeMinutes 15 ;
+    schema:name "Classic Breakfast Oat Bowl" .
+
+ex:ClassicChickenStirFry a schema:Recipe ;
+    ex:calories 580 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Chinese" ;
+    ex:cuisineType ex:Chinese ;
+    ex:diet ex:HighProtein ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Broccoli,
+        ex:Chicken,
+        ex:Ginger,
+        ex:Rice,
+        ex:SoySauce ;
+    ex:mainProtein "Chicken" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 2 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 30 ;
+    schema:name "Classic Chicken Stir Fry" .
+
+ex:ClassicChickpeaCurry a schema:Recipe ;
+    ex:calories 610 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "Indian" ;
+    ex:cuisineType ex:Indian ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Chickpeas,
+        ex:CoconutMilk,
+        ex:CurryPaste,
+        ex:Garlic,
+        ex:Onion,
+        ex:Rice ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Curry ;
+    ex:servings 2 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Classic Chickpea Curry" .
+
+ex:ClassicFalafelWrap a schema:Recipe ;
+    ex:calories 560 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Middle Eastern" ;
+    ex:cuisineType ex:MiddleEastern ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Chickpeas,
+        ex:Cucumber,
+        ex:Parsley,
+        ex:Pita,
+        ex:Tahini,
+        ex:Tomato ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 25 ;
+    ex:recipeCategory ex:Wrap ;
+    ex:servings 2 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Classic Falafel Wrap" .
+
+ex:ClassicFrenchMushroomSoup a schema:Recipe ;
+    ex:calories 450 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "French" ;
+    ex:cuisineType ex:French ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Butter,
+        ex:Cream,
+        ex:Garlic,
+        ex:Mushroom,
+        ex:Onion ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Soup ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Classic French Mushroom Soup" .
+
+ex:ClassicGreekSaladPlate a schema:Recipe ;
+    ex:calories 380 ;
+    ex:cookTimeMinutes 0 ;
+    ex:countryOfOrigin "Greek" ;
+    ex:cuisineType ex:Greek ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Cucumber,
+        ex:Feta,
+        ex:Lemon,
+        ex:OliveOil,
+        ex:Parsley,
+        ex:Tomato ;
+    ex:mainProtein "Feta" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Salad ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 15 ;
+    schema:name "Classic Greek Salad Plate" .
+
+ex:ClassicHalloumiBurger a schema:Recipe ;
+    ex:calories 650 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "British" ;
+    ex:cuisineType ex:British ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Bread,
+        ex:Cucumber,
+        ex:Halloumi,
+        ex:Mayonnaise,
+        ex:Pickles,
+        ex:Tomato ;
+    ex:mainProtein "Halloumi" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 10 ;
+    ex:recipeCategory ex:Burger ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 20 ;
+    schema:name "Classic Halloumi Burger" .
+
+ex:ClassicKimchiFriedRice a schema:Recipe ;
+    ex:calories 540 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Korean" ;
+    ex:cuisineType ex:Korean ;
+    ex:diet ex:Omnivore ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Egg,
+        ex:Kimchi,
+        ex:Onion,
+        ex:Rice,
+        ex:Sesame,
+        ex:SoySauce ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 10 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 2 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 25 ;
+    schema:name "Classic Kimchi Fried Rice" .
+
+ex:ClassicLentilStew a schema:Recipe ;
+    ex:calories 460 ;
+    ex:cookTimeMinutes 30 ;
+    ex:countryOfOrigin "Ethiopian" ;
+    ex:cuisineType ex:Ethiopian ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Carrot,
+        ex:Garlic,
+        ex:Lentils,
+        ex:Onion,
+        ex:Spinach,
+        ex:TomatoPaste ;
+    ex:mainProtein "Lentils" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Stew ;
+    ex:servings 2 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 45 ;
+    schema:name "Classic Lentil Stew" .
+
+ex:ClassicMoroccanCouscous a schema:Recipe ;
+    ex:calories 500 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Moroccan" ;
+    ex:cuisineType ex:Moroccan ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Almond,
+        ex:Apricot,
+        ex:Carrot,
+        ex:Chickpeas,
+        ex:Cinnamon,
+        ex:Couscous ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Stew ;
+    ex:servings 2 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 35 ;
+    schema:name "Classic Moroccan Couscous" .
+
+ex:ClassicPaellaExpress a schema:Recipe ;
+    ex:calories 670 ;
+    ex:cookTimeMinutes 30 ;
+    ex:countryOfOrigin "Spanish" ;
+    ex:cuisineType ex:Spanish ;
+    ex:diet ex:Pescatarian ;
+    ex:difficulty ex:Hard ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Garlic,
+        ex:Parsley,
+        ex:Rice,
+        ex:Shrimp,
+        ex:Tomato ;
+    ex:mainProtein "Shrimp" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 20 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 2 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 50 ;
+    schema:name "Classic Paella Express" .
+
+ex:ClassicPomodoroPasta a schema:Recipe ;
+    ex:calories 520 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Italian" ;
+    ex:cuisineType ex:Italian ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Basil,
+        ex:Garlic,
+        ex:OliveOil,
+        ex:Parmesan,
+        ex:Pasta,
+        ex:Tomato ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 10 ;
+    ex:recipeCategory ex:Pasta ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 25 ;
+    schema:name "Classic Pomodoro Pasta" .
+
+ex:ClassicRamenComfortBowl a schema:Recipe ;
+    ex:calories 610 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Omnivore ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Egg,
+        ex:Miso,
+        ex:Mushroom,
+        ex:Onion,
+        ex:RamenNoodles,
+        ex:Seaweed ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Soup ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 35 ;
+    schema:name "Classic Ramen Comfort Bowl" .
+
+ex:ClassicRoestiBowl a schema:Recipe ;
+    ex:calories 430 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Swiss" ;
+    ex:cuisineType ex:Swiss ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Mushroom,
+        ex:OliveOil,
+        ex:Onion,
+        ex:Potato,
+        ex:Spinach ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 20 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Classic Roesti Bowl" .
+
+ex:ClassicTeriyakiSalmonBowl a schema:Recipe ;
+    ex:calories 640 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Pescatarian ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Broccoli,
+        ex:Ginger,
+        ex:Rice,
+        ex:Salmon,
+        ex:Sesame,
+        ex:SoySauce ;
+    ex:mainProtein "Salmon" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 35 ;
+    schema:name "Classic Teriyaki Salmon Bowl" .
+
+ex:ClassicThaiPeanutNoodles a schema:Recipe ;
+    ex:calories 590 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Thai" ;
+    ex:cuisineType ex:Thai ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Carrot,
+        ex:Chili,
+        ex:Garlic,
+        ex:Noodles,
+        ex:Peanut,
+        ex:SoySauce ;
+    ex:mainProtein "Tofu" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 2 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 30 ;
+    schema:name "Classic Thai Peanut Noodles" .
+
+ex:ClassicTofuUdonStirFry a schema:Recipe ;
+    ex:calories 530 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Cabbage,
+        ex:Carrot,
+        ex:Ginger,
+        ex:SoySauce,
+        ex:Tofu,
+        ex:Udon ;
+    ex:mainProtein "Tofu" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 2 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 30 ;
+    schema:name "Classic Tofu Udon Stir Fry" .
+
+ex:ClassicTurkeyMeatballs a schema:Recipe ;
+    ex:calories 680 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "American" ;
+    ex:cuisineType ex:American ;
+    ex:diet ex:HighProtein ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Garlic,
+        ex:Onion,
+        ex:Parmesan,
+        ex:Pasta,
+        ex:Tomato,
+        ex:Turkey ;
+    ex:mainProtein "Turkey" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 20 ;
+    ex:recipeCategory ex:Pasta ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Classic Turkey Meatballs" .
+
+ex:Cod a ex:Ingredient ;
+    schema:name "Cod" .
+
+ex:Coriander a ex:Ingredient ;
+    schema:name "Coriander" .
+
+ex:Dates a ex:Ingredient ;
+    schema:name "Dates" .
+
+ex:Eggplant a ex:Ingredient ;
+    schema:name "Eggplant" .
+
+ex:German a ex:Cuisine ;
+    schema:name "German" .
+
+ex:GlutenFree a ex:DietType ;
+    schema:name "Gluten Free" .
+
+ex:GreenBeanTacos a schema:Recipe ;
+    ex:calories 460 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "Mexican" ;
+    ex:cuisineType ex:Mexican ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Avocado,
+        ex:BlackBeans,
+        ex:Cheese,
+        ex:Corn,
+        ex:Lime,
+        ex:Parsley,
+        ex:Spinach,
+        ex:Tortilla ;
+    ex:mainProtein "Black Beans" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Wrap ;
+    ex:servings 4 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 25 ;
+    schema:name "Green Bean Tacos" .
+
+ex:GreenBerryPancakes a schema:Recipe ;
+    ex:calories 490 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "French" ;
+    ex:cuisineType ex:French ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Blueberries,
+        ex:Egg,
+        ex:Flour,
+        ex:MapleSyrup,
+        ex:Milk,
+        ex:Parsley,
+        ex:Spinach,
+        ex:Strawberries ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Breakfast ;
+    ex:prepTimeMinutes 10 ;
+    ex:recipeCategory ex:Dessert ;
+    ex:servings 4 ;
+    ex:spiceLevel 0 ;
+    ex:totalTimeMinutes 25 ;
+    schema:name "Green Berry Pancakes" .
+
+ex:GreenBreakfastOatBowl a schema:Recipe ;
+    ex:calories 360 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "American" ;
+    ex:cuisineType ex:American ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Banana,
+        ex:Blueberries,
+        ex:Cinnamon,
+        ex:Honey,
+        ex:Milk,
+        ex:Oats,
+        ex:Parsley,
+        ex:Spinach ;
+    ex:mainProtein "Milk" ;
+    ex:mealType ex:Breakfast ;
+    ex:prepTimeMinutes 5 ;
+    ex:recipeCategory ex:Dessert ;
+    ex:servings 4 ;
+    ex:spiceLevel 0 ;
+    ex:totalTimeMinutes 15 ;
+    schema:name "Green Breakfast Oat Bowl" .
+
+ex:GreenChickenStirFry a schema:Recipe ;
+    ex:calories 550 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Chinese" ;
+    ex:cuisineType ex:Chinese ;
+    ex:diet ex:HighProtein ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Broccoli,
+        ex:Chicken,
+        ex:Ginger,
+        ex:Parsley,
+        ex:Rice,
+        ex:SoySauce,
+        ex:Spinach ;
+    ex:mainProtein "Chicken" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 4 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 30 ;
+    schema:name "Green Chicken Stir Fry" .
+
+ex:GreenChickpeaCurry a schema:Recipe ;
+    ex:calories 580 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "Indian" ;
+    ex:cuisineType ex:Indian ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Chickpeas,
+        ex:CoconutMilk,
+        ex:CurryPaste,
+        ex:Garlic,
+        ex:Onion,
+        ex:Parsley,
+        ex:Rice,
+        ex:Spinach ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Curry ;
+    ex:servings 4 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Green Chickpea Curry" .
+
+ex:GreenFalafelWrap a schema:Recipe ;
+    ex:calories 530 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Middle Eastern" ;
+    ex:cuisineType ex:MiddleEastern ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Chickpeas,
+        ex:Cucumber,
+        ex:Parsley,
+        ex:Pita,
+        ex:Spinach,
+        ex:Tahini,
+        ex:Tomato ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 25 ;
+    ex:recipeCategory ex:Wrap ;
+    ex:servings 4 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Green Falafel Wrap" .
+
+ex:GreenFrenchMushroomSoup a schema:Recipe ;
+    ex:calories 420 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "French" ;
+    ex:cuisineType ex:French ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Butter,
+        ex:Cream,
+        ex:Garlic,
+        ex:Mushroom,
+        ex:Onion,
+        ex:Parsley,
+        ex:Spinach ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Soup ;
+    ex:servings 4 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Green French Mushroom Soup" .
+
+ex:GreenGreekSaladPlate a schema:Recipe ;
+    ex:calories 350 ;
+    ex:cookTimeMinutes 0 ;
+    ex:countryOfOrigin "Greek" ;
+    ex:cuisineType ex:Greek ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Cucumber,
+        ex:Feta,
+        ex:Lemon,
+        ex:OliveOil,
+        ex:Parsley,
+        ex:Spinach,
+        ex:Tomato ;
+    ex:mainProtein "Feta" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Salad ;
+    ex:servings 4 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 15 ;
+    schema:name "Green Greek Salad Plate" .
+
+ex:GreenHalloumiBurger a schema:Recipe ;
+    ex:calories 620 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "British" ;
+    ex:cuisineType ex:British ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Bread,
+        ex:Cucumber,
+        ex:Halloumi,
+        ex:Mayonnaise,
+        ex:Parsley,
+        ex:Pickles,
+        ex:Spinach,
+        ex:Tomato ;
+    ex:mainProtein "Halloumi" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 10 ;
+    ex:recipeCategory ex:Burger ;
+    ex:servings 4 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 20 ;
+    schema:name "Green Halloumi Burger" .
+
+ex:GreenKimchiFriedRice a schema:Recipe ;
+    ex:calories 510 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Korean" ;
+    ex:cuisineType ex:Korean ;
+    ex:diet ex:Omnivore ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Egg,
+        ex:Kimchi,
+        ex:Onion,
+        ex:Parsley,
+        ex:Rice,
+        ex:Sesame,
+        ex:SoySauce,
+        ex:Spinach ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 10 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 4 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 25 ;
+    schema:name "Green Kimchi Fried Rice" .
+
+ex:GreenLentilStew a schema:Recipe ;
+    ex:calories 430 ;
+    ex:cookTimeMinutes 30 ;
+    ex:countryOfOrigin "Ethiopian" ;
+    ex:cuisineType ex:Ethiopian ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Carrot,
+        ex:Garlic,
+        ex:Lentils,
+        ex:Onion,
+        ex:Parsley,
+        ex:Spinach,
+        ex:TomatoPaste ;
+    ex:mainProtein "Lentils" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Stew ;
+    ex:servings 4 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 45 ;
+    schema:name "Green Lentil Stew" .
+
+ex:GreenMoroccanCouscous a schema:Recipe ;
+    ex:calories 470 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Moroccan" ;
+    ex:cuisineType ex:Moroccan ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Almond,
+        ex:Apricot,
+        ex:Carrot,
+        ex:Chickpeas,
+        ex:Cinnamon,
+        ex:Couscous,
+        ex:Parsley,
+        ex:Spinach ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Stew ;
+    ex:servings 4 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 35 ;
+    schema:name "Green Moroccan Couscous" .
+
+ex:GreenPaellaExpress a schema:Recipe ;
+    ex:calories 640 ;
+    ex:cookTimeMinutes 30 ;
+    ex:countryOfOrigin "Spanish" ;
+    ex:cuisineType ex:Spanish ;
+    ex:diet ex:Pescatarian ;
+    ex:difficulty ex:Hard ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Garlic,
+        ex:Parsley,
+        ex:Rice,
+        ex:Shrimp,
+        ex:Spinach,
+        ex:Tomato ;
+    ex:mainProtein "Shrimp" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 20 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 4 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 50 ;
+    schema:name "Green Paella Express" .
+
+ex:GreenPeas a ex:Ingredient ;
+    schema:name "Green Peas" .
+
+ex:GreenPomodoroPasta a schema:Recipe ;
+    ex:calories 490 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Italian" ;
+    ex:cuisineType ex:Italian ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Basil,
+        ex:Garlic,
+        ex:OliveOil,
+        ex:Parmesan,
+        ex:Parsley,
+        ex:Pasta,
+        ex:Spinach,
+        ex:Tomato ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 10 ;
+    ex:recipeCategory ex:Pasta ;
+    ex:servings 4 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 25 ;
+    schema:name "Green Pomodoro Pasta" .
+
+ex:GreenRamenComfortBowl a schema:Recipe ;
+    ex:calories 580 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Omnivore ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Egg,
+        ex:Miso,
+        ex:Mushroom,
+        ex:Onion,
+        ex:Parsley,
+        ex:RamenNoodles,
+        ex:Seaweed,
+        ex:Spinach ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Soup ;
+    ex:servings 4 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 35 ;
+    schema:name "Green Ramen Comfort Bowl" .
+
+ex:GreenRoestiBowl a schema:Recipe ;
+    ex:calories 400 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Swiss" ;
+    ex:cuisineType ex:Swiss ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Mushroom,
+        ex:OliveOil,
+        ex:Onion,
+        ex:Parsley,
+        ex:Potato,
+        ex:Spinach ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 20 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 4 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Green Roesti Bowl" .
+
+ex:GreenTeriyakiSalmonBowl a schema:Recipe ;
+    ex:calories 610 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Pescatarian ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Broccoli,
+        ex:Ginger,
+        ex:Parsley,
+        ex:Rice,
+        ex:Salmon,
+        ex:Sesame,
+        ex:SoySauce,
+        ex:Spinach ;
+    ex:mainProtein "Salmon" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 4 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 35 ;
+    schema:name "Green Teriyaki Salmon Bowl" .
+
+ex:GreenThaiPeanutNoodles a schema:Recipe ;
+    ex:calories 560 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Thai" ;
+    ex:cuisineType ex:Thai ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Carrot,
+        ex:Chili,
+        ex:Garlic,
+        ex:Noodles,
+        ex:Parsley,
+        ex:Peanut,
+        ex:SoySauce,
+        ex:Spinach ;
+    ex:mainProtein "Tofu" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 4 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 30 ;
+    schema:name "Green Thai Peanut Noodles" .
+
+ex:GreenTofuUdonStirFry a schema:Recipe ;
+    ex:calories 500 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Cabbage,
+        ex:Carrot,
+        ex:Ginger,
+        ex:Parsley,
+        ex:SoySauce,
+        ex:Spinach,
+        ex:Tofu,
+        ex:Udon ;
+    ex:mainProtein "Tofu" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 4 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 30 ;
+    schema:name "Green Tofu Udon Stir Fry" .
+
+ex:GreenTurkeyMeatballs a schema:Recipe ;
+    ex:calories 650 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "American" ;
+    ex:cuisineType ex:American ;
+    ex:diet ex:HighProtein ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Garlic,
+        ex:Onion,
+        ex:Parmesan,
+        ex:Parsley,
+        ex:Pasta,
+        ex:Spinach,
+        ex:Tomato,
+        ex:Turkey ;
+    ex:mainProtein "Turkey" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 20 ;
+    ex:recipeCategory ex:Pasta ;
+    ex:servings 4 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Green Turkey Meatballs" .
+
+ex:Hummus a ex:Ingredient ;
+    schema:name "Hummus" .
+
+ex:Kale a ex:Ingredient ;
+    schema:name "Kale" .
+
+ex:KidneyBeans a ex:Ingredient ;
+    schema:name "Kidney Beans" .
+
+ex:Lamb a ex:Ingredient ;
+    schema:name "Lamb" .
+
+ex:Mint a ex:Ingredient ;
+    schema:name "Mint" .
+
+ex:Mozzarella a ex:Ingredient ;
+    schema:name "Mozzarella" .
+
+ex:Mustard a ex:Ingredient ;
+    schema:name "Mustard" .
+
+ex:Organization rdfs:label "Organization"@en ;
+    rdfs:comment "An organization, company, or agency connected to characters."@en .
+
+ex:Panko a ex:Ingredient ;
+    schema:name "Panko" .
+
+ex:Pomegranate a ex:Ingredient ;
+    schema:name "Pomegranate" .
+
+ex:Power rdfs:label "Power"@en ;
+    rdfs:comment "An extraordinary ability or skill."@en .
+
+ex:Pumpkin a ex:Ingredient ;
+    schema:name "Pumpkin" .
+
+ex:QuickBeanTacos a schema:Recipe ;
+    ex:calories 490 ;
+    ex:cookTimeMinutes 5 ;
+    ex:countryOfOrigin "Mexican" ;
+    ex:cuisineType ex:Mexican ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Avocado,
+        ex:BlackBeans,
+        ex:Cheese,
+        ex:Corn,
+        ex:Lime,
+        ex:Tortilla ;
+    ex:mainProtein "Black Beans" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:Wrap ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 17 ;
+    schema:name "Quick Bean Tacos" .
+
+ex:QuickBerryPancakes a schema:Recipe ;
+    ex:calories 520 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "French" ;
+    ex:cuisineType ex:French ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Blueberries,
+        ex:Egg,
+        ex:Flour,
+        ex:MapleSyrup,
+        ex:Milk,
+        ex:Strawberries ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Breakfast ;
+    ex:prepTimeMinutes 7 ;
+    ex:recipeCategory ex:Dessert ;
+    ex:servings 3 ;
+    ex:spiceLevel 0 ;
+    ex:totalTimeMinutes 17 ;
+    schema:name "Quick Berry Pancakes" .
+
+ex:QuickBreakfastOatBowl a schema:Recipe ;
+    ex:calories 390 ;
+    ex:cookTimeMinutes 5 ;
+    ex:countryOfOrigin "American" ;
+    ex:cuisineType ex:American ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Banana,
+        ex:Blueberries,
+        ex:Cinnamon,
+        ex:Honey,
+        ex:Milk,
+        ex:Oats ;
+    ex:mainProtein "Milk" ;
+    ex:mealType ex:Breakfast ;
+    ex:prepTimeMinutes 5 ;
+    ex:recipeCategory ex:Dessert ;
+    ex:servings 3 ;
+    ex:spiceLevel 0 ;
+    ex:totalTimeMinutes 10 ;
+    schema:name "Quick Breakfast Oat Bowl" .
+
+ex:QuickChickenStirFry a schema:Recipe ;
+    ex:calories 580 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "Chinese" ;
+    ex:cuisineType ex:Chinese ;
+    ex:diet ex:HighProtein ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Broccoli,
+        ex:Chicken,
+        ex:Ginger,
+        ex:Rice,
+        ex:SoySauce ;
+    ex:mainProtein "Chicken" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 22 ;
+    schema:name "Quick Chicken Stir Fry" .
+
+ex:QuickChickpeaCurry a schema:Recipe ;
+    ex:calories 610 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Indian" ;
+    ex:cuisineType ex:Indian ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Chickpeas,
+        ex:CoconutMilk,
+        ex:CurryPaste,
+        ex:Garlic,
+        ex:Onion,
+        ex:Rice ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:Curry ;
+    ex:servings 3 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 32 ;
+    schema:name "Quick Chickpea Curry" .
+
+ex:QuickFalafelWrap a schema:Recipe ;
+    ex:calories 560 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "Middle Eastern" ;
+    ex:cuisineType ex:MiddleEastern ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Chickpeas,
+        ex:Cucumber,
+        ex:Parsley,
+        ex:Pita,
+        ex:Tahini,
+        ex:Tomato ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 22 ;
+    ex:recipeCategory ex:Wrap ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 32 ;
+    schema:name "Quick Falafel Wrap" .
+
+ex:QuickFrenchMushroomSoup a schema:Recipe ;
+    ex:calories 450 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "French" ;
+    ex:cuisineType ex:French ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Butter,
+        ex:Cream,
+        ex:Garlic,
+        ex:Mushroom,
+        ex:Onion ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:Soup ;
+    ex:servings 3 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 32 ;
+    schema:name "Quick French Mushroom Soup" .
+
+ex:QuickGreekSaladPlate a schema:Recipe ;
+    ex:calories 380 ;
+    ex:cookTimeMinutes 0 ;
+    ex:countryOfOrigin "Greek" ;
+    ex:cuisineType ex:Greek ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Cucumber,
+        ex:Feta,
+        ex:Lemon,
+        ex:OliveOil,
+        ex:Parsley,
+        ex:Tomato ;
+    ex:mainProtein "Feta" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:Salad ;
+    ex:servings 3 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 12 ;
+    schema:name "Quick Greek Salad Plate" .
+
+ex:QuickHalloumiBurger a schema:Recipe ;
+    ex:calories 650 ;
+    ex:cookTimeMinutes 5 ;
+    ex:countryOfOrigin "British" ;
+    ex:cuisineType ex:British ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Bread,
+        ex:Cucumber,
+        ex:Halloumi,
+        ex:Mayonnaise,
+        ex:Pickles,
+        ex:Tomato ;
+    ex:mainProtein "Halloumi" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 7 ;
+    ex:recipeCategory ex:Burger ;
+    ex:servings 3 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 12 ;
+    schema:name "Quick Halloumi Burger" .
+
+ex:QuickKimchiFriedRice a schema:Recipe ;
+    ex:calories 540 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "Korean" ;
+    ex:cuisineType ex:Korean ;
+    ex:diet ex:Omnivore ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Egg,
+        ex:Kimchi,
+        ex:Onion,
+        ex:Rice,
+        ex:Sesame,
+        ex:SoySauce ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 7 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 3 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 17 ;
+    schema:name "Quick Kimchi Fried Rice" .
+
+ex:QuickLentilStew a schema:Recipe ;
+    ex:calories 460 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "Ethiopian" ;
+    ex:cuisineType ex:Ethiopian ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Carrot,
+        ex:Garlic,
+        ex:Lentils,
+        ex:Onion,
+        ex:Spinach,
+        ex:TomatoPaste ;
+    ex:mainProtein "Lentils" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:Stew ;
+    ex:servings 3 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 37 ;
+    schema:name "Quick Lentil Stew" .
+
+ex:QuickMoroccanCouscous a schema:Recipe ;
+    ex:calories 500 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Moroccan" ;
+    ex:cuisineType ex:Moroccan ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Almond,
+        ex:Apricot,
+        ex:Carrot,
+        ex:Chickpeas,
+        ex:Cinnamon,
+        ex:Couscous ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:Stew ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 27 ;
+    schema:name "Quick Moroccan Couscous" .
+
+ex:QuickPaellaExpress a schema:Recipe ;
+    ex:calories 670 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "Spanish" ;
+    ex:cuisineType ex:Spanish ;
+    ex:diet ex:Pescatarian ;
+    ex:difficulty ex:Hard ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Garlic,
+        ex:Parsley,
+        ex:Rice,
+        ex:Shrimp,
+        ex:Tomato ;
+    ex:mainProtein "Shrimp" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 42 ;
+    schema:name "Quick Paella Express" .
+
+ex:QuickPomodoroPasta a schema:Recipe ;
+    ex:calories 520 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "Italian" ;
+    ex:cuisineType ex:Italian ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Basil,
+        ex:Garlic,
+        ex:OliveOil,
+        ex:Parmesan,
+        ex:Pasta,
+        ex:Tomato ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 7 ;
+    ex:recipeCategory ex:Pasta ;
+    ex:servings 3 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 17 ;
+    schema:name "Quick Pomodoro Pasta" .
+
+ex:QuickRamenComfortBowl a schema:Recipe ;
+    ex:calories 610 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Omnivore ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Egg,
+        ex:Miso,
+        ex:Mushroom,
+        ex:Onion,
+        ex:RamenNoodles,
+        ex:Seaweed ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:Soup ;
+    ex:servings 3 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 27 ;
+    schema:name "Quick Ramen Comfort Bowl" .
+
+ex:QuickRoestiBowl a schema:Recipe ;
+    ex:calories 430 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Swiss" ;
+    ex:cuisineType ex:Swiss ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Mushroom,
+        ex:OliveOil,
+        ex:Onion,
+        ex:Potato,
+        ex:Spinach ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 3 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 32 ;
+    schema:name "Quick Roesti Bowl" .
+
+ex:QuickTeriyakiSalmonBowl a schema:Recipe ;
+    ex:calories 640 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Pescatarian ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Broccoli,
+        ex:Ginger,
+        ex:Rice,
+        ex:Salmon,
+        ex:Sesame,
+        ex:SoySauce ;
+    ex:mainProtein "Salmon" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 3 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 27 ;
+    schema:name "Quick Teriyaki Salmon Bowl" .
+
+ex:QuickThaiPeanutNoodles a schema:Recipe ;
+    ex:calories 590 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "Thai" ;
+    ex:cuisineType ex:Thai ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Carrot,
+        ex:Chili,
+        ex:Garlic,
+        ex:Noodles,
+        ex:Peanut,
+        ex:SoySauce ;
+    ex:mainProtein "Tofu" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 3 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 22 ;
+    schema:name "Quick Thai Peanut Noodles" .
+
+ex:QuickTofuUdonStirFry a schema:Recipe ;
+    ex:calories 530 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Cabbage,
+        ex:Carrot,
+        ex:Ginger,
+        ex:SoySauce,
+        ex:Tofu,
+        ex:Udon ;
+    ex:mainProtein "Tofu" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 22 ;
+    schema:name "Quick Tofu Udon Stir Fry" .
+
+ex:QuickTurkeyMeatballs a schema:Recipe ;
+    ex:calories 680 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "American" ;
+    ex:cuisineType ex:American ;
+    ex:diet ex:HighProtein ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Garlic,
+        ex:Onion,
+        ex:Parmesan,
+        ex:Pasta,
+        ex:Tomato,
+        ex:Turkey ;
+    ex:mainProtein "Turkey" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:Pasta ;
+    ex:servings 3 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 32 ;
+    schema:name "Quick Turkey Meatballs" .
+
+ex:Quinoa a ex:Ingredient ;
+    schema:name "Quinoa" .
+
+ex:RedCurryPaste a ex:Ingredient ;
+    schema:name "Red Curry Paste" .
+
+ex:RoastedBeanTacos a schema:Recipe ;
+    ex:calories 530 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Mexican" ;
+    ex:cuisineType ex:Mexican ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Avocado,
+        ex:BellPepper,
+        ex:BlackBeans,
+        ex:Cheese,
+        ex:Corn,
+        ex:Lime,
+        ex:Tortilla,
+        ex:Zucchini ;
+    ex:mainProtein "Black Beans" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:Wrap ;
+    ex:servings 2 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 32 ;
+    schema:name "Roasted Bean Tacos" .
+
+ex:RoastedBerryPancakes a schema:Recipe ;
+    ex:calories 560 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "French" ;
+    ex:cuisineType ex:French ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Blueberries,
+        ex:Egg,
+        ex:Flour,
+        ex:MapleSyrup,
+        ex:Milk,
+        ex:Strawberries,
+        ex:Zucchini ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Breakfast ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:Dessert ;
+    ex:servings 2 ;
+    ex:spiceLevel 0 ;
+    ex:totalTimeMinutes 32 ;
+    schema:name "Roasted Berry Pancakes" .
+
+ex:RoastedBreakfastOatBowl a schema:Recipe ;
+    ex:calories 430 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "American" ;
+    ex:cuisineType ex:American ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Banana,
+        ex:BellPepper,
+        ex:Blueberries,
+        ex:Cinnamon,
+        ex:Honey,
+        ex:Milk,
+        ex:Oats,
+        ex:Zucchini ;
+    ex:mainProtein "Milk" ;
+    ex:mealType ex:Breakfast ;
+    ex:prepTimeMinutes 7 ;
+    ex:recipeCategory ex:Dessert ;
+    ex:servings 2 ;
+    ex:spiceLevel 0 ;
+    ex:totalTimeMinutes 22 ;
+    schema:name "Roasted Breakfast Oat Bowl" .
+
+ex:RoastedChickenStirFry a schema:Recipe ;
+    ex:calories 620 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Chinese" ;
+    ex:cuisineType ex:Chinese ;
+    ex:diet ex:HighProtein ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Broccoli,
+        ex:Chicken,
+        ex:Ginger,
+        ex:Rice,
+        ex:SoySauce,
+        ex:Zucchini ;
+    ex:mainProtein "Chicken" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 2 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 37 ;
+    schema:name "Roasted Chicken Stir Fry" .
+
+ex:RoastedChickpeaCurry a schema:Recipe ;
+    ex:calories 650 ;
+    ex:cookTimeMinutes 30 ;
+    ex:countryOfOrigin "Indian" ;
+    ex:cuisineType ex:Indian ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Chickpeas,
+        ex:CoconutMilk,
+        ex:CurryPaste,
+        ex:Garlic,
+        ex:Onion,
+        ex:Rice,
+        ex:Zucchini ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:Curry ;
+    ex:servings 2 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 47 ;
+    schema:name "Roasted Chickpea Curry" .
+
+ex:RoastedFalafelWrap a schema:Recipe ;
+    ex:calories 600 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Middle Eastern" ;
+    ex:cuisineType ex:MiddleEastern ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Chickpeas,
+        ex:Cucumber,
+        ex:Parsley,
+        ex:Pita,
+        ex:Tahini,
+        ex:Tomato,
+        ex:Zucchini ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 27 ;
+    ex:recipeCategory ex:Wrap ;
+    ex:servings 2 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 47 ;
+    schema:name "Roasted Falafel Wrap" .
+
+ex:RoastedFrenchMushroomSoup a schema:Recipe ;
+    ex:calories 490 ;
+    ex:cookTimeMinutes 30 ;
+    ex:countryOfOrigin "French" ;
+    ex:cuisineType ex:French ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Butter,
+        ex:Cream,
+        ex:Garlic,
+        ex:Mushroom,
+        ex:Onion,
+        ex:Zucchini ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:Soup ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 47 ;
+    schema:name "Roasted French Mushroom Soup" .
+
+ex:RoastedGreekSaladPlate a schema:Recipe ;
+    ex:calories 420 ;
+    ex:cookTimeMinutes 5 ;
+    ex:countryOfOrigin "Greek" ;
+    ex:cuisineType ex:Greek ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Cucumber,
+        ex:Feta,
+        ex:Lemon,
+        ex:OliveOil,
+        ex:Parsley,
+        ex:Tomato,
+        ex:Zucchini ;
+    ex:mainProtein "Feta" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:Salad ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 22 ;
+    schema:name "Roasted Greek Salad Plate" .
+
+ex:RoastedHalloumiBurger a schema:Recipe ;
+    ex:calories 690 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "British" ;
+    ex:cuisineType ex:British ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Bread,
+        ex:Cucumber,
+        ex:Halloumi,
+        ex:Mayonnaise,
+        ex:Pickles,
+        ex:Tomato,
+        ex:Zucchini ;
+    ex:mainProtein "Halloumi" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:Burger ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 27 ;
+    schema:name "Roasted Halloumi Burger" .
+
+ex:RoastedKimchiFriedRice a schema:Recipe ;
+    ex:calories 580 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Korean" ;
+    ex:cuisineType ex:Korean ;
+    ex:diet ex:Omnivore ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Egg,
+        ex:Kimchi,
+        ex:Onion,
+        ex:Rice,
+        ex:Sesame,
+        ex:SoySauce,
+        ex:Zucchini ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 2 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 32 ;
+    schema:name "Roasted Kimchi Fried Rice" .
+
+ex:RoastedLentilStew a schema:Recipe ;
+    ex:calories 500 ;
+    ex:cookTimeMinutes 35 ;
+    ex:countryOfOrigin "Ethiopian" ;
+    ex:cuisineType ex:Ethiopian ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Carrot,
+        ex:Garlic,
+        ex:Lentils,
+        ex:Onion,
+        ex:Spinach,
+        ex:TomatoPaste,
+        ex:Zucchini ;
+    ex:mainProtein "Lentils" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:Stew ;
+    ex:servings 2 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 52 ;
+    schema:name "Roasted Lentil Stew" .
+
+ex:RoastedMoroccanCouscous a schema:Recipe ;
+    ex:calories 540 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "Moroccan" ;
+    ex:cuisineType ex:Moroccan ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Almond,
+        ex:Apricot,
+        ex:BellPepper,
+        ex:Carrot,
+        ex:Chickpeas,
+        ex:Cinnamon,
+        ex:Couscous,
+        ex:Zucchini ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:Stew ;
+    ex:servings 2 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 42 ;
+    schema:name "Roasted Moroccan Couscous" .
+
+ex:RoastedPaellaExpress a schema:Recipe ;
+    ex:calories 710 ;
+    ex:cookTimeMinutes 35 ;
+    ex:countryOfOrigin "Spanish" ;
+    ex:cuisineType ex:Spanish ;
+    ex:diet ex:Pescatarian ;
+    ex:difficulty ex:Hard ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Garlic,
+        ex:Parsley,
+        ex:Rice,
+        ex:Shrimp,
+        ex:Tomato,
+        ex:Zucchini ;
+    ex:mainProtein "Shrimp" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 22 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 2 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 57 ;
+    schema:name "Roasted Paella Express" .
+
+ex:RoastedPomodoroPasta a schema:Recipe ;
+    ex:calories 560 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Italian" ;
+    ex:cuisineType ex:Italian ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Basil,
+        ex:BellPepper,
+        ex:Garlic,
+        ex:OliveOil,
+        ex:Parmesan,
+        ex:Pasta,
+        ex:Tomato,
+        ex:Zucchini ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 12 ;
+    ex:recipeCategory ex:Pasta ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 32 ;
+    schema:name "Roasted Pomodoro Pasta" .
+
+ex:RoastedRamenComfortBowl a schema:Recipe ;
+    ex:calories 650 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Omnivore ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Egg,
+        ex:Miso,
+        ex:Mushroom,
+        ex:Onion,
+        ex:RamenNoodles,
+        ex:Seaweed,
+        ex:Zucchini ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:Soup ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 42 ;
+    schema:name "Roasted Ramen Comfort Bowl" .
+
+ex:RoastedRoestiBowl a schema:Recipe ;
+    ex:calories 470 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "Swiss" ;
+    ex:cuisineType ex:Swiss ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Mushroom,
+        ex:OliveOil,
+        ex:Onion,
+        ex:Potato,
+        ex:Spinach,
+        ex:Zucchini ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 22 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 47 ;
+    schema:name "Roasted Roesti Bowl" .
+
+ex:RoastedTeriyakiSalmonBowl a schema:Recipe ;
+    ex:calories 680 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Pescatarian ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Broccoli,
+        ex:Ginger,
+        ex:Rice,
+        ex:Salmon,
+        ex:Sesame,
+        ex:SoySauce,
+        ex:Zucchini ;
+    ex:mainProtein "Salmon" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 42 ;
+    schema:name "Roasted Teriyaki Salmon Bowl" .
+
+ex:RoastedThaiPeanutNoodles a schema:Recipe ;
+    ex:calories 630 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Thai" ;
+    ex:cuisineType ex:Thai ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Carrot,
+        ex:Chili,
+        ex:Garlic,
+        ex:Noodles,
+        ex:Peanut,
+        ex:SoySauce,
+        ex:Zucchini ;
+    ex:mainProtein "Tofu" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 2 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 37 ;
+    schema:name "Roasted Thai Peanut Noodles" .
+
+ex:RoastedTofuUdonStirFry a schema:Recipe ;
+    ex:calories 570 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Cabbage,
+        ex:Carrot,
+        ex:Ginger,
+        ex:SoySauce,
+        ex:Tofu,
+        ex:Udon,
+        ex:Zucchini ;
+    ex:mainProtein "Tofu" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 17 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 2 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 37 ;
+    schema:name "Roasted Tofu Udon Stir Fry" .
+
+ex:RoastedTurkeyMeatballs a schema:Recipe ;
+    ex:calories 720 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "American" ;
+    ex:cuisineType ex:American ;
+    ex:diet ex:HighProtein ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Garlic,
+        ex:Onion,
+        ex:Parmesan,
+        ex:Pasta,
+        ex:Tomato,
+        ex:Turkey,
+        ex:Zucchini ;
+    ex:mainProtein "Turkey" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 22 ;
+    ex:recipeCategory ex:Pasta ;
+    ex:servings 2 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 47 ;
+    schema:name "Roasted Turkey Meatballs" .
+
+ex:Sausage a ex:Ingredient ;
+    schema:name "Sausage" .
+
+ex:Snack a ex:MealType ;
+    schema:name "Snack" .
+
+ex:SourCream a ex:Ingredient ;
+    schema:name "Sour Cream" .
+
+ex:SpicyBeanTacos a schema:Recipe ;
+    ex:calories 490 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "Mexican" ;
+    ex:cuisineType ex:Mexican ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Avocado,
+        ex:BlackBeans,
+        ex:Cheese,
+        ex:Chili,
+        ex:Corn,
+        ex:Lime,
+        ex:Tortilla ;
+    ex:mainProtein "Black Beans" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Wrap ;
+    ex:servings 3 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 25 ;
+    schema:name "Spicy Bean Tacos" .
+
+ex:SpicyBerryPancakes a schema:Recipe ;
+    ex:calories 520 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "French" ;
+    ex:cuisineType ex:French ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Blueberries,
+        ex:Chili,
+        ex:Egg,
+        ex:Flour,
+        ex:MapleSyrup,
+        ex:Milk,
+        ex:Strawberries ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Breakfast ;
+    ex:prepTimeMinutes 10 ;
+    ex:recipeCategory ex:Dessert ;
+    ex:servings 3 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 25 ;
+    schema:name "Spicy Berry Pancakes" .
+
+ex:SpicyBreakfastOatBowl a schema:Recipe ;
+    ex:calories 390 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "American" ;
+    ex:cuisineType ex:American ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Banana,
+        ex:Blueberries,
+        ex:Chili,
+        ex:Cinnamon,
+        ex:Honey,
+        ex:Milk,
+        ex:Oats ;
+    ex:mainProtein "Milk" ;
+    ex:mealType ex:Breakfast ;
+    ex:prepTimeMinutes 5 ;
+    ex:recipeCategory ex:Dessert ;
+    ex:servings 3 ;
+    ex:spiceLevel 1 ;
+    ex:totalTimeMinutes 15 ;
+    schema:name "Spicy Breakfast Oat Bowl" .
+
+ex:SpicyChickenStirFry a schema:Recipe ;
+    ex:calories 580 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Chinese" ;
+    ex:cuisineType ex:Chinese ;
+    ex:diet ex:HighProtein ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Broccoli,
+        ex:Chicken,
+        ex:Chili,
+        ex:Ginger,
+        ex:Rice,
+        ex:SoySauce ;
+    ex:mainProtein "Chicken" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 3 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 30 ;
+    schema:name "Spicy Chicken Stir Fry" .
+
+ex:SpicyChickpeaCurry a schema:Recipe ;
+    ex:calories 610 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "Indian" ;
+    ex:cuisineType ex:Indian ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Chickpeas,
+        ex:Chili,
+        ex:CoconutMilk,
+        ex:CurryPaste,
+        ex:Garlic,
+        ex:Onion,
+        ex:Rice ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Curry ;
+    ex:servings 3 ;
+    ex:spiceLevel 4 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Spicy Chickpea Curry" .
+
+ex:SpicyFalafelWrap a schema:Recipe ;
+    ex:calories 560 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Middle Eastern" ;
+    ex:cuisineType ex:MiddleEastern ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Chickpeas,
+        ex:Chili,
+        ex:Cucumber,
+        ex:Parsley,
+        ex:Pita,
+        ex:Tahini,
+        ex:Tomato ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 25 ;
+    ex:recipeCategory ex:Wrap ;
+    ex:servings 3 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Spicy Falafel Wrap" .
+
+ex:SpicyFrenchMushroomSoup a schema:Recipe ;
+    ex:calories 450 ;
+    ex:cookTimeMinutes 25 ;
+    ex:countryOfOrigin "French" ;
+    ex:cuisineType ex:French ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Butter,
+        ex:Chili,
+        ex:Cream,
+        ex:Garlic,
+        ex:Mushroom,
+        ex:Onion ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Soup ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Spicy French Mushroom Soup" .
+
+ex:SpicyGreekSaladPlate a schema:Recipe ;
+    ex:calories 380 ;
+    ex:cookTimeMinutes 0 ;
+    ex:countryOfOrigin "Greek" ;
+    ex:cuisineType ex:Greek ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Chili,
+        ex:Cucumber,
+        ex:Feta,
+        ex:Lemon,
+        ex:OliveOil,
+        ex:Parsley,
+        ex:Tomato ;
+    ex:mainProtein "Feta" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Salad ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 15 ;
+    schema:name "Spicy Greek Salad Plate" .
+
+ex:SpicyHalloumiBurger a schema:Recipe ;
+    ex:calories 650 ;
+    ex:cookTimeMinutes 10 ;
+    ex:countryOfOrigin "British" ;
+    ex:cuisineType ex:British ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Bread,
+        ex:Chili,
+        ex:Cucumber,
+        ex:Halloumi,
+        ex:Mayonnaise,
+        ex:Pickles,
+        ex:Tomato ;
+    ex:mainProtein "Halloumi" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 10 ;
+    ex:recipeCategory ex:Burger ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 20 ;
+    schema:name "Spicy Halloumi Burger" .
+
+ex:SpicyKimchiFriedRice a schema:Recipe ;
+    ex:calories 540 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Korean" ;
+    ex:cuisineType ex:Korean ;
+    ex:diet ex:Omnivore ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Chili,
+        ex:Egg,
+        ex:Kimchi,
+        ex:Onion,
+        ex:Rice,
+        ex:Sesame,
+        ex:SoySauce ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 10 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 3 ;
+    ex:spiceLevel 4 ;
+    ex:totalTimeMinutes 25 ;
+    schema:name "Spicy Kimchi Fried Rice" .
+
+ex:SpicyLentilStew a schema:Recipe ;
+    ex:calories 460 ;
+    ex:cookTimeMinutes 30 ;
+    ex:countryOfOrigin "Ethiopian" ;
+    ex:cuisineType ex:Ethiopian ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Carrot,
+        ex:Chili,
+        ex:Garlic,
+        ex:Lentils,
+        ex:Onion,
+        ex:Spinach,
+        ex:TomatoPaste ;
+    ex:mainProtein "Lentils" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Stew ;
+    ex:servings 3 ;
+    ex:spiceLevel 4 ;
+    ex:totalTimeMinutes 45 ;
+    schema:name "Spicy Lentil Stew" .
+
+ex:SpicyMoroccanCouscous a schema:Recipe ;
+    ex:calories 500 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Moroccan" ;
+    ex:cuisineType ex:Moroccan ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Almond,
+        ex:Apricot,
+        ex:Carrot,
+        ex:Chickpeas,
+        ex:Chili,
+        ex:Cinnamon,
+        ex:Couscous ;
+    ex:mainProtein "Chickpeas" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Stew ;
+    ex:servings 3 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 35 ;
+    schema:name "Spicy Moroccan Couscous" .
+
+ex:SpicyPaellaExpress a schema:Recipe ;
+    ex:calories 670 ;
+    ex:cookTimeMinutes 30 ;
+    ex:countryOfOrigin "Spanish" ;
+    ex:cuisineType ex:Spanish ;
+    ex:diet ex:Pescatarian ;
+    ex:difficulty ex:Hard ;
+    ex:hasIngredient ex:BellPepper,
+        ex:Chili,
+        ex:Garlic,
+        ex:Parsley,
+        ex:Rice,
+        ex:Shrimp,
+        ex:Tomato ;
+    ex:mainProtein "Shrimp" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 20 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 3 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 50 ;
+    schema:name "Spicy Paella Express" .
+
+ex:SpicyPomodoroPasta a schema:Recipe ;
+    ex:calories 520 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Italian" ;
+    ex:cuisineType ex:Italian ;
+    ex:diet ex:Vegetarian ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Basil,
+        ex:Chili,
+        ex:Garlic,
+        ex:OliveOil,
+        ex:Parmesan,
+        ex:Pasta,
+        ex:Tomato ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 10 ;
+    ex:recipeCategory ex:Pasta ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 25 ;
+    schema:name "Spicy Pomodoro Pasta" .
+
+ex:SpicyRamenComfortBowl a schema:Recipe ;
+    ex:calories 610 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Omnivore ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Chili,
+        ex:Egg,
+        ex:Miso,
+        ex:Mushroom,
+        ex:Onion,
+        ex:RamenNoodles,
+        ex:Seaweed ;
+    ex:mainProtein "Egg" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:Soup ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 35 ;
+    schema:name "Spicy Ramen Comfort Bowl" .
+
+ex:SpicyRoestiBowl a schema:Recipe ;
+    ex:calories 430 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Swiss" ;
+    ex:cuisineType ex:Swiss ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Chili,
+        ex:Mushroom,
+        ex:OliveOil,
+        ex:Onion,
+        ex:Potato,
+        ex:Spinach ;
+    ex:mainProtein "None" ;
+    ex:mealType ex:Lunch ;
+    ex:prepTimeMinutes 20 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Spicy Roesti Bowl" .
+
+ex:SpicyTeriyakiSalmonBowl a schema:Recipe ;
+    ex:calories 640 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Pescatarian ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Broccoli,
+        ex:Chili,
+        ex:Ginger,
+        ex:Rice,
+        ex:Salmon,
+        ex:Sesame,
+        ex:SoySauce ;
+    ex:mainProtein "Salmon" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:RiceBowl ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 35 ;
+    schema:name "Spicy Teriyaki Salmon Bowl" .
+
+ex:SpicyThaiPeanutNoodles a schema:Recipe ;
+    ex:calories 590 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Thai" ;
+    ex:cuisineType ex:Thai ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Carrot,
+        ex:Chili,
+        ex:Garlic,
+        ex:Noodles,
+        ex:Peanut,
+        ex:SoySauce ;
+    ex:mainProtein "Tofu" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 3 ;
+    ex:spiceLevel 4 ;
+    ex:totalTimeMinutes 30 ;
+    schema:name "Spicy Thai Peanut Noodles" .
+
+ex:SpicyTofuUdonStirFry a schema:Recipe ;
+    ex:calories 530 ;
+    ex:cookTimeMinutes 15 ;
+    ex:countryOfOrigin "Japanese" ;
+    ex:cuisineType ex:Japanese ;
+    ex:diet ex:Vegan ;
+    ex:difficulty ex:Easy ;
+    ex:hasIngredient ex:Cabbage,
+        ex:Carrot,
+        ex:Chili,
+        ex:Ginger,
+        ex:SoySauce,
+        ex:Tofu,
+        ex:Udon ;
+    ex:mainProtein "Tofu" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 15 ;
+    ex:recipeCategory ex:StirFry ;
+    ex:servings 3 ;
+    ex:spiceLevel 3 ;
+    ex:totalTimeMinutes 30 ;
+    schema:name "Spicy Tofu Udon Stir Fry" .
+
+ex:SpicyTurkeyMeatballs a schema:Recipe ;
+    ex:calories 680 ;
+    ex:cookTimeMinutes 20 ;
+    ex:countryOfOrigin "American" ;
+    ex:cuisineType ex:American ;
+    ex:diet ex:HighProtein ;
+    ex:difficulty ex:Medium ;
+    ex:hasIngredient ex:Chili,
+        ex:Garlic,
+        ex:Onion,
+        ex:Parmesan,
+        ex:Pasta,
+        ex:Tomato,
+        ex:Turkey ;
+    ex:mainProtein "Turkey" ;
+    ex:mealType ex:Dinner ;
+    ex:prepTimeMinutes 20 ;
+    ex:recipeCategory ex:Pasta ;
+    ex:servings 3 ;
+    ex:spiceLevel 2 ;
+    ex:totalTimeMinutes 40 ;
+    schema:name "Spicy Turkey Meatballs" .
+
+ex:Sugar a ex:Ingredient ;
+    schema:name "Sugar" .
+
+ex:Superhero rdfs:label "Superhero"@en ;
+    rdfs:comment "A fictional heroic character with extraordinary abilities or skills."@en .
+
+ex:SweetPotato a ex:Ingredient ;
+    schema:name "Sweet Potato" .
+
+ex:Team rdfs:label "Team"@en ;
+    rdfs:comment "A group or alliance of comic-book characters."@en .
+
+ex:Tuna a ex:Ingredient ;
+    schema:name "Tuna" .
+
+ex:Turkish a ex:Cuisine ;
+    schema:name "Turkish" .
+
+ex:Vanilla a ex:Ingredient ;
+    schema:name "Vanilla" .
+
+ex:Vietnamese a ex:Cuisine ;
+    schema:name "Vietnamese" .
+
+ex:Villain rdfs:label "Villain"@en ;
+    rdfs:comment "A fictional antagonist or adversary in the superhero universe."@en .
+
+ex:Walnut a ex:Ingredient ;
+    schema:name "Walnut" .
+
+ex:Yogurt a ex:Ingredient ;
+    schema:name "Yogurt" .
+
+ex:allyOf rdfs:label "ally of"@en ;
+    rdfs:comment "Links a character to an ally."@en .
+
+ex:calories a rdf:Property .
+
+ex:cookTimeMinutes a rdf:Property .
+
+ex:countryOfOrigin a rdf:Property .
+
+ex:cuisineType a rdf:Property ;
+    rdfs:label "cuisine type"@en ;
+    rdfs:comment "Links a recipe to its cuisine."@en .
+
+ex:diet a rdf:Property ;
+    rdfs:label "diet"@en ;
+    rdfs:comment "Links a recipe to a dietary type."@en .
+
+ex:difficulty a rdf:Property .
+
+ex:enemyOf rdfs:label "enemy of"@en ;
+    rdfs:comment "Links a character to an enemy."@en .
+
+ex:hasIngredient a rdf:Property ;
+    rdfs:label "has ingredient"@en ;
+    rdfs:comment "Links a recipe to one of its ingredients."@en .
+
+ex:hasPower rdfs:label "has power"@en ;
+    rdfs:comment "Links a character to one of their powers."@en .
+
+ex:mainProtein a rdf:Property .
+
+ex:mealType a rdf:Property .
+
+ex:memberOf rdfs:label "member of"@en ;
+    rdfs:comment "Links a character to a team."@en .
+
+ex:operatesIn rdfs:label "operates in"@en ;
+    rdfs:comment "Links a character to a city or place of operation."@en .
+
+ex:prepTimeMinutes a rdf:Property .
+
+ex:recipeCategory a rdf:Property .
+
+ex:servings a rdf:Property .
+
+ex:spiceLevel a rdf:Property .
+
+ex:totalTimeMinutes a rdf:Property ;
+    rdfs:label "total time in minutes"@en ;
+    rdfs:comment "The total preparation and cooking time in minutes."@en .
+
+ex:Almond a ex:Ingredient ;
+    schema:name "Almond" .
+
+ex:Apricot a ex:Ingredient ;
+    schema:name "Apricot" .
+
+ex:Avocado a ex:Ingredient ;
+    schema:name "Avocado" .
+
+ex:Banana a ex:Ingredient ;
+    schema:name "Banana" .
+
+ex:Basil a ex:Ingredient ;
+    schema:name "Basil" .
+
+ex:BlackBeans a ex:Ingredient ;
+    schema:name "Black Beans" .
+
+ex:Bread a ex:Ingredient ;
+    schema:name "Bread" .
+
+ex:British a ex:Cuisine ;
+    schema:name "British" .
+
+ex:Burger a ex:RecipeCategory ;
+    schema:name "Burger" .
+
+ex:Butter a ex:Ingredient ;
+    schema:name "Butter" .
+
+ex:Cabbage a ex:Ingredient ;
+    schema:name "Cabbage" .
+
+ex:Cheese a ex:Ingredient ;
+    schema:name "Cheese" .
+
+ex:Chicken a ex:Ingredient ;
+    schema:name "Chicken" .
+
+ex:Chinese a ex:Cuisine ;
+    schema:name "Chinese" .
+
+ex:CoconutMilk a ex:Ingredient ;
+    schema:name "Coconut Milk" .
+
+ex:Corn a ex:Ingredient ;
+    schema:name "Corn" .
+
+ex:Couscous a ex:Ingredient ;
+    schema:name "Couscous" .
+
+ex:Cream a ex:Ingredient ;
+    schema:name "Cream" .
+
+ex:Curry a ex:RecipeCategory ;
+    schema:name "Curry" .
+
+ex:CurryPaste a ex:Ingredient ;
+    schema:name "Curry Paste" .
+
+ex:Ethiopian a ex:Cuisine ;
+    schema:name "Ethiopian" .
+
+ex:Feta a ex:Ingredient ;
+    schema:name "Feta" .
+
+ex:Flour a ex:Ingredient ;
+    schema:name "Flour" .
+
+ex:Greek a ex:Cuisine ;
+    schema:name "Greek" .
+
+ex:Halloumi a ex:Ingredient ;
+    schema:name "Halloumi" .
+
+ex:Hard a ex:SkillLevel ;
+    schema:name "Hard" .
+
+ex:Honey a ex:Ingredient ;
+    schema:name "Honey" .
+
+ex:Indian a ex:Cuisine ;
+    schema:name "Indian" .
+
+ex:Italian a ex:Cuisine ;
+    schema:name "Italian" .
+
+ex:Kimchi a ex:Ingredient ;
+    schema:name "Kimchi" .
+
+ex:Korean a ex:Cuisine ;
+    schema:name "Korean" .
+
+ex:Lemon a ex:Ingredient ;
+    schema:name "Lemon" .
+
+ex:Lentils a ex:Ingredient ;
+    schema:name "Lentils" .
+
+ex:Lime a ex:Ingredient ;
+    schema:name "Lime" .
+
+ex:MapleSyrup a ex:Ingredient ;
+    schema:name "Maple Syrup" .
+
+ex:Mayonnaise a ex:Ingredient ;
+    schema:name "Mayonnaise" .
+
+ex:Mexican a ex:Cuisine ;
+    schema:name "Mexican" .
+
+ex:MiddleEastern a ex:Cuisine ;
+    schema:name "Middle Eastern" .
+
+ex:Miso a ex:Ingredient ;
+    schema:name "Miso" .
+
+ex:Moroccan a ex:Cuisine ;
+    schema:name "Moroccan" .
+
+ex:Noodles a ex:Ingredient ;
+    schema:name "Noodles" .
+
+ex:Oats a ex:Ingredient ;
+    schema:name "Oats" .
+
+ex:Peanut a ex:Ingredient ;
+    schema:name "Peanut" .
+
+ex:Pickles a ex:Ingredient ;
+    schema:name "Pickles" .
+
+ex:Pita a ex:Ingredient ;
+    schema:name "Pita" .
+
+ex:Potato a ex:Ingredient ;
+    schema:name "Potato" .
+
+ex:RamenNoodles a ex:Ingredient ;
+    schema:name "Ramen Noodles" .
+
+ex:Salad a ex:RecipeCategory ;
+    schema:name "Salad" .
+
+ex:Salmon a ex:Ingredient ;
+    schema:name "Salmon" .
+
+ex:Seaweed a ex:Ingredient ;
+    schema:name "Seaweed" .
+
+ex:Shrimp a ex:Ingredient ;
+    schema:name "Shrimp" .
+
+ex:Spanish a ex:Cuisine ;
+    schema:name "Spanish" .
+
+ex:Strawberries a ex:Ingredient ;
+    schema:name "Strawberries" .
+
+ex:Swiss a ex:Cuisine ;
+    schema:name "Swiss" .
+
+ex:Tahini a ex:Ingredient ;
+    schema:name "Tahini" .
+
+ex:Thai a ex:Cuisine ;
+    schema:name "Thai" .
+
+ex:Tofu a ex:Ingredient ;
+    schema:name "Tofu" .
+
+ex:TomatoPaste a ex:Ingredient ;
+    schema:name "Tomato Paste" .
+
+ex:Tortilla a ex:Ingredient ;
+    schema:name "Tortilla" .
+
+ex:Turkey a ex:Ingredient ;
+    schema:name "Turkey" .
+
+ex:Udon a ex:Ingredient ;
+    schema:name "Udon" .
+
+ex:American a ex:Cuisine ;
+    schema:name "American" .
+
+ex:Blueberries a ex:Ingredient ;
+    schema:name "Blueberries" .
+
+ex:Breakfast a ex:MealType ;
+    schema:name "Breakfast" .
+
+ex:Broccoli a ex:Ingredient ;
+    schema:name "Broccoli" .
+
+ex:Cinnamon a ex:Ingredient ;
+    schema:name "Cinnamon" .
+
+ex:Dessert a ex:MealType,
+        ex:RecipeCategory ;
+    schema:name "Dessert" .
+
+ex:French a ex:Cuisine ;
+    schema:name "French" .
+
+ex:HighProtein a ex:DietType ;
+    schema:name "High Protein" .
+
+ex:Milk a ex:Ingredient ;
+    schema:name "Milk" .
+
+ex:Omnivore a ex:DietType ;
+    schema:name "Omnivore" .
+
+ex:Parmesan a ex:Ingredient ;
+    schema:name "Parmesan" .
+
+ex:Pescatarian a ex:DietType ;
+    schema:name "Pescatarian" .
+
+ex:Sesame a ex:Ingredient ;
+    schema:name "Sesame" .
+
+ex:Soup a ex:RecipeCategory ;
+    schema:name "Soup" .
+
+ex:Stew a ex:RecipeCategory ;
+    schema:name "Stew" .
+
+ex:Wrap a ex:RecipeCategory ;
+    schema:name "Wrap" .
+
+ex:Chickpeas a ex:Ingredient ;
+    schema:name "Chickpeas" .
+
+ex:Cucumber a ex:Ingredient ;
+    schema:name "Cucumber" .
+
+ex:Egg a ex:Ingredient ;
+    schema:name "Egg" .
+
+ex:Ginger a ex:Ingredient ;
+    schema:name "Ginger" .
+
+ex:Japanese a ex:Cuisine ;
+    schema:name "Japanese" .
+
+ex:Mushroom a ex:Ingredient ;
+    schema:name "Mushroom" .
+
+ex:OliveOil a ex:Ingredient ;
+    schema:name "Olive Oil" .
+
+ex:StirFry a ex:RecipeCategory ;
+    schema:name "Stir Fry" .
+
+ex:Carrot a ex:Ingredient ;
+    schema:name "Carrot" .
+
+ex:Pasta a ex:Ingredient,
+        ex:RecipeCategory ;
+    schema:name "Pasta" .
+
+ex:RiceBowl a ex:RecipeCategory ;
+    schema:name "Rice Bowl" .
+
+ex:Zucchini a ex:Ingredient ;
+    schema:name "Zucchini" .
+
+ex:Chili a ex:Ingredient ;
+    schema:name "Chili" .
+
+ex:Lunch a ex:MealType ;
+    schema:name "Lunch" .
+
+ex:Rice a ex:Ingredient ;
+    schema:name "Rice" .
+
+ex:SoySauce a ex:Ingredient ;
+    schema:name "Soy Sauce" .
+
+ex:BellPepper a ex:Ingredient ;
+    schema:name "Bell Pepper" .
+
+ex:Spinach a ex:Ingredient ;
+    schema:name "Spinach" .
+
+ex:Tomato a ex:Ingredient ;
+    schema:name "Tomato" .
+
+ex:Parsley a ex:Ingredient ;
+    schema:name "Parsley" .
+
+ex:Garlic a ex:Ingredient ;
+    schema:name "Garlic" .
+
+ex:Medium a ex:SkillLevel ;
+    schema:name "Medium" .
+
+ex:Onion a ex:Ingredient ;
+    schema:name "Onion" .
+
+ex:Vegan a ex:DietType ;
+    schema:name "Vegan" .
+
+ex:Vegetarian a ex:DietType ;
+    schema:name "Vegetarian" .
+
+ex:Easy a ex:SkillLevel ;
+    schema:name "Easy" .
+
+ex:Dinner a ex:MealType ;
+    schema:name "Dinner" .
+

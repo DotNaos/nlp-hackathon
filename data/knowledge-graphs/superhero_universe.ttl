@@ -1,0 +1,2489 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Antihero a rdfs:Class ;
+    rdfs:label "Antihero"@en ;
+    rdfs:comment "A character with ambiguous morals who may act heroically."@en .
+
+ex:Artifact a rdfs:Class ;
+    rdfs:label "Artifact"@en ;
+    rdfs:comment "A notable object or weapon used by characters."@en .
+
+ex:City a rdfs:Class ;
+    rdfs:label "City"@en ;
+    rdfs:comment "A fictional or real location where characters operate."@en .
+
+ex:Civilian a rdfs:Class ;
+    rdfs:label "Civilian"@en ;
+    rdfs:comment "A non-superpowered supporting character."@en .
+
+ex:Nation a rdfs:Class .
+
+ex:Organization a rdfs:Class ;
+    rdfs:label "Organization"@en ;
+    rdfs:comment "An organization, company, or agency connected to characters."@en .
+
+ex:Power a rdfs:Class ;
+    rdfs:label "Power"@en ;
+    rdfs:comment "An extraordinary ability or skill."@en .
+
+ex:Publisher a rdfs:Class .
+
+ex:Species a rdfs:Class .
+
+ex:Superhero a rdfs:Class ;
+    rdfs:label "Superhero"@en ;
+    rdfs:comment "A fictional heroic character with extraordinary abilities or skills."@en .
+
+ex:Team a rdfs:Class ;
+    rdfs:label "Team"@en ;
+    rdfs:comment "A group or alliance of comic-book characters."@en .
+
+ex:Villain a rdfs:Class ;
+    rdfs:label "Villain"@en ;
+    rdfs:comment "A fictional antagonist or adversary in the superhero universe."@en .
+
+ex:AForce a ex:Team ;
+    schema:name "A-Force" .
+
+ex:AlfredPennyworth a ex:Civilian,
+        schema:Person ;
+    ex:affiliatedWith ex:WayneEnterprises ;
+    ex:alias "Alfred Pennyworth" ;
+    ex:alignment "support" ;
+    ex:firstAppearanceYear "1943"^^xsd:gYear ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Alfred Pennyworth" ;
+    ex:roleLabel "Civilian" ;
+    ex:species ex:Human ;
+    schema:name "Alfred Pennyworth" .
+
+ex:AlphaFlight a ex:Team ;
+    schema:name "Alpha Flight" .
+
+ex:AntMan a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:StarkIndustries ;
+    ex:alias "Ant-Man" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1979"^^xsd:gYear ;
+    ex:hasPower ex:SizeChanging ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Scott Lang" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Ant-Man" .
+
+ex:Apocalypse a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Apocalypse" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1986"^^xsd:gYear ;
+    ex:hasPower ex:Invulnerability,
+        ex:ShapeShifting ;
+    ex:operatesIn ex:Genosha ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "En Sabah Nur" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Mutant ;
+    schema:name "Apocalypse" .
+
+ex:AuntMay a ex:Civilian,
+        schema:Person ;
+    ex:affiliatedWith ex:Oscorp ;
+    ex:alias "Aunt May" ;
+    ex:alignment "support" ;
+    ex:firstAppearanceYear "1962"^^xsd:gYear ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "May Parker" ;
+    ex:roleLabel "Civilian" ;
+    ex:species ex:Human ;
+    schema:name "Aunt May" .
+
+ex:Bane a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LeagueOfAssassins ;
+    ex:alias "Bane" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1993"^^xsd:gYear ;
+    ex:hasPower ex:SuperStrength ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Bane" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Bane" .
+
+ex:BeastBoy a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:DoomPatrol ;
+    ex:alias "Beast Boy" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1965"^^xsd:gYear ;
+    ex:hasPower ex:ShapeShifting ;
+    ex:memberOf ex:TeenTitans ;
+    ex:operatesIn ex:Bludhaven ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Garfield Logan" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Beast Boy" .
+
+ex:BlackAdam a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Black Adam" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1945"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:Magic,
+        ex:SuperStrength ;
+    ex:operatesIn ex:Kahndaq ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Teth-Adam" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:HelmetOfFate ;
+    schema:name "Black Adam" .
+
+ex:Blade a ex:Antihero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Blade" ;
+    ex:alignment "antihero" ;
+    ex:firstAppearanceYear "1973"^^xsd:gYear ;
+    ex:hasPower ex:EnhancedSenses,
+        ex:MartialArts ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Eric Brooks" ;
+    ex:roleLabel "Antihero" ;
+    ex:species ex:Human ;
+    schema:name "Blade" .
+
+ex:BlueBeetle a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Blue Beetle" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "2006"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection,
+        ex:PowerArmor ;
+    ex:memberOf ex:YoungJustice ;
+    ex:operatesIn ex:ElPaso ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Jaime Reyes" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Blue Beetle" .
+
+ex:BoosterGold a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Booster Gold" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1986"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:PowerArmor ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:Metropolis ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Michael Carter" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Booster Gold" .
+
+ex:Brainiac a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LexCorp ;
+    ex:alias "Brainiac" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1958"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect,
+        ex:Technopathy ;
+    ex:operatesIn ex:Metropolis ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Brainiac" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Alien ;
+    schema:name "Brainiac" .
+
+ex:Bullseye a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Bullseye" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1976"^^xsd:gYear ;
+    ex:hasPower ex:EnhancedSenses ;
+    ex:operatesIn ex:HellSKitchen ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Lester" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Bullseye" .
+
+ex:CaptainCold a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Captain Cold" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1957"^^xsd:gYear ;
+    ex:hasPower ex:Cryokinesis ;
+    ex:operatesIn ex:CentralCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Leonard Snart" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Captain Cold" .
+
+ex:CaptainMarvel a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Captain Marvel" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1968"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection,
+        ex:Flight,
+        ex:SuperStrength ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Carol Danvers" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Captain Marvel" .
+
+ex:Carnage a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Carnage" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1992"^^xsd:gYear ;
+    ex:hasPower ex:ShapeShifting,
+        ex:SuperStrength ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Cletus Kasady" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Symbiote ;
+    schema:name "Carnage" .
+
+ex:Catwoman a ex:Antihero,
+        schema:Person ;
+    ex:affiliatedWith ex:LeagueOfAssassins ;
+    ex:alias "Catwoman" ;
+    ex:alignment "antihero" ;
+    ex:firstAppearanceYear "1940"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts ;
+    ex:memberOf ex:BirdsOfPrey ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Selina Kyle" ;
+    ex:roleLabel "Antihero" ;
+    ex:species ex:Human ;
+    schema:name "Catwoman" .
+
+ex:CommissionerGordon a ex:Civilian,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Commissioner Gordon" ;
+    ex:alignment "support" ;
+    ex:firstAppearanceYear "1939"^^xsd:gYear ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "James Gordon" ;
+    ex:roleLabel "Civilian" ;
+    ex:species ex:Human ;
+    schema:name "Commissioner Gordon" .
+
+ex:Cuisine rdfs:label "Cuisine"@en ;
+    rdfs:comment "A culinary tradition or cuisine style."@en .
+
+ex:Cyborg a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Cyborg" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1980"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection,
+        ex:SuperStrength,
+        ex:Technopathy ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:Metropolis ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Victor Stone" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:MotherBox ;
+    schema:name "Cyborg" .
+
+ex:DarkHorseComics a ex:Publisher ;
+    schema:name "Dark Horse Comics" .
+
+ex:Darkseid a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Darkseid" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1970"^^xsd:gYear ;
+    ex:hasPower ex:OmegaBeams,
+        ex:SuperStrength,
+        ex:Teleportation ;
+    ex:operatesIn ex:Apokolips ;
+    ex:originWorld ex:Apokolips ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Uxas" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Alien ;
+    ex:usesArtifact ex:MotherBox ;
+    schema:name "Darkseid" .
+
+ex:Deadpool a ex:Antihero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Deadpool" ;
+    ex:alignment "antihero" ;
+    ex:firstAppearanceYear "1991"^^xsd:gYear ;
+    ex:hasPower ex:HealingFactor,
+        ex:MartialArts ;
+    ex:operatesIn ex:Madripoor ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Wade Wilson" ;
+    ex:roleLabel "Antihero" ;
+    ex:species ex:Human ;
+    schema:name "Deadpool" .
+
+ex:Deathstroke a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LeagueOfAssassins ;
+    ex:alias "Deathstroke" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1980"^^xsd:gYear ;
+    ex:hasPower ex:EnhancedSenses,
+        ex:MartialArts ;
+    ex:memberOf ex:SuicideSquad ;
+    ex:operatesIn ex:Bludhaven ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Slade Wilson" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Deathstroke" .
+
+ex:DietType rdfs:label "Diet type"@en ;
+    rdfs:comment "A dietary category such as vegan or vegetarian."@en .
+
+ex:DoctorDoom a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Doctor Doom" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1962"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect,
+        ex:Magic,
+        ex:PowerArmor ;
+    ex:operatesIn ex:Latveria ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Victor von Doom" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Doctor Doom" .
+
+ex:DoctorFate a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Doctor Fate" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1940"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:Magic ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:Metropolis ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Kent Nelson" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:HelmetOfFate ;
+    schema:name "Doctor Fate" .
+
+ex:DoctorPoison a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LeagueOfAssassins ;
+    ex:alias "Doctor Poison" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1942"^^xsd:gYear ;
+    ex:hasPower ex:Chemistry ;
+    ex:operatesIn ex:Themyscira ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Maru" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Doctor Poison" .
+
+ex:DoctorStrange a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Doctor Strange" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:Magic,
+        ex:Teleportation,
+        ex:TimeManipulation ;
+    ex:memberOf ex:Defenders ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Stephen Strange" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Doctor Strange" .
+
+ex:Drax a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Drax" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1973"^^xsd:gYear ;
+    ex:hasPower ex:Invulnerability,
+        ex:SuperStrength ;
+    ex:memberOf ex:GuardiansOfTheGalaxy ;
+    ex:operatesIn ex:Knowhere ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Drax" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Alien ;
+    schema:name "Drax" .
+
+ex:Electro a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Oscorp ;
+    ex:alias "Electro" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1964"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Max Dillon" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Electro" .
+
+ex:Gambit a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:XavierInstitute ;
+    ex:alias "Gambit" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1990"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection,
+        ex:MartialArts ;
+    ex:memberOf ex:XMen ;
+    ex:operatesIn ex:Madripoor ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Remy LeBeau" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Mutant ;
+    schema:name "Gambit" .
+
+ex:GeneralZod a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LexCorp ;
+    ex:alias "General Zod" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1961"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:Invulnerability,
+        ex:SuperStrength ;
+    ex:operatesIn ex:Metropolis ;
+    ex:originWorld ex:Krypton ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Dru-Zod" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Kryptonian ;
+    schema:name "General Zod" .
+
+ex:GhostRider a ex:Antihero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Ghost Rider" ;
+    ex:alignment "antihero" ;
+    ex:firstAppearanceYear "1972"^^xsd:gYear ;
+    ex:hasPower ex:Magic,
+        ex:Pyrokinesis ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Johnny Blaze" ;
+    ex:roleLabel "Antihero" ;
+    ex:species ex:Human ;
+    schema:name "Ghost Rider" .
+
+ex:HarleyQuinn a ex:Antihero,
+        schema:Person ;
+    ex:affiliatedWith ex:LeagueOfAssassins ;
+    ex:alias "Harley Quinn" ;
+    ex:alignment "antihero" ;
+    ex:firstAppearanceYear "1992"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts ;
+    ex:memberOf ex:SuicideSquad ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Harleen Quinzel" ;
+    ex:roleLabel "Antihero" ;
+    ex:species ex:Human ;
+    schema:name "Harley Quinn" .
+
+ex:Hawkeye a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Hawkeye" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1964"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Clint Barton" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Hawkeye" .
+
+ex:Hela a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Hela" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1964"^^xsd:gYear ;
+    ex:hasPower ex:Invulnerability,
+        ex:Magic ;
+    ex:operatesIn ex:Asgard ;
+    ex:originWorld ex:Asgard ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Hela" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Asgardian ;
+    schema:name "Hela" .
+
+ex:Hulk a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Hulk" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1962"^^xsd:gYear ;
+    ex:hasPower ex:Invulnerability,
+        ex:SuperStrength ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Bruce Banner" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Hulk" .
+
+ex:HumanTorch a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:StarkIndustries ;
+    ex:alias "Human Torch" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1961"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:Pyrokinesis ;
+    ex:memberOf ex:FantasticFour ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Johnny Storm" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Human Torch" .
+
+ex:Huntress a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Huntress" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1989"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts ;
+    ex:memberOf ex:BirdsOfPrey ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Helena Bertinelli" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Huntress" .
+
+ex:ImageComics a ex:Publisher ;
+    schema:name "Image Comics" .
+
+ex:Ingredient rdfs:label "Ingredient"@en ;
+    rdfs:comment "A food ingredient used in a recipe."@en .
+
+ex:InvisibleWoman a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:StarkIndustries ;
+    ex:alias "Invisible Woman" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1961"^^xsd:gYear ;
+    ex:hasPower ex:ForceFields,
+        ex:Invisibility ;
+    ex:memberOf ex:FantasticFour ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Sue Storm" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Invisible Woman" .
+
+ex:IronFist a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Iron Fist" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1974"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection,
+        ex:MartialArts ;
+    ex:memberOf ex:Defenders ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Danny Rand" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Iron Fist" .
+
+ex:JessicaJones a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Jessica Jones" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "2001"^^xsd:gYear ;
+    ex:hasPower ex:SuperStrength ;
+    ex:memberOf ex:Defenders ;
+    ex:operatesIn ex:HellSKitchen ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Jessica Jones" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Jessica Jones" .
+
+ex:JimmyOlsen a ex:Civilian,
+        schema:Person ;
+    ex:affiliatedWith ex:DailyPlanet ;
+    ex:alias "Jimmy Olsen" ;
+    ex:alignment "support" ;
+    ex:firstAppearanceYear "1941"^^xsd:gYear ;
+    ex:operatesIn ex:Metropolis ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Jimmy Olsen" ;
+    ex:roleLabel "Civilian" ;
+    ex:species ex:Human ;
+    schema:name "Jimmy Olsen" .
+
+ex:JohnConstantine a ex:Antihero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "John Constantine" ;
+    ex:alignment "antihero" ;
+    ex:firstAppearanceYear "1985"^^xsd:gYear ;
+    ex:hasPower ex:Magic ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "John Constantine" ;
+    ex:roleLabel "Antihero" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:HelmetOfFate ;
+    schema:name "John Constantine" .
+
+ex:KravenTheHunter a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Kraven the Hunter" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1964"^^xsd:gYear ;
+    ex:hasPower ex:EnhancedSenses,
+        ex:MartialArts ;
+    ex:operatesIn ex:Madripoor ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Sergei Kravinoff" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Kraven the Hunter" .
+
+ex:LoisLane a ex:Civilian,
+        schema:Person ;
+    ex:affiliatedWith ex:DailyPlanet ;
+    ex:alias "Lois Lane" ;
+    ex:alignment "support" ;
+    ex:firstAppearanceYear "1938"^^xsd:gYear ;
+    ex:operatesIn ex:Metropolis ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Lois Lane" ;
+    ex:roleLabel "Civilian" ;
+    ex:species ex:Human ;
+    schema:name "Lois Lane" .
+
+ex:LukeCage a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Luke Cage" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1972"^^xsd:gYear ;
+    ex:hasPower ex:Invulnerability,
+        ex:SuperStrength ;
+    ex:memberOf ex:Defenders ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Luke Cage" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Luke Cage" .
+
+ex:Magik a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:XavierInstitute ;
+    ex:alias "Magik" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1975"^^xsd:gYear ;
+    ex:hasPower ex:Magic,
+        ex:Teleportation ;
+    ex:memberOf ex:XMen ;
+    ex:operatesIn ex:Genosha ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Illyana Rasputina" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Mutant ;
+    schema:name "Magik" .
+
+ex:MartianManhunter a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Martian Manhunter" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1955"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:Invulnerability,
+        ex:ShapeShifting,
+        ex:Telepathy ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:Metropolis ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "J'onn J'onzz" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Alien ;
+    schema:name "Martian Manhunter" .
+
+ex:MaryJaneWatson a ex:Civilian,
+        schema:Person ;
+    ex:affiliatedWith ex:Oscorp ;
+    ex:alias "Mary Jane Watson" ;
+    ex:alignment "support" ;
+    ex:firstAppearanceYear "1965"^^xsd:gYear ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Mary Jane Watson" ;
+    ex:roleLabel "Civilian" ;
+    ex:species ex:Human ;
+    schema:name "Mary Jane Watson" .
+
+ex:MealType rdfs:label "Meal type"@en ;
+    rdfs:comment "The type of meal, such as breakfast or dinner."@en .
+
+ex:MoonKnight a ex:Antihero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Moon Knight" ;
+    ex:alignment "antihero" ;
+    ex:firstAppearanceYear "1975"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts ;
+    ex:memberOf ex:Defenders ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Marc Spector" ;
+    ex:roleLabel "Antihero" ;
+    ex:species ex:Human ;
+    schema:name "Moon Knight" .
+
+ex:MrFantastic a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:StarkIndustries ;
+    ex:alias "Mr. Fantastic" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1961"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect,
+        ex:ShapeShifting ;
+    ex:memberOf ex:FantasticFour ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Reed Richards" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Mr. Fantastic" .
+
+ex:MsMarvel a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Ms. Marvel" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "2013"^^xsd:gYear ;
+    ex:hasPower ex:ShapeShifting,
+        ex:SizeChanging ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Kamala Khan" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Ms. Marvel" .
+
+ex:Mysterio a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Oscorp ;
+    ex:alias "Mysterio" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1964"^^xsd:gYear ;
+    ex:hasPower ex:Illusion ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Quentin Beck" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Mysterio" .
+
+ex:Mystique a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Mystique" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1978"^^xsd:gYear ;
+    ex:hasPower ex:ShapeShifting ;
+    ex:operatesIn ex:Madripoor ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Raven Darkholme" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Mutant ;
+    schema:name "Mystique" .
+
+ex:NickFury a ex:Civilian,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Nick Fury" ;
+    ex:alignment "support" ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Nick Fury" ;
+    ex:roleLabel "Civilian" ;
+    ex:species ex:Human ;
+    schema:name "Nick Fury" .
+
+ex:None a ex:Power ;
+    schema:name "None" .
+
+ex:Oracle a ex:Civilian,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Oracle" ;
+    ex:alignment "support" ;
+    ex:firstAppearanceYear "1989"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect ;
+    ex:memberOf ex:BirdsOfPrey ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Barbara Gordon" ;
+    ex:roleLabel "Civilian" ;
+    ex:species ex:Human ;
+    schema:name "Oracle" .
+
+ex:PepperPotts a ex:Civilian,
+        schema:Person ;
+    ex:affiliatedWith ex:StarkIndustries ;
+    ex:alias "Pepper Potts" ;
+    ex:alignment "support" ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Virginia Potts" ;
+    ex:roleLabel "Civilian" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:ArcReactor ;
+    schema:name "Pepper Potts" .
+
+ex:PoisonIvy a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LeagueOfAssassins ;
+    ex:alias "Poison Ivy" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1966"^^xsd:gYear ;
+    ex:hasPower ex:ElementalControl ;
+    ex:memberOf ex:SuicideSquad ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Pamela Isley" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Poison Ivy" .
+
+ex:Punisher a ex:Antihero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Punisher" ;
+    ex:alignment "antihero" ;
+    ex:firstAppearanceYear "1974"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts ;
+    ex:memberOf ex:Thunderbolts ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Frank Castle" ;
+    ex:roleLabel "Antihero" ;
+    ex:species ex:Human ;
+    schema:name "Punisher" .
+
+ex:RaSAlGhul a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LeagueOfAssassins ;
+    ex:alias "Ra's al Ghul" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1971"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Ra's al Ghul" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Ra's al Ghul" .
+
+ex:Raven a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Raven" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1980"^^xsd:gYear ;
+    ex:hasPower ex:Magic,
+        ex:Telekinesis,
+        ex:Teleportation ;
+    ex:memberOf ex:TeenTitans ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Rachel Roth" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Alien ;
+    schema:name "Raven" .
+
+ex:RecipeCategory rdfs:label "Recipe category"@en ;
+    rdfs:comment "A category such as soup, salad, or pasta."@en .
+
+ex:Riddler a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LeagueOfAssassins ;
+    ex:alias "Riddler" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1948"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Edward Nygma" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Riddler" .
+
+ex:Rogue a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:XavierInstitute ;
+    ex:alias "Rogue" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1981"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:Invulnerability,
+        ex:SuperStrength ;
+    ex:memberOf ex:XMen ;
+    ex:operatesIn ex:Genosha ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Anna Marie" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Mutant ;
+    schema:name "Rogue" .
+
+ex:Runaways a ex:Team ;
+    schema:name "Runaways" .
+
+ex:Sandman a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Oscorp ;
+    ex:alias "Sandman" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:ShapeShifting ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Flint Marko" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Sandman" .
+
+ex:Scarecrow a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LeagueOfAssassins ;
+    ex:alias "Scarecrow" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1941"^^xsd:gYear ;
+    ex:hasPower ex:Chemistry ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Jonathan Crane" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Scarecrow" .
+
+ex:ScarletWitch a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Scarlet Witch" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1964"^^xsd:gYear ;
+    ex:hasPower ex:Magic,
+        ex:Telekinesis ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Wanda Maximoff" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Mutant ;
+    schema:name "Scarlet Witch" .
+
+ex:Shazam a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Shazam" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1940"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:Magic,
+        ex:SuperStrength ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:Metropolis ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Billy Batson" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:HelmetOfFate ;
+    schema:name "Shazam" .
+
+ex:SheHulk a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "She-Hulk" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1980"^^xsd:gYear ;
+    ex:hasPower ex:Invulnerability,
+        ex:SuperStrength ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Jennifer Walters" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "She-Hulk" .
+
+ex:SilverSurfer a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Silver Surfer" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1966"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection,
+        ex:Flight ;
+    ex:memberOf ex:Defenders ;
+    ex:operatesIn ex:Knowhere ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Norrin Radd" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Alien ;
+    schema:name "Silver Surfer" .
+
+ex:Starfire a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Starfire" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1980"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection,
+        ex:Flight,
+        ex:Invulnerability ;
+    ex:memberOf ex:TeenTitans ;
+    ex:operatesIn ex:Bludhaven ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Koriand'r" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Alien ;
+    schema:name "Starfire" .
+
+ex:Static a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Static" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1993"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection ;
+    ex:memberOf ex:YoungJustice ;
+    ex:operatesIn ex:DakotaCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Virgil Hawkins" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Static" .
+
+ex:Supergirl a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:DailyPlanet ;
+    ex:alias "Supergirl" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1959"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:Invulnerability,
+        ex:SuperSpeed,
+        ex:SuperStrength ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:Metropolis ;
+    ex:originWorld ex:Krypton ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Kara Zor-El" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Kryptonian ;
+    schema:name "Supergirl" .
+
+ex:Taskmaster a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Taskmaster" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1980"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts ;
+    ex:memberOf ex:Thunderbolts ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Tony Masters" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Taskmaster" .
+
+ex:Thanos a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Thanos" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1973"^^xsd:gYear ;
+    ex:hasPower ex:Invulnerability,
+        ex:SuperStrength ;
+    ex:operatesIn ex:Knowhere ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Thanos" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Alien ;
+    ex:usesArtifact ex:InfinityGauntlet ;
+    schema:name "Thanos" .
+
+ex:Thing a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:StarkIndustries ;
+    ex:alias "Thing" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1961"^^xsd:gYear ;
+    ex:hasPower ex:Invulnerability,
+        ex:SuperStrength ;
+    ex:memberOf ex:FantasticFour ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Ben Grimm" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Thing" .
+
+ex:TwoFace a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LeagueOfAssassins ;
+    ex:alias "Two-Face" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1942"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Harvey Dent" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Two-Face" .
+
+ex:ValiantComics a ex:Publisher ;
+    schema:name "Valiant Comics" .
+
+ex:Venom a ex:Antihero,
+        schema:Person ;
+    ex:affiliatedWith ex:Oscorp ;
+    ex:alias "Venom" ;
+    ex:alignment "antihero" ;
+    ex:firstAppearanceYear "1988"^^xsd:gYear ;
+    ex:hasPower ex:ShapeShifting,
+        ex:SuperStrength,
+        ex:WebSlinging ;
+    ex:memberOf ex:Thunderbolts ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Eddie Brock" ;
+    ex:roleLabel "Antihero" ;
+    ex:species ex:Symbiote ;
+    schema:name "Venom" .
+
+ex:Vision a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Vision" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1968"^^xsd:gYear ;
+    ex:hasPower ex:DensityControl,
+        ex:EnergyProjection,
+        ex:Flight ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Vision" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Alien ;
+    ex:usesArtifact ex:MindStone ;
+    schema:name "Vision" .
+
+ex:Vulture a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Oscorp ;
+    ex:alias "Vulture" ;
+    ex:alignment "villain" ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:Flight ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Adrian Toomes" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Vulture" .
+
+ex:Wasp a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:StarkIndustries ;
+    ex:alias "Wasp" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:SizeChanging ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Janet van Dyne" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Wasp" .
+
+ex:WinterSoldier a ex:Antihero,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Winter Soldier" ;
+    ex:alignment "antihero" ;
+    ex:firstAppearanceYear "1941"^^xsd:gYear ;
+    ex:hasPower ex:EnhancedSenses,
+        ex:MartialArts ;
+    ex:memberOf ex:Thunderbolts ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Bucky Barnes" ;
+    ex:roleLabel "Antihero" ;
+    ex:species ex:Human ;
+    schema:name "Winter Soldier" .
+
+ex:Zatanna a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Zatanna" ;
+    ex:alignment "hero" ;
+    ex:firstAppearanceYear "1964"^^xsd:gYear ;
+    ex:hasPower ex:Magic,
+        ex:Teleportation ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Zatanna Zatara" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:HelmetOfFate ;
+    schema:name "Zatanna" .
+
+ex:affiliatedWith a rdf:Property .
+
+ex:alias a rdf:Property .
+
+ex:alignment a rdf:Property .
+
+ex:allyOf a rdf:Property ;
+    rdfs:label "ally of"@en ;
+    rdfs:comment "Links a character to an ally."@en .
+
+ex:cuisineType rdfs:label "cuisine type"@en ;
+    rdfs:comment "Links a recipe to its cuisine."@en .
+
+ex:diet rdfs:label "diet"@en ;
+    rdfs:comment "Links a recipe to a dietary type."@en .
+
+ex:enemyOf a rdf:Property ;
+    rdfs:label "enemy of"@en ;
+    rdfs:comment "Links a character to an enemy."@en .
+
+ex:firstAppearanceYear a rdf:Property .
+
+ex:hasIngredient rdfs:label "has ingredient"@en ;
+    rdfs:comment "Links a recipe to one of its ingredients."@en .
+
+ex:hasPower a rdf:Property ;
+    rdfs:label "has power"@en ;
+    rdfs:comment "Links a character to one of their powers."@en .
+
+ex:memberOf a rdf:Property ;
+    rdfs:label "member of"@en ;
+    rdfs:comment "Links a character to a team."@en .
+
+ex:operatesIn a rdf:Property ;
+    rdfs:label "operates in"@en ;
+    rdfs:comment "Links a character to a city or place of operation."@en .
+
+ex:originWorld a rdf:Property .
+
+ex:publishedBy a rdf:Property .
+
+ex:realName a rdf:Property .
+
+ex:roleLabel a rdf:Property .
+
+ex:species a rdf:Property .
+
+ex:totalTimeMinutes rdfs:label "total time in minutes"@en ;
+    rdfs:comment "The total preparation and cooking time in minutes."@en .
+
+ex:usesArtifact a rdf:Property .
+
+ex:AdamantiumClaws a ex:Power ;
+    schema:name "Adamantium Claws" .
+
+ex:Amazon a ex:Species ;
+    schema:name "Amazon" .
+
+ex:Aquaman a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Aquaman" ;
+    ex:alignment "hero" ;
+    ex:enemyOf ex:BlackManta ;
+    ex:firstAppearanceYear "1941"^^xsd:gYear ;
+    ex:hasPower ex:SuperStrength,
+        ex:Telepathy,
+        ex:UnderwaterBreathing ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:Atlantis ;
+    ex:originWorld ex:Atlantis ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Arthur Curry" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Atlantean ;
+    schema:name "Aquaman" .
+
+ex:Atlantean a ex:Species ;
+    schema:name "Atlantean" .
+
+ex:Batarang a ex:Artifact ;
+    schema:name "Batarang" .
+
+ex:Batgirl a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Batgirl" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:Nightwing ;
+    ex:firstAppearanceYear "1967"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect,
+        ex:MartialArts ;
+    ex:memberOf ex:BirdsOfPrey ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Barbara Gordon" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Batgirl" .
+
+ex:BlackCanary a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Black Canary" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:GreenArrow ;
+    ex:firstAppearanceYear "1947"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection,
+        ex:MartialArts ;
+    ex:memberOf ex:BirdsOfPrey ;
+    ex:operatesIn ex:StarCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Dinah Lance" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Black Canary" .
+
+ex:BlackManta a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Black Manta" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:Aquaman ;
+    ex:firstAppearanceYear "1967"^^xsd:gYear ;
+    ex:hasPower ex:PowerArmor ;
+    ex:operatesIn ex:Atlantis ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "David Kane" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Black Manta" .
+
+ex:BlackPanther a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Black Panther" ;
+    ex:alignment "hero" ;
+    ex:enemyOf ex:Killmonger ;
+    ex:firstAppearanceYear "1966"^^xsd:gYear ;
+    ex:hasPower ex:EnhancedSenses,
+        ex:MartialArts ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:Wakanda ;
+    ex:originWorld ex:Wakanda ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "T'Challa" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Black Panther" .
+
+ex:BlackWidow a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Black Widow" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:CaptainAmerica ;
+    ex:firstAppearanceYear "1964"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Natasha Romanoff" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Black Widow" .
+
+ex:CaptainAmericaSShield a ex:Artifact ;
+    schema:name "Captain America's Shield" .
+
+ex:Cheetah a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LeagueOfAssassins ;
+    ex:alias "Cheetah" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:WonderWoman ;
+    ex:firstAppearanceYear "1987"^^xsd:gYear ;
+    ex:hasPower ex:EnhancedSenses,
+        ex:SuperSpeed ;
+    ex:operatesIn ex:Themyscira ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Barbara Minerva" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Cheetah" .
+
+ex:Cryokinesis a ex:Power ;
+    schema:name "Cryokinesis" .
+
+ex:Cyclops a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:XavierInstitute ;
+    ex:alias "Cyclops" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:JeanGrey ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection ;
+    ex:memberOf ex:XMen ;
+    ex:operatesIn ex:Genosha ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Scott Summers" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Mutant ;
+    schema:name "Cyclops" .
+
+ex:DakotaCity a ex:City ;
+    schema:name "Dakota City" .
+
+ex:DensityControl a ex:Power ;
+    schema:name "Density Control" .
+
+ex:DoctorOctopus a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Oscorp ;
+    ex:alias "Doctor Octopus" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:SpiderMan ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect,
+        ex:PowerArmor ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Otto Octavius" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Doctor Octopus" .
+
+ex:DoomPatrol a ex:Organization,
+        ex:Team ;
+    schema:name "Doom Patrol" .
+
+ex:ElPaso a ex:City ;
+    schema:name "El Paso" .
+
+ex:Flash a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Flash" ;
+    ex:alignment "hero" ;
+    ex:enemyOf ex:ReverseFlash ;
+    ex:firstAppearanceYear "1956"^^xsd:gYear ;
+    ex:hasPower ex:SuperSpeed,
+        ex:TimeManipulation ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:CentralCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Barry Allen" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Flash" .
+
+ex:ForceFields a ex:Power ;
+    schema:name "Force Fields" .
+
+ex:Gamora a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Gamora" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:StarLord ;
+    ex:firstAppearanceYear "1975"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts,
+        ex:SuperStrength ;
+    ex:memberOf ex:GuardiansOfTheGalaxy ;
+    ex:operatesIn ex:Knowhere ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Gamora" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Alien ;
+    schema:name "Gamora" .
+
+ex:GreenArrow a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Green Arrow" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:BlackCanary ;
+    ex:firstAppearanceYear "1941"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:StarCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Oliver Queen" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Green Arrow" .
+
+ex:GreenGoblin a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Oscorp ;
+    ex:alias "Green Goblin" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:SpiderMan ;
+    ex:firstAppearanceYear "1964"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect,
+        ex:SuperStrength ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Norman Osborn" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Green Goblin" .
+
+ex:GreenLantern a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Green Lantern" ;
+    ex:alignment "hero" ;
+    ex:enemyOf ex:Sinestro ;
+    ex:firstAppearanceYear "1959"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection,
+        ex:Flight ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:CoastCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Hal Jordan" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:PowerRing ;
+    schema:name "Green Lantern" .
+
+ex:Groot a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Groot" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:RocketRaccoon ;
+    ex:firstAppearanceYear "1960"^^xsd:gYear ;
+    ex:hasPower ex:HealingFactor,
+        ex:SuperStrength ;
+    ex:memberOf ex:GuardiansOfTheGalaxy ;
+    ex:operatesIn ex:Knowhere ;
+    ex:originWorld ex:Knowhere ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Groot" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Alien ;
+    schema:name "Groot" .
+
+ex:Illusion a ex:Power ;
+    schema:name "Illusion" .
+
+ex:InfinityGauntlet a ex:Artifact ;
+    schema:name "Infinity Gauntlet" .
+
+ex:Invisibility a ex:Power ;
+    schema:name "Invisibility" .
+
+ex:JeanGrey a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:XavierInstitute ;
+    ex:alias "Jean Grey" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:Cyclops ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:Telekinesis,
+        ex:Telepathy ;
+    ex:memberOf ex:XMen ;
+    ex:operatesIn ex:Genosha ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Jean Grey" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Mutant ;
+    schema:name "Jean Grey" .
+
+ex:Joker a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LeagueOfAssassins ;
+    ex:alias "Joker" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:Batman ;
+    ex:firstAppearanceYear "1940"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect ;
+    ex:memberOf ex:SuicideSquad ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Unknown" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Joker" .
+
+ex:Kahndaq a ex:City ;
+    schema:name "Kahndaq" .
+
+ex:Killmonger a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Killmonger" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:BlackPanther ;
+    ex:firstAppearanceYear "1973"^^xsd:gYear ;
+    ex:hasPower ex:EnhancedSenses,
+        ex:MartialArts ;
+    ex:operatesIn ex:Wakanda ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Erik Killmonger" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Killmonger" .
+
+ex:Kingpin a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Kingpin" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:Daredevil ;
+    ex:firstAppearanceYear "1967"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect,
+        ex:SuperStrength ;
+    ex:operatesIn ex:HellSKitchen ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Wilson Fisk" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Kingpin" .
+
+ex:LassoOfTruth a ex:Artifact ;
+    schema:name "Lasso of Truth" .
+
+ex:Latveria a ex:City ;
+    schema:name "Latveria" .
+
+ex:LexLuthor a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:LexCorp ;
+    ex:alias "Lex Luthor" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:Superman ;
+    ex:firstAppearanceYear "1940"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect,
+        ex:PowerArmor ;
+    ex:operatesIn ex:Metropolis ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Lex Luthor" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:PowerArmor ;
+    schema:name "Lex Luthor" .
+
+ex:Loki a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Loki" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:Thor ;
+    ex:firstAppearanceYear "1949"^^xsd:gYear ;
+    ex:hasPower ex:Magic,
+        ex:ShapeShifting ;
+    ex:operatesIn ex:Asgard ;
+    ex:originWorld ex:Asgard ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Loki Laufeyson" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Asgardian ;
+    schema:name "Loki" .
+
+ex:Magneto a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Magneto" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:ProfessorX ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:ElementalControl,
+        ex:Flight ;
+    ex:operatesIn ex:Genosha ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Max Eisenhardt" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Mutant ;
+    schema:name "Magneto" .
+
+ex:MindStone a ex:Artifact ;
+    schema:name "Mind Stone" .
+
+ex:Mjolnir a ex:Artifact ;
+    schema:name "Mjolnir" .
+
+ex:Nightwing a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:WayneEnterprises ;
+    ex:alias "Nightwing" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:Batgirl ;
+    ex:firstAppearanceYear "1984"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts ;
+    ex:memberOf ex:TeenTitans ;
+    ex:operatesIn ex:Bludhaven ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Dick Grayson" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Nightwing" .
+
+ex:OmegaBeams a ex:Power ;
+    schema:name "Omega Beams" .
+
+ex:ProfessorX a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:XavierInstitute ;
+    ex:alias "Professor X" ;
+    ex:alignment "hero" ;
+    ex:enemyOf ex:Magneto ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:Telepathy ;
+    ex:memberOf ex:XMen ;
+    ex:operatesIn ex:Genosha ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Charles Xavier" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Mutant ;
+    schema:name "Professor X" .
+
+ex:RedSkull a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Red Skull" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:CaptainAmerica ;
+    ex:firstAppearanceYear "1941"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Johann Schmidt" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Red Skull" .
+
+ex:ReverseFlash a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Reverse Flash" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:Flash ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:SuperSpeed,
+        ex:TimeManipulation ;
+    ex:operatesIn ex:CentralCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Eobard Thawne" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Human ;
+    schema:name "Reverse Flash" .
+
+ex:RocketRaccoon a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Rocket Raccoon" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:Groot ;
+    ex:firstAppearanceYear "1976"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect,
+        ex:MartialArts ;
+    ex:memberOf ex:GuardiansOfTheGalaxy ;
+    ex:operatesIn ex:Knowhere ;
+    ex:originWorld ex:Knowhere ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Rocket" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Alien ;
+    schema:name "Rocket Raccoon" .
+
+ex:Sabretooth a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Sabretooth" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:Wolverine ;
+    ex:firstAppearanceYear "1977"^^xsd:gYear ;
+    ex:hasPower ex:EnhancedSenses,
+        ex:HealingFactor ;
+    ex:operatesIn ex:Madripoor ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Victor Creed" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Mutant ;
+    schema:name "Sabretooth" .
+
+ex:Sinestro a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Sinestro" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:GreenLantern ;
+    ex:firstAppearanceYear "1961"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection,
+        ex:Flight ;
+    ex:operatesIn ex:CoastCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Thaal Sinestro" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Alien ;
+    ex:usesArtifact ex:PowerRing ;
+    schema:name "Sinestro" .
+
+ex:StarLord a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Star-Lord" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:Gamora ;
+    ex:firstAppearanceYear "1976"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts ;
+    ex:memberOf ex:GuardiansOfTheGalaxy ;
+    ex:operatesIn ex:Knowhere ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Peter Quill" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Star-Lord" .
+
+ex:Storm a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:XavierInstitute ;
+    ex:alias "Storm" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:Wolverine ;
+    ex:firstAppearanceYear "1975"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:WeatherControl ;
+    ex:memberOf ex:XMen ;
+    ex:operatesIn ex:Genosha ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Ororo Munroe" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Mutant ;
+    schema:name "Storm" .
+
+ex:Thor a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Thor" ;
+    ex:alignment "hero" ;
+    ex:enemyOf ex:Loki ;
+    ex:firstAppearanceYear "1962"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:SuperStrength,
+        ex:WeatherControl ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:Asgard ;
+    ex:originWorld ex:Asgard ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Thor Odinson" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Asgardian ;
+    ex:usesArtifact ex:Mjolnir ;
+    schema:name "Thor" .
+
+ex:Ultron a ex:Villain,
+        schema:Person ;
+    ex:affiliatedWith ex:Hydra ;
+    ex:alias "Ultron" ;
+    ex:alignment "villain" ;
+    ex:enemyOf ex:IronMan ;
+    ex:firstAppearanceYear "1968"^^xsd:gYear ;
+    ex:hasPower ex:EnergyProjection,
+        ex:Technopathy ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Ultron" ;
+    ex:roleLabel "Villain" ;
+    ex:species ex:Alien ;
+    schema:name "Ultron" .
+
+ex:UnderwaterBreathing a ex:Power ;
+    schema:name "Underwater Breathing" .
+
+ex:WebShooters a ex:Artifact ;
+    schema:name "Web Shooters" .
+
+ex:Apokolips a ex:City,
+        ex:Nation ;
+    schema:name "Apokolips" .
+
+ex:ArcReactor a ex:Artifact ;
+    schema:name "Arc Reactor" .
+
+ex:Batman a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:WayneEnterprises ;
+    ex:alias "Batman" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:Superman ;
+    ex:enemyOf ex:Joker ;
+    ex:firstAppearanceYear "1939"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect,
+        ex:MartialArts ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:GothamCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Bruce Wayne" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:Batarang ;
+    schema:name "Batman" .
+
+ex:Chemistry a ex:Power ;
+    schema:name "Chemistry" .
+
+ex:CoastCity a ex:City ;
+    schema:name "Coast City" .
+
+ex:Daredevil a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Daredevil" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:SpiderMan ;
+    ex:enemyOf ex:Kingpin ;
+    ex:firstAppearanceYear "1964"^^xsd:gYear ;
+    ex:hasPower ex:EnhancedSenses,
+        ex:MartialArts ;
+    ex:memberOf ex:Defenders ;
+    ex:operatesIn ex:HellSKitchen ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Matt Murdock" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    schema:name "Daredevil" .
+
+ex:ElementalControl a ex:Power ;
+    schema:name "Elemental Control" .
+
+ex:IronMan a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:StarkIndustries ;
+    ex:alias "Iron Man" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:CaptainAmerica ;
+    ex:enemyOf ex:Ultron ;
+    ex:firstAppearanceYear "1963"^^xsd:gYear ;
+    ex:hasPower ex:GeniusIntellect,
+        ex:PowerArmor ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Tony Stark" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:ArcReactor ;
+    schema:name "Iron Man" .
+
+ex:MotherBox a ex:Artifact ;
+    schema:name "Mother Box" .
+
+ex:PowerRing a ex:Artifact ;
+    schema:name "Power Ring" .
+
+ex:Pyrokinesis a ex:Power ;
+    schema:name "Pyrokinesis" .
+
+ex:StarCity a ex:City ;
+    schema:name "Star City" .
+
+ex:Symbiote a ex:Species ;
+    schema:name "Symbiote" .
+
+ex:WeatherControl a ex:Power ;
+    schema:name "Weather Control" .
+
+ex:WebSlinging a ex:Power ;
+    schema:name "Web Slinging" .
+
+ex:Wolverine a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:XavierInstitute ;
+    ex:alias "Wolverine" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:Storm ;
+    ex:enemyOf ex:Sabretooth ;
+    ex:firstAppearanceYear "1974"^^xsd:gYear ;
+    ex:hasPower ex:AdamantiumClaws,
+        ex:EnhancedSenses,
+        ex:HealingFactor ;
+    ex:memberOf ex:XMen ;
+    ex:operatesIn ex:Genosha ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Logan" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Mutant ;
+    schema:name "Wolverine" .
+
+ex:WonderWoman a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:ARGUS ;
+    ex:alias "Wonder Woman" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:Superman ;
+    ex:enemyOf ex:Cheetah ;
+    ex:firstAppearanceYear "1941"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:Invulnerability,
+        ex:SuperStrength ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:Themyscira ;
+    ex:originWorld ex:Themyscira ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Diana Prince" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Amazon ;
+    ex:usesArtifact ex:LassoOfTruth ;
+    schema:name "Wonder Woman" .
+
+ex:YoungJustice a ex:Team ;
+    schema:name "Young Justice" .
+
+ex:Asgardian a ex:Species ;
+    schema:name "Asgardian" .
+
+ex:Atlantis a ex:City,
+        ex:Nation ;
+    schema:name "Atlantis" .
+
+ex:CaptainAmerica a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:SHIELD ;
+    ex:alias "Captain America" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:BlackWidow,
+        ex:IronMan ;
+    ex:enemyOf ex:RedSkull ;
+    ex:firstAppearanceYear "1941"^^xsd:gYear ;
+    ex:hasPower ex:MartialArts,
+        ex:SuperStrength ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Steve Rogers" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:CaptainAmericaSShield ;
+    schema:name "Captain America" .
+
+ex:CentralCity a ex:City ;
+    schema:name "Central City" .
+
+ex:Krypton a ex:Nation ;
+    schema:name "Krypton" .
+
+ex:Kryptonian a ex:Species ;
+    schema:name "Kryptonian" .
+
+ex:LexCorp a ex:Organization ;
+    schema:name "LexCorp" .
+
+ex:SizeChanging a ex:Power ;
+    schema:name "Size Changing" .
+
+ex:SpiderMan a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:Oscorp ;
+    ex:alias "Spider-Man" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:Daredevil ;
+    ex:enemyOf ex:DoctorOctopus,
+        ex:GreenGoblin ;
+    ex:firstAppearanceYear "1962"^^xsd:gYear ;
+    ex:hasPower ex:EnhancedSenses,
+        ex:SuperStrength,
+        ex:WebSlinging ;
+    ex:memberOf ex:Avengers ;
+    ex:operatesIn ex:NewYorkCity ;
+    ex:originWorld ex:Earth ;
+    ex:publishedBy ex:Marvel ;
+    ex:realName "Peter Parker" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Human ;
+    ex:usesArtifact ex:WebShooters ;
+    schema:name "Spider-Man" .
+
+ex:Superman a ex:Superhero,
+        schema:Person ;
+    ex:affiliatedWith ex:DailyPlanet ;
+    ex:alias "Superman" ;
+    ex:alignment "hero" ;
+    ex:allyOf ex:Batman,
+        ex:WonderWoman ;
+    ex:enemyOf ex:LexLuthor ;
+    ex:firstAppearanceYear "1938"^^xsd:gYear ;
+    ex:hasPower ex:Flight,
+        ex:Invulnerability,
+        ex:SuperSpeed,
+        ex:SuperStrength ;
+    ex:memberOf ex:JusticeLeague ;
+    ex:operatesIn ex:Metropolis ;
+    ex:originWorld ex:Krypton ;
+    ex:publishedBy ex:DCComics ;
+    ex:realName "Clark Kent" ;
+    ex:roleLabel "Superhero" ;
+    ex:species ex:Kryptonian ;
+    schema:name "Superman" .
+
+ex:Technopathy a ex:Power ;
+    schema:name "Technopathy" .
+
+ex:Telekinesis a ex:Power ;
+    schema:name "Telekinesis" .
+
+ex:TimeManipulation a ex:Power ;
+    schema:name "Time Manipulation" .
+
+ex:Wakanda a ex:City,
+        ex:Nation ;
+    schema:name "Wakanda" .
+
+ex:WayneEnterprises a ex:Organization ;
+    schema:name "Wayne Enterprises" .
+
+ex:Bludhaven a ex:City ;
+    schema:name "Bludhaven" .
+
+ex:DailyPlanet a ex:Organization ;
+    schema:name "Daily Planet" .
+
+ex:FantasticFour a ex:Team ;
+    schema:name "Fantastic Four" .
+
+ex:HealingFactor a ex:Power ;
+    schema:name "Healing Factor" .
+
+ex:HellSKitchen a ex:City ;
+    schema:name "Hell's Kitchen" .
+
+ex:SuicideSquad a ex:Team ;
+    schema:name "Suicide Squad" .
+
+ex:TeenTitans a ex:Team ;
+    schema:name "Teen Titans" .
+
+ex:Telepathy a ex:Power ;
+    schema:name "Telepathy" .
+
+ex:Themyscira a ex:City,
+        ex:Nation ;
+    schema:name "Themyscira" .
+
+ex:Thunderbolts a ex:Team ;
+    schema:name "Thunderbolts" .
+
+ex:BirdsOfPrey a ex:Team ;
+    schema:name "Birds of Prey" .
+
+ex:GuardiansOfTheGalaxy a ex:Team ;
+    schema:name "Guardians of the Galaxy" .
+
+ex:HelmetOfFate a ex:Artifact ;
+    schema:name "Helmet of Fate" .
+
+ex:Madripoor a ex:City,
+        ex:Nation ;
+    schema:name "Madripoor" .
+
+ex:SuperSpeed a ex:Power ;
+    schema:name "Super Speed" .
+
+ex:Teleportation a ex:Power ;
+    schema:name "Teleportation" .
+
+ex:Asgard a ex:City,
+        ex:Nation ;
+    schema:name "Asgard" .
+
+ex:Defenders a ex:Team ;
+    schema:name "Defenders" .
+
+ex:PowerArmor a ex:Artifact,
+        ex:Power ;
+    schema:name "Power Armor" .
+
+ex:StarkIndustries a ex:Organization ;
+    schema:name "Stark Industries" .
+
+ex:XMen a ex:Team ;
+    schema:name "X-Men" .
+
+ex:XavierInstitute a ex:Organization ;
+    schema:name "Xavier Institute" .
+
+ex:Genosha a ex:City,
+        ex:Nation ;
+    schema:name "Genosha" .
+
+ex:Knowhere a ex:City,
+        ex:Nation ;
+    schema:name "Knowhere" .
+
+ex:Oscorp a ex:Organization ;
+    schema:name "Oscorp" .
+
+ex:ShapeShifting a ex:Power ;
+    schema:name "Shape Shifting" .
+
+ex:EnhancedSenses a ex:Power ;
+    schema:name "Enhanced Senses" .
+
+ex:LeagueOfAssassins a ex:Organization ;
+    schema:name "League of Assassins" .
+
+ex:Metropolis a ex:City ;
+    schema:name "Metropolis" .
+
+ex:Magic a ex:Power ;
+    schema:name "Magic" .
+
+ex:Mutant a ex:Species ;
+    schema:name "Mutant" .
+
+ex:Alien a ex:Species ;
+    schema:name "Alien" .
+
+ex:JusticeLeague a ex:Team ;
+    schema:name "Justice League" .
+
+ex:EnergyProjection a ex:Power ;
+    schema:name "Energy Projection" .
+
+ex:Invulnerability a ex:Power ;
+    schema:name "Invulnerability" .
+
+ex:Avengers a ex:Team ;
+    schema:name "Avengers" .
+
+ex:Hydra a ex:Organization ;
+    schema:name "Hydra" .
+
+ex:GeniusIntellect a ex:Power ;
+    schema:name "Genius Intellect" .
+
+ex:GothamCity a ex:City ;
+    schema:name "Gotham City" .
+
+ex:Flight a ex:Power ;
+    schema:name "Flight" .
+
+ex:ARGUS a ex:Organization ;
+    schema:name "A.R.G.U.S." .
+
+ex:MartialArts a ex:Power ;
+    schema:name "Martial Arts" .
+
+ex:SHIELD a ex:Organization ;
+    schema:name "S.H.I.E.L.D." .
+
+ex:SuperStrength a ex:Power ;
+    schema:name "Super Strength" .
+
+ex:NewYorkCity a ex:City ;
+    schema:name "New York City" .
+
+ex:DCComics a ex:Publisher ;
+    schema:name "DC Comics" .
+
+ex:Marvel a ex:Publisher ;
+    schema:name "Marvel" .
+
+ex:Human a ex:Species ;
+    schema:name "Human" .
+
+ex:Earth a ex:Nation ;
+    schema:name "Earth" .
+
