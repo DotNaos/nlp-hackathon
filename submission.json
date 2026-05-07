@@ -1,0 +1,2253 @@
+[
+  {
+    "question_id": "test_super_01",
+    "graph": "superhero_universe",
+    "question_de": "Nenne alle Antiheld:innen.",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x a ex:Antihero .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Blade"
+      },
+      {
+        "name": "Catwoman"
+      },
+      {
+        "name": "Deadpool"
+      },
+      {
+        "name": "Ghost Rider"
+      },
+      {
+        "name": "Harley Quinn"
+      },
+      {
+        "name": "John Constantine"
+      },
+      {
+        "name": "Moon Knight"
+      },
+      {
+        "name": "Punisher"
+      },
+      {
+        "name": "Venom"
+      },
+      {
+        "name": "Winter Soldier"
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_02",
+    "graph": "superhero_universe",
+    "question_de": "Welche Figuren gehoeren zur Justice League?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:memberOf ex:JusticeLeague .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Aquaman"
+      },
+      {
+        "name": "Batman"
+      },
+      {
+        "name": "Booster Gold"
+      },
+      {
+        "name": "Cyborg"
+      },
+      {
+        "name": "Doctor Fate"
+      },
+      {
+        "name": "Flash"
+      },
+      {
+        "name": "Green Arrow"
+      },
+      {
+        "name": "Green Lantern"
+      },
+      {
+        "name": "Martian Manhunter"
+      },
+      {
+        "name": "Shazam"
+      },
+      {
+        "name": "Supergirl"
+      },
+      {
+        "name": "Superman"
+      },
+      {
+        "name": "Wonder Woman"
+      },
+      {
+        "name": "Zatanna"
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_03",
+    "graph": "superhero_universe",
+    "question_de": "Welche Figuren stammen aus Marvel?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:publishedBy ex:Marvel .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Ant-Man"
+      },
+      {
+        "name": "Apocalypse"
+      },
+      {
+        "name": "Aunt May"
+      },
+      {
+        "name": "Black Panther"
+      },
+      {
+        "name": "Black Widow"
+      },
+      {
+        "name": "Blade"
+      },
+      {
+        "name": "Bullseye"
+      },
+      {
+        "name": "Captain America"
+      },
+      {
+        "name": "Captain Marvel"
+      },
+      {
+        "name": "Carnage"
+      },
+      {
+        "name": "Cyclops"
+      },
+      {
+        "name": "Daredevil"
+      },
+      {
+        "name": "Deadpool"
+      },
+      {
+        "name": "Doctor Doom"
+      },
+      {
+        "name": "Doctor Octopus"
+      },
+      {
+        "name": "Doctor Strange"
+      },
+      {
+        "name": "Drax"
+      },
+      {
+        "name": "Electro"
+      },
+      {
+        "name": "Gambit"
+      },
+      {
+        "name": "Gamora"
+      },
+      {
+        "name": "Ghost Rider"
+      },
+      {
+        "name": "Green Goblin"
+      },
+      {
+        "name": "Groot"
+      },
+      {
+        "name": "Hawkeye"
+      },
+      {
+        "name": "Hela"
+      },
+      {
+        "name": "Hulk"
+      },
+      {
+        "name": "Human Torch"
+      },
+      {
+        "name": "Invisible Woman"
+      },
+      {
+        "name": "Iron Fist"
+      },
+      {
+        "name": "Iron Man"
+      },
+      {
+        "name": "Jean Grey"
+      },
+      {
+        "name": "Jessica Jones"
+      },
+      {
+        "name": "Killmonger"
+      },
+      {
+        "name": "Kingpin"
+      },
+      {
+        "name": "Kraven the Hunter"
+      },
+      {
+        "name": "Loki"
+      },
+      {
+        "name": "Luke Cage"
+      },
+      {
+        "name": "Magik"
+      },
+      {
+        "name": "Magneto"
+      },
+      {
+        "name": "Mary Jane Watson"
+      },
+      {
+        "name": "Moon Knight"
+      },
+      {
+        "name": "Mr. Fantastic"
+      },
+      {
+        "name": "Ms. Marvel"
+      },
+      {
+        "name": "Mysterio"
+      },
+      {
+        "name": "Mystique"
+      },
+      {
+        "name": "Nick Fury"
+      },
+      {
+        "name": "Pepper Potts"
+      },
+      {
+        "name": "Professor X"
+      },
+      {
+        "name": "Punisher"
+      },
+      {
+        "name": "Red Skull"
+      },
+      {
+        "name": "Rocket Raccoon"
+      },
+      {
+        "name": "Rogue"
+      },
+      {
+        "name": "Sabretooth"
+      },
+      {
+        "name": "Sandman"
+      },
+      {
+        "name": "Scarlet Witch"
+      },
+      {
+        "name": "She-Hulk"
+      },
+      {
+        "name": "Silver Surfer"
+      },
+      {
+        "name": "Spider-Man"
+      },
+      {
+        "name": "Star-Lord"
+      },
+      {
+        "name": "Storm"
+      },
+      {
+        "name": "Taskmaster"
+      },
+      {
+        "name": "Thanos"
+      },
+      {
+        "name": "Thing"
+      },
+      {
+        "name": "Thor"
+      },
+      {
+        "name": "Ultron"
+      },
+      {
+        "name": "Venom"
+      },
+      {
+        "name": "Vision"
+      },
+      {
+        "name": "Vulture"
+      },
+      {
+        "name": "Wasp"
+      },
+      {
+        "name": "Winter Soldier"
+      },
+      {
+        "name": "Wolverine"
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_04",
+    "graph": "superhero_universe",
+    "question_de": "Welche Figuren haben Super Strength?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:hasPower ex:SuperStrength .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Aquaman"
+      },
+      {
+        "name": "Bane"
+      },
+      {
+        "name": "Black Adam"
+      },
+      {
+        "name": "Captain America"
+      },
+      {
+        "name": "Captain Marvel"
+      },
+      {
+        "name": "Carnage"
+      },
+      {
+        "name": "Cyborg"
+      },
+      {
+        "name": "Darkseid"
+      },
+      {
+        "name": "Drax"
+      },
+      {
+        "name": "Gamora"
+      },
+      {
+        "name": "General Zod"
+      },
+      {
+        "name": "Green Goblin"
+      },
+      {
+        "name": "Groot"
+      },
+      {
+        "name": "Hulk"
+      },
+      {
+        "name": "Jessica Jones"
+      },
+      {
+        "name": "Kingpin"
+      },
+      {
+        "name": "Luke Cage"
+      },
+      {
+        "name": "Rogue"
+      },
+      {
+        "name": "Shazam"
+      },
+      {
+        "name": "She-Hulk"
+      },
+      {
+        "name": "Spider-Man"
+      },
+      {
+        "name": "Supergirl"
+      },
+      {
+        "name": "Superman"
+      },
+      {
+        "name": "Thanos"
+      },
+      {
+        "name": "Thing"
+      },
+      {
+        "name": "Thor"
+      },
+      {
+        "name": "Venom"
+      },
+      {
+        "name": "Wonder Woman"
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_05",
+    "graph": "superhero_universe",
+    "question_de": "Welche Figuren nutzen ein Artefakt?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:usesArtifact ?artifact .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Batman"
+      },
+      {
+        "name": "Black Adam"
+      },
+      {
+        "name": "Captain America"
+      },
+      {
+        "name": "Cyborg"
+      },
+      {
+        "name": "Darkseid"
+      },
+      {
+        "name": "Doctor Fate"
+      },
+      {
+        "name": "Green Lantern"
+      },
+      {
+        "name": "Iron Man"
+      },
+      {
+        "name": "John Constantine"
+      },
+      {
+        "name": "Lex Luthor"
+      },
+      {
+        "name": "Pepper Potts"
+      },
+      {
+        "name": "Shazam"
+      },
+      {
+        "name": "Sinestro"
+      },
+      {
+        "name": "Spider-Man"
+      },
+      {
+        "name": "Thanos"
+      },
+      {
+        "name": "Thor"
+      },
+      {
+        "name": "Vision"
+      },
+      {
+        "name": "Wonder Woman"
+      },
+      {
+        "name": "Zatanna"
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_06",
+    "graph": "superhero_universe",
+    "question_de": "Welche Figuren sind in New York City aktiv?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:operatesIn ex:NewYorkCity .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Ant-Man"
+      },
+      {
+        "name": "Aunt May"
+      },
+      {
+        "name": "Black Widow"
+      },
+      {
+        "name": "Blade"
+      },
+      {
+        "name": "Captain America"
+      },
+      {
+        "name": "Captain Marvel"
+      },
+      {
+        "name": "Carnage"
+      },
+      {
+        "name": "Doctor Octopus"
+      },
+      {
+        "name": "Doctor Strange"
+      },
+      {
+        "name": "Electro"
+      },
+      {
+        "name": "Ghost Rider"
+      },
+      {
+        "name": "Green Goblin"
+      },
+      {
+        "name": "Hawkeye"
+      },
+      {
+        "name": "Hulk"
+      },
+      {
+        "name": "Human Torch"
+      },
+      {
+        "name": "Invisible Woman"
+      },
+      {
+        "name": "Iron Fist"
+      },
+      {
+        "name": "Iron Man"
+      },
+      {
+        "name": "Luke Cage"
+      },
+      {
+        "name": "Mary Jane Watson"
+      },
+      {
+        "name": "Moon Knight"
+      },
+      {
+        "name": "Mr. Fantastic"
+      },
+      {
+        "name": "Ms. Marvel"
+      },
+      {
+        "name": "Mysterio"
+      },
+      {
+        "name": "Nick Fury"
+      },
+      {
+        "name": "Pepper Potts"
+      },
+      {
+        "name": "Punisher"
+      },
+      {
+        "name": "Red Skull"
+      },
+      {
+        "name": "Sandman"
+      },
+      {
+        "name": "Scarlet Witch"
+      },
+      {
+        "name": "She-Hulk"
+      },
+      {
+        "name": "Spider-Man"
+      },
+      {
+        "name": "Taskmaster"
+      },
+      {
+        "name": "Thing"
+      },
+      {
+        "name": "Ultron"
+      },
+      {
+        "name": "Venom"
+      },
+      {
+        "name": "Vision"
+      },
+      {
+        "name": "Vulture"
+      },
+      {
+        "name": "Wasp"
+      },
+      {
+        "name": "Winter Soldier"
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_07",
+    "graph": "superhero_universe",
+    "question_de": "Welche Figuren sind Kryptonian?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:species ex:Kryptonian .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "General Zod"
+      },
+      {
+        "name": "Supergirl"
+      },
+      {
+        "name": "Superman"
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_08",
+    "graph": "superhero_universe",
+    "question_de": "Welche Figuren gehoeren zu den X-Men und sind Mutant:innen?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:memberOf ex:XMen .\n  ?x ex:species ex:Mutant .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Cyclops"
+      },
+      {
+        "name": "Gambit"
+      },
+      {
+        "name": "Jean Grey"
+      },
+      {
+        "name": "Magik"
+      },
+      {
+        "name": "Professor X"
+      },
+      {
+        "name": "Rogue"
+      },
+      {
+        "name": "Storm"
+      },
+      {
+        "name": "Wolverine"
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_09",
+    "graph": "superhero_universe",
+    "question_de": "Welche Figuren koennen fliegen und stammen von Marvel?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?x ex:publishedBy ex:Marvel .\n  ?x ex:hasPower ex:Flight .\n  ?x schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Captain Marvel"
+      },
+      {
+        "name": "Human Torch"
+      },
+      {
+        "name": "Magneto"
+      },
+      {
+        "name": "Rogue"
+      },
+      {
+        "name": "Silver Surfer"
+      },
+      {
+        "name": "Storm"
+      },
+      {
+        "name": "Thor"
+      },
+      {
+        "name": "Vision"
+      },
+      {
+        "name": "Vulture"
+      },
+      {
+        "name": "Wasp"
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_10",
+    "graph": "superhero_universe",
+    "question_de": "Wie viele Figuren gibt es pro Rolle?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?role (COUNT(?x) AS ?count)\nWHERE {\n  ?x ex:roleLabel ?role .\n}\nGROUP BY ?role\nORDER BY DESC(?count) ?role",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "role": "Antihero",
+        "count": 10
+      },
+      {
+        "role": "Villain",
+        "count": 41
+      },
+      {
+        "role": "Superhero",
+        "count": 61
+      },
+      {
+        "role": "Civilian",
+        "count": 9
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_11",
+    "graph": "superhero_universe",
+    "question_de": "Welche Figuren haben mindestens drei Powers?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name (COUNT(?power) AS ?powerCount)\nWHERE {\n  ?x schema:name ?name ;\n     ex:hasPower ?power .\n}\nGROUP BY ?x ?name\nHAVING (COUNT(?power) >= 3)\nORDER BY DESC(?powerCount) ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Aquaman",
+        "powerCount": 3
+      },
+      {
+        "name": "Black Adam",
+        "powerCount": 3
+      },
+      {
+        "name": "Captain Marvel",
+        "powerCount": 3
+      },
+      {
+        "name": "Cyborg",
+        "powerCount": 3
+      },
+      {
+        "name": "Darkseid",
+        "powerCount": 3
+      },
+      {
+        "name": "Doctor Doom",
+        "powerCount": 3
+      },
+      {
+        "name": "Doctor Strange",
+        "powerCount": 3
+      },
+      {
+        "name": "General Zod",
+        "powerCount": 3
+      },
+      {
+        "name": "Martian Manhunter",
+        "powerCount": 4
+      },
+      {
+        "name": "Raven",
+        "powerCount": 3
+      },
+      {
+        "name": "Rogue",
+        "powerCount": 3
+      },
+      {
+        "name": "Shazam",
+        "powerCount": 3
+      },
+      {
+        "name": "Spider-Man",
+        "powerCount": 3
+      },
+      {
+        "name": "Starfire",
+        "powerCount": 3
+      },
+      {
+        "name": "Supergirl",
+        "powerCount": 4
+      },
+      {
+        "name": "Superman",
+        "powerCount": 4
+      },
+      {
+        "name": "Thor",
+        "powerCount": 3
+      },
+      {
+        "name": "Venom",
+        "powerCount": 3
+      },
+      {
+        "name": "Vision",
+        "powerCount": 3
+      },
+      {
+        "name": "Wolverine",
+        "powerCount": 3
+      },
+      {
+        "name": "Wonder Woman",
+        "powerCount": 3
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_12",
+    "graph": "superhero_universe",
+    "question_de": "Welche Verbuendeten hat Batman?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?allyName\nWHERE {\n  ex:Batman ex:allyOf ?ally .\n  ?ally schema:name ?allyName .\n}\nORDER BY ?allyName",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "allyName": "Superman"
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_13",
+    "graph": "superhero_universe",
+    "question_de": "Welche Gegner:innen hat Spider-Man?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?enemyName\nWHERE {\n  ex:SpiderMan ex:enemyOf ?enemy .\n  ?enemy schema:name ?enemyName .\n}\nORDER BY ?enemyName",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "enemyName": "Doctor Octopus"
+      },
+      {
+        "enemyName": "Green Goblin"
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_14",
+    "graph": "superhero_universe",
+    "question_de": "Welche Publisher haben mehr als zehn Figuren?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?publisherName (COUNT(?x) AS ?count)\nWHERE {\n  ?x ex:publishedBy ?publisher .\n  ?publisher schema:name ?publisherName .\n}\nGROUP BY ?publisherName\nHAVING (COUNT(?x) > 10)\nORDER BY DESC(?count) ?publisherName",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "publisherName": "DC Comics",
+        "count": 50
+      },
+      {
+        "publisherName": "Marvel",
+        "count": 71
+      }
+    ]
+  },
+  {
+    "question_id": "test_super_15",
+    "graph": "superhero_universe",
+    "question_de": "Welche Figuren traten ab 1980 erstmals auf?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name ?year\nWHERE {\n  ?x schema:name ?name ;\n     ex:firstAppearanceYear ?year .\n  FILTER(?year >= \"1980\"^^xsd:gYear)\n}\nORDER BY ?year ?name",
+    "execution_success": true,
+    "predicted_result": []
+  },
+  {
+    "question_id": "test_recipe_01",
+    "graph": "recipes_100",
+    "question_de": "Nenne alle vegetarischen Rezepte.",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:diet ex:Vegetarian .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Classic Bean Tacos"
+      },
+      {
+        "name": "Classic Berry Pancakes"
+      },
+      {
+        "name": "Classic Breakfast Oat Bowl"
+      },
+      {
+        "name": "Classic French Mushroom Soup"
+      },
+      {
+        "name": "Classic Greek Salad Plate"
+      },
+      {
+        "name": "Classic Halloumi Burger"
+      },
+      {
+        "name": "Classic Pomodoro Pasta"
+      },
+      {
+        "name": "Green Bean Tacos"
+      },
+      {
+        "name": "Green Berry Pancakes"
+      },
+      {
+        "name": "Green Breakfast Oat Bowl"
+      },
+      {
+        "name": "Green French Mushroom Soup"
+      },
+      {
+        "name": "Green Greek Salad Plate"
+      },
+      {
+        "name": "Green Halloumi Burger"
+      },
+      {
+        "name": "Green Pomodoro Pasta"
+      },
+      {
+        "name": "Quick Bean Tacos"
+      },
+      {
+        "name": "Quick Berry Pancakes"
+      },
+      {
+        "name": "Quick Breakfast Oat Bowl"
+      },
+      {
+        "name": "Quick French Mushroom Soup"
+      },
+      {
+        "name": "Quick Greek Salad Plate"
+      },
+      {
+        "name": "Quick Halloumi Burger"
+      },
+      {
+        "name": "Quick Pomodoro Pasta"
+      },
+      {
+        "name": "Roasted Bean Tacos"
+      },
+      {
+        "name": "Roasted Berry Pancakes"
+      },
+      {
+        "name": "Roasted Breakfast Oat Bowl"
+      },
+      {
+        "name": "Roasted French Mushroom Soup"
+      },
+      {
+        "name": "Roasted Greek Salad Plate"
+      },
+      {
+        "name": "Roasted Halloumi Burger"
+      },
+      {
+        "name": "Roasted Pomodoro Pasta"
+      },
+      {
+        "name": "Spicy Bean Tacos"
+      },
+      {
+        "name": "Spicy Berry Pancakes"
+      },
+      {
+        "name": "Spicy Breakfast Oat Bowl"
+      },
+      {
+        "name": "Spicy French Mushroom Soup"
+      },
+      {
+        "name": "Spicy Greek Salad Plate"
+      },
+      {
+        "name": "Spicy Halloumi Burger"
+      },
+      {
+        "name": "Spicy Pomodoro Pasta"
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_02",
+    "graph": "recipes_100",
+    "question_de": "Welche Rezepte sind Dinner?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:mealType ex:Dinner .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Classic Chicken Stir Fry"
+      },
+      {
+        "name": "Classic Chickpea Curry"
+      },
+      {
+        "name": "Classic French Mushroom Soup"
+      },
+      {
+        "name": "Classic Kimchi Fried Rice"
+      },
+      {
+        "name": "Classic Lentil Stew"
+      },
+      {
+        "name": "Classic Moroccan Couscous"
+      },
+      {
+        "name": "Classic Paella Express"
+      },
+      {
+        "name": "Classic Pomodoro Pasta"
+      },
+      {
+        "name": "Classic Ramen Comfort Bowl"
+      },
+      {
+        "name": "Classic Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Classic Thai Peanut Noodles"
+      },
+      {
+        "name": "Classic Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Classic Turkey Meatballs"
+      },
+      {
+        "name": "Green Chicken Stir Fry"
+      },
+      {
+        "name": "Green Chickpea Curry"
+      },
+      {
+        "name": "Green French Mushroom Soup"
+      },
+      {
+        "name": "Green Kimchi Fried Rice"
+      },
+      {
+        "name": "Green Lentil Stew"
+      },
+      {
+        "name": "Green Moroccan Couscous"
+      },
+      {
+        "name": "Green Paella Express"
+      },
+      {
+        "name": "Green Pomodoro Pasta"
+      },
+      {
+        "name": "Green Ramen Comfort Bowl"
+      },
+      {
+        "name": "Green Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Green Thai Peanut Noodles"
+      },
+      {
+        "name": "Green Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Green Turkey Meatballs"
+      },
+      {
+        "name": "Quick Chicken Stir Fry"
+      },
+      {
+        "name": "Quick Chickpea Curry"
+      },
+      {
+        "name": "Quick French Mushroom Soup"
+      },
+      {
+        "name": "Quick Kimchi Fried Rice"
+      },
+      {
+        "name": "Quick Lentil Stew"
+      },
+      {
+        "name": "Quick Moroccan Couscous"
+      },
+      {
+        "name": "Quick Paella Express"
+      },
+      {
+        "name": "Quick Pomodoro Pasta"
+      },
+      {
+        "name": "Quick Ramen Comfort Bowl"
+      },
+      {
+        "name": "Quick Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Quick Thai Peanut Noodles"
+      },
+      {
+        "name": "Quick Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Quick Turkey Meatballs"
+      },
+      {
+        "name": "Roasted Chicken Stir Fry"
+      },
+      {
+        "name": "Roasted Chickpea Curry"
+      },
+      {
+        "name": "Roasted French Mushroom Soup"
+      },
+      {
+        "name": "Roasted Kimchi Fried Rice"
+      },
+      {
+        "name": "Roasted Lentil Stew"
+      },
+      {
+        "name": "Roasted Moroccan Couscous"
+      },
+      {
+        "name": "Roasted Paella Express"
+      },
+      {
+        "name": "Roasted Pomodoro Pasta"
+      },
+      {
+        "name": "Roasted Ramen Comfort Bowl"
+      },
+      {
+        "name": "Roasted Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Roasted Thai Peanut Noodles"
+      },
+      {
+        "name": "Roasted Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Roasted Turkey Meatballs"
+      },
+      {
+        "name": "Spicy Chicken Stir Fry"
+      },
+      {
+        "name": "Spicy Chickpea Curry"
+      },
+      {
+        "name": "Spicy French Mushroom Soup"
+      },
+      {
+        "name": "Spicy Kimchi Fried Rice"
+      },
+      {
+        "name": "Spicy Lentil Stew"
+      },
+      {
+        "name": "Spicy Moroccan Couscous"
+      },
+      {
+        "name": "Spicy Paella Express"
+      },
+      {
+        "name": "Spicy Pomodoro Pasta"
+      },
+      {
+        "name": "Spicy Ramen Comfort Bowl"
+      },
+      {
+        "name": "Spicy Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Spicy Thai Peanut Noodles"
+      },
+      {
+        "name": "Spicy Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Spicy Turkey Meatballs"
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_03",
+    "graph": "recipes_100",
+    "question_de": "Welche Rezepte enthalten Chickpeas?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:hasIngredient ex:Chickpeas .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Classic Chickpea Curry"
+      },
+      {
+        "name": "Classic Falafel Wrap"
+      },
+      {
+        "name": "Classic Moroccan Couscous"
+      },
+      {
+        "name": "Green Chickpea Curry"
+      },
+      {
+        "name": "Green Falafel Wrap"
+      },
+      {
+        "name": "Green Moroccan Couscous"
+      },
+      {
+        "name": "Quick Chickpea Curry"
+      },
+      {
+        "name": "Quick Falafel Wrap"
+      },
+      {
+        "name": "Quick Moroccan Couscous"
+      },
+      {
+        "name": "Roasted Chickpea Curry"
+      },
+      {
+        "name": "Roasted Falafel Wrap"
+      },
+      {
+        "name": "Roasted Moroccan Couscous"
+      },
+      {
+        "name": "Spicy Chickpea Curry"
+      },
+      {
+        "name": "Spicy Falafel Wrap"
+      },
+      {
+        "name": "Spicy Moroccan Couscous"
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_04",
+    "graph": "recipes_100",
+    "question_de": "Welche japanischen Rezepte gibt es?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:cuisineType ex:Japanese .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Classic Ramen Comfort Bowl"
+      },
+      {
+        "name": "Classic Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Classic Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Green Ramen Comfort Bowl"
+      },
+      {
+        "name": "Green Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Green Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Quick Ramen Comfort Bowl"
+      },
+      {
+        "name": "Quick Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Quick Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Roasted Ramen Comfort Bowl"
+      },
+      {
+        "name": "Roasted Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Roasted Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Spicy Ramen Comfort Bowl"
+      },
+      {
+        "name": "Spicy Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Spicy Tofu Udon Stir Fry"
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_05",
+    "graph": "recipes_100",
+    "question_de": "Welche Rezepte haben weniger als 500 Kalorien?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name ?calories\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:calories ?calories .\n  FILTER(?calories < 500)\n}\nORDER BY ?calories ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Green Greek Salad Plate",
+        "calories": 350
+      },
+      {
+        "name": "Green Breakfast Oat Bowl",
+        "calories": 360
+      },
+      {
+        "name": "Classic Greek Salad Plate",
+        "calories": 380
+      },
+      {
+        "name": "Quick Greek Salad Plate",
+        "calories": 380
+      },
+      {
+        "name": "Spicy Greek Salad Plate",
+        "calories": 380
+      },
+      {
+        "name": "Classic Breakfast Oat Bowl",
+        "calories": 390
+      },
+      {
+        "name": "Quick Breakfast Oat Bowl",
+        "calories": 390
+      },
+      {
+        "name": "Spicy Breakfast Oat Bowl",
+        "calories": 390
+      },
+      {
+        "name": "Green Roesti Bowl",
+        "calories": 400
+      },
+      {
+        "name": "Green French Mushroom Soup",
+        "calories": 420
+      },
+      {
+        "name": "Roasted Greek Salad Plate",
+        "calories": 420
+      },
+      {
+        "name": "Classic Roesti Bowl",
+        "calories": 430
+      },
+      {
+        "name": "Green Lentil Stew",
+        "calories": 430
+      },
+      {
+        "name": "Quick Roesti Bowl",
+        "calories": 430
+      },
+      {
+        "name": "Roasted Breakfast Oat Bowl",
+        "calories": 430
+      },
+      {
+        "name": "Spicy Roesti Bowl",
+        "calories": 430
+      },
+      {
+        "name": "Classic French Mushroom Soup",
+        "calories": 450
+      },
+      {
+        "name": "Quick French Mushroom Soup",
+        "calories": 450
+      },
+      {
+        "name": "Spicy French Mushroom Soup",
+        "calories": 450
+      },
+      {
+        "name": "Classic Lentil Stew",
+        "calories": 460
+      },
+      {
+        "name": "Green Bean Tacos",
+        "calories": 460
+      },
+      {
+        "name": "Quick Lentil Stew",
+        "calories": 460
+      },
+      {
+        "name": "Spicy Lentil Stew",
+        "calories": 460
+      },
+      {
+        "name": "Green Moroccan Couscous",
+        "calories": 470
+      },
+      {
+        "name": "Roasted Roesti Bowl",
+        "calories": 470
+      },
+      {
+        "name": "Classic Bean Tacos",
+        "calories": 490
+      },
+      {
+        "name": "Green Berry Pancakes",
+        "calories": 490
+      },
+      {
+        "name": "Green Pomodoro Pasta",
+        "calories": 490
+      },
+      {
+        "name": "Quick Bean Tacos",
+        "calories": 490
+      },
+      {
+        "name": "Roasted French Mushroom Soup",
+        "calories": 490
+      },
+      {
+        "name": "Spicy Bean Tacos",
+        "calories": 490
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_06",
+    "graph": "recipes_100",
+    "question_de": "Welche Rezepte haben Tofu und sind vegan?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:hasIngredient ex:Tofu .\n  ?r ex:diet ex:Vegan .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Classic Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Green Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Quick Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Roasted Tofu Udon Stir Fry"
+      },
+      {
+        "name": "Spicy Tofu Udon Stir Fry"
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_07",
+    "graph": "recipes_100",
+    "question_de": "Welche Rezepte sind Breakfast und Easy?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:mealType ex:Breakfast .\n  ?r ex:difficulty ex:Easy .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Classic Berry Pancakes"
+      },
+      {
+        "name": "Classic Breakfast Oat Bowl"
+      },
+      {
+        "name": "Green Berry Pancakes"
+      },
+      {
+        "name": "Green Breakfast Oat Bowl"
+      },
+      {
+        "name": "Quick Berry Pancakes"
+      },
+      {
+        "name": "Quick Breakfast Oat Bowl"
+      },
+      {
+        "name": "Roasted Berry Pancakes"
+      },
+      {
+        "name": "Roasted Breakfast Oat Bowl"
+      },
+      {
+        "name": "Spicy Berry Pancakes"
+      },
+      {
+        "name": "Spicy Breakfast Oat Bowl"
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_08",
+    "graph": "recipes_100",
+    "question_de": "Welche Rezepte dauern zwischen 20 und 35 Minuten insgesamt?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name ?time\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:totalTimeMinutes ?time .\n  FILTER(?time >= 20 && ?time <= 35)\n}\nORDER BY ?time ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Classic Bean Tacos",
+        "time": 25
+      },
+      {
+        "name": "Classic Berry Pancakes",
+        "time": 25
+      },
+      {
+        "name": "Classic Chicken Stir Fry",
+        "time": 30
+      },
+      {
+        "name": "Classic Halloumi Burger",
+        "time": 20
+      },
+      {
+        "name": "Classic Kimchi Fried Rice",
+        "time": 25
+      },
+      {
+        "name": "Classic Moroccan Couscous",
+        "time": 35
+      },
+      {
+        "name": "Classic Pomodoro Pasta",
+        "time": 25
+      },
+      {
+        "name": "Classic Ramen Comfort Bowl",
+        "time": 35
+      },
+      {
+        "name": "Classic Teriyaki Salmon Bowl",
+        "time": 35
+      },
+      {
+        "name": "Classic Thai Peanut Noodles",
+        "time": 30
+      },
+      {
+        "name": "Classic Tofu Udon Stir Fry",
+        "time": 30
+      },
+      {
+        "name": "Green Bean Tacos",
+        "time": 25
+      },
+      {
+        "name": "Green Berry Pancakes",
+        "time": 25
+      },
+      {
+        "name": "Green Chicken Stir Fry",
+        "time": 30
+      },
+      {
+        "name": "Green Halloumi Burger",
+        "time": 20
+      },
+      {
+        "name": "Green Kimchi Fried Rice",
+        "time": 25
+      },
+      {
+        "name": "Green Moroccan Couscous",
+        "time": 35
+      },
+      {
+        "name": "Green Pomodoro Pasta",
+        "time": 25
+      },
+      {
+        "name": "Green Ramen Comfort Bowl",
+        "time": 35
+      },
+      {
+        "name": "Green Teriyaki Salmon Bowl",
+        "time": 35
+      },
+      {
+        "name": "Green Thai Peanut Noodles",
+        "time": 30
+      },
+      {
+        "name": "Green Tofu Udon Stir Fry",
+        "time": 30
+      },
+      {
+        "name": "Quick Chicken Stir Fry",
+        "time": 22
+      },
+      {
+        "name": "Quick Chickpea Curry",
+        "time": 32
+      },
+      {
+        "name": "Quick Falafel Wrap",
+        "time": 32
+      },
+      {
+        "name": "Quick French Mushroom Soup",
+        "time": 32
+      },
+      {
+        "name": "Quick Moroccan Couscous",
+        "time": 27
+      },
+      {
+        "name": "Quick Ramen Comfort Bowl",
+        "time": 27
+      },
+      {
+        "name": "Quick Roesti Bowl",
+        "time": 32
+      },
+      {
+        "name": "Quick Teriyaki Salmon Bowl",
+        "time": 27
+      },
+      {
+        "name": "Quick Thai Peanut Noodles",
+        "time": 22
+      },
+      {
+        "name": "Quick Tofu Udon Stir Fry",
+        "time": 22
+      },
+      {
+        "name": "Quick Turkey Meatballs",
+        "time": 32
+      },
+      {
+        "name": "Roasted Bean Tacos",
+        "time": 32
+      },
+      {
+        "name": "Roasted Berry Pancakes",
+        "time": 32
+      },
+      {
+        "name": "Roasted Breakfast Oat Bowl",
+        "time": 22
+      },
+      {
+        "name": "Roasted Greek Salad Plate",
+        "time": 22
+      },
+      {
+        "name": "Roasted Halloumi Burger",
+        "time": 27
+      },
+      {
+        "name": "Roasted Kimchi Fried Rice",
+        "time": 32
+      },
+      {
+        "name": "Roasted Pomodoro Pasta",
+        "time": 32
+      },
+      {
+        "name": "Spicy Bean Tacos",
+        "time": 25
+      },
+      {
+        "name": "Spicy Berry Pancakes",
+        "time": 25
+      },
+      {
+        "name": "Spicy Chicken Stir Fry",
+        "time": 30
+      },
+      {
+        "name": "Spicy Halloumi Burger",
+        "time": 20
+      },
+      {
+        "name": "Spicy Kimchi Fried Rice",
+        "time": 25
+      },
+      {
+        "name": "Spicy Moroccan Couscous",
+        "time": 35
+      },
+      {
+        "name": "Spicy Pomodoro Pasta",
+        "time": 25
+      },
+      {
+        "name": "Spicy Ramen Comfort Bowl",
+        "time": 35
+      },
+      {
+        "name": "Spicy Teriyaki Salmon Bowl",
+        "time": 35
+      },
+      {
+        "name": "Spicy Thai Peanut Noodles",
+        "time": 30
+      },
+      {
+        "name": "Spicy Tofu Udon Stir Fry",
+        "time": 30
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_09",
+    "graph": "recipes_100",
+    "question_de": "Welche Rezepte haben Spice Level genau 0?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name ?level\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:spiceLevel ?level .\n  FILTER(?level = 0)\n}\nORDER BY ?level ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Classic Berry Pancakes",
+        "level": 0
+      },
+      {
+        "name": "Classic Breakfast Oat Bowl",
+        "level": 0
+      },
+      {
+        "name": "Green Berry Pancakes",
+        "level": 0
+      },
+      {
+        "name": "Green Breakfast Oat Bowl",
+        "level": 0
+      },
+      {
+        "name": "Quick Berry Pancakes",
+        "level": 0
+      },
+      {
+        "name": "Quick Breakfast Oat Bowl",
+        "level": 0
+      },
+      {
+        "name": "Roasted Berry Pancakes",
+        "level": 0
+      },
+      {
+        "name": "Roasted Breakfast Oat Bowl",
+        "level": 0
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_10",
+    "graph": "recipes_100",
+    "question_de": "Wie viele Rezepte gibt es pro Cuisine?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?cuisineName (COUNT(?r) AS ?count)\nWHERE {\n  ?r a schema:Recipe ;\n     ex:cuisineType ?cuisine .\n  ?cuisine schema:name ?cuisineName .\n}\nGROUP BY ?cuisineName\nORDER BY DESC(?count) ?cuisineName",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "cuisineName": "American",
+        "count": 10
+      },
+      {
+        "cuisineName": "French",
+        "count": 10
+      },
+      {
+        "cuisineName": "Japanese",
+        "count": 15
+      },
+      {
+        "cuisineName": "British",
+        "count": 5
+      },
+      {
+        "cuisineName": "Chinese",
+        "count": 5
+      },
+      {
+        "cuisineName": "Ethiopian",
+        "count": 5
+      },
+      {
+        "cuisineName": "Greek",
+        "count": 5
+      },
+      {
+        "cuisineName": "Indian",
+        "count": 5
+      },
+      {
+        "cuisineName": "Italian",
+        "count": 5
+      },
+      {
+        "cuisineName": "Korean",
+        "count": 5
+      },
+      {
+        "cuisineName": "Mexican",
+        "count": 5
+      },
+      {
+        "cuisineName": "Middle Eastern",
+        "count": 5
+      },
+      {
+        "cuisineName": "Moroccan",
+        "count": 5
+      },
+      {
+        "cuisineName": "Spanish",
+        "count": 5
+      },
+      {
+        "cuisineName": "Swiss",
+        "count": 5
+      },
+      {
+        "cuisineName": "Thai",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_11",
+    "graph": "recipes_100",
+    "question_de": "Welche Cuisines haben im Durchschnitt mehr als 550 Kalorien?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?cuisineName (AVG(?cal) AS ?avgCalories)\nWHERE {\n  ?r a schema:Recipe ;\n     ex:cuisineType ?cuisine ;\n     ex:calories ?cal .\n  ?cuisine schema:name ?cuisineName .\n}\nGROUP BY ?cuisineName\nHAVING (AVG(?cal) > 550)\nORDER BY DESC(?avgCalories) ?cuisineName",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "cuisineName": "Middle Eastern",
+        "avgCalories": "562"
+      },
+      {
+        "cuisineName": "Chinese",
+        "avgCalories": "582"
+      },
+      {
+        "cuisineName": "Thai",
+        "avgCalories": "592"
+      },
+      {
+        "cuisineName": "Japanese",
+        "avgCalories": "595.3333333333333333333333333"
+      },
+      {
+        "cuisineName": "Indian",
+        "avgCalories": "612"
+      },
+      {
+        "cuisineName": "British",
+        "avgCalories": "652"
+      },
+      {
+        "cuisineName": "Spanish",
+        "avgCalories": "672"
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_12",
+    "graph": "recipes_100",
+    "question_de": "Welche Rezepte haben mindestens sieben Zutaten?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name (COUNT(?ingredient) AS ?ingredientCount)\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:hasIngredient ?ingredient .\n}\nGROUP BY ?r ?name\nHAVING (COUNT(?ingredient) >= 7)\nORDER BY DESC(?ingredientCount) ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Green Falafel Wrap",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Green French Mushroom Soup",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Green Greek Salad Plate",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Green Lentil Stew",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Green Paella Express",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Roasted Chicken Stir Fry",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Roasted French Mushroom Soup",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Roasted Paella Express",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Roasted Roesti Bowl",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Bean Tacos",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Berry Pancakes",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Breakfast Oat Bowl",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Chicken Stir Fry",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Chickpea Curry",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Falafel Wrap",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Greek Salad Plate",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Halloumi Burger",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Kimchi Fried Rice",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Lentil Stew",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Moroccan Couscous",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Paella Express",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Pomodoro Pasta",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Ramen Comfort Bowl",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Teriyaki Salmon Bowl",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Tofu Udon Stir Fry",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Spicy Turkey Meatballs",
+        "ingredientCount": 7
+      },
+      {
+        "name": "Green Bean Tacos",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Berry Pancakes",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Breakfast Oat Bowl",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Chicken Stir Fry",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Chickpea Curry",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Halloumi Burger",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Kimchi Fried Rice",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Moroccan Couscous",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Pomodoro Pasta",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Ramen Comfort Bowl",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Teriyaki Salmon Bowl",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Thai Peanut Noodles",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Tofu Udon Stir Fry",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Green Turkey Meatballs",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Bean Tacos",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Berry Pancakes",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Breakfast Oat Bowl",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Chickpea Curry",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Falafel Wrap",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Greek Salad Plate",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Halloumi Burger",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Kimchi Fried Rice",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Lentil Stew",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Moroccan Couscous",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Pomodoro Pasta",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Ramen Comfort Bowl",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Teriyaki Salmon Bowl",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Thai Peanut Noodles",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Tofu Udon Stir Fry",
+        "ingredientCount": 8
+      },
+      {
+        "name": "Roasted Turkey Meatballs",
+        "ingredientCount": 8
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_13",
+    "graph": "recipes_100",
+    "question_de": "Welche Diet-Typen kommen vor und wie viele Rezepte gibt es je Typ?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?dietName (COUNT(?r) AS ?count)\nWHERE {\n  ?r a schema:Recipe ;\n     ex:diet ?diet .\n  ?diet schema:name ?dietName .\n}\nGROUP BY ?dietName\nORDER BY DESC(?count) ?dietName",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "dietName": "High Protein",
+        "count": 10
+      },
+      {
+        "dietName": "Omnivore",
+        "count": 10
+      },
+      {
+        "dietName": "Pescatarian",
+        "count": 10
+      },
+      {
+        "dietName": "Vegan",
+        "count": 35
+      },
+      {
+        "dietName": "Vegetarian",
+        "count": 35
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_14",
+    "graph": "recipes_100",
+    "question_de": "Welche Rezepte enthalten sowohl Rice als auch Soy Sauce?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name\nWHERE {\n  ?r a schema:Recipe .\n  ?r ex:hasIngredient ex:SoySauce .\n  ?r ex:hasIngredient ex:Rice .\n  ?r schema:name ?name .\n}\nORDER BY ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Classic Chicken Stir Fry"
+      },
+      {
+        "name": "Classic Kimchi Fried Rice"
+      },
+      {
+        "name": "Classic Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Green Chicken Stir Fry"
+      },
+      {
+        "name": "Green Kimchi Fried Rice"
+      },
+      {
+        "name": "Green Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Quick Chicken Stir Fry"
+      },
+      {
+        "name": "Quick Kimchi Fried Rice"
+      },
+      {
+        "name": "Quick Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Roasted Chicken Stir Fry"
+      },
+      {
+        "name": "Roasted Kimchi Fried Rice"
+      },
+      {
+        "name": "Roasted Teriyaki Salmon Bowl"
+      },
+      {
+        "name": "Spicy Chicken Stir Fry"
+      },
+      {
+        "name": "Spicy Kimchi Fried Rice"
+      },
+      {
+        "name": "Spicy Teriyaki Salmon Bowl"
+      }
+    ]
+  },
+  {
+    "question_id": "test_recipe_15",
+    "graph": "recipes_100",
+    "question_de": "Welche Rezepte haben mehr als 3 Portionen?",
+    "generated_sparql": "PREFIX ex: <http://example.org/>\nPREFIX schema: <https://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?name ?servings\nWHERE {\n  ?r a schema:Recipe ;\n     schema:name ?name ;\n     ex:servings ?servings .\n  FILTER(?servings > 3)\n}\nORDER BY DESC(?servings) ?name",
+    "execution_success": true,
+    "predicted_result": [
+      {
+        "name": "Green Bean Tacos",
+        "servings": 4
+      },
+      {
+        "name": "Green Berry Pancakes",
+        "servings": 4
+      },
+      {
+        "name": "Green Breakfast Oat Bowl",
+        "servings": 4
+      },
+      {
+        "name": "Green Chicken Stir Fry",
+        "servings": 4
+      },
+      {
+        "name": "Green Chickpea Curry",
+        "servings": 4
+      },
+      {
+        "name": "Green Falafel Wrap",
+        "servings": 4
+      },
+      {
+        "name": "Green French Mushroom Soup",
+        "servings": 4
+      },
+      {
+        "name": "Green Greek Salad Plate",
+        "servings": 4
+      },
+      {
+        "name": "Green Halloumi Burger",
+        "servings": 4
+      },
+      {
+        "name": "Green Kimchi Fried Rice",
+        "servings": 4
+      },
+      {
+        "name": "Green Lentil Stew",
+        "servings": 4
+      },
+      {
+        "name": "Green Moroccan Couscous",
+        "servings": 4
+      },
+      {
+        "name": "Green Paella Express",
+        "servings": 4
+      },
+      {
+        "name": "Green Pomodoro Pasta",
+        "servings": 4
+      },
+      {
+        "name": "Green Ramen Comfort Bowl",
+        "servings": 4
+      },
+      {
+        "name": "Green Roesti Bowl",
+        "servings": 4
+      },
+      {
+        "name": "Green Teriyaki Salmon Bowl",
+        "servings": 4
+      },
+      {
+        "name": "Green Thai Peanut Noodles",
+        "servings": 4
+      },
+      {
+        "name": "Green Tofu Udon Stir Fry",
+        "servings": 4
+      },
+      {
+        "name": "Green Turkey Meatballs",
+        "servings": 4
+      }
+    ]
+  }
+]

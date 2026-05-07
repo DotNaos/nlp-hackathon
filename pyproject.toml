@@ -17,3 +17,8 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/nlp_hackathon"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]

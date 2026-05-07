@@ -46,3 +46,14 @@ uv run python -m nlp_hackathon.submission \
 
 The `--use-reference` flag is only for local dev-set verification. It should not
 be used for the final test set.
+
+## Tests
+
+```bash
+uv run pytest
+```
+
+The tests parse both RDF graphs, verify all course reference queries against the
+dev gold results, verify the generated solver against all dev gold results, and
+check that every public test question produces an executable query with the
+expected result shape.

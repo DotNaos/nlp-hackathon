@@ -7,6 +7,8 @@ from typing import Any
 
 from rdflib import Graph
 
+from nlp_hackathon.query_generation import generate_sparql
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT = PROJECT_ROOT / "data" / "dev-test-set" / "test_set_public.json"
@@ -43,20 +45,6 @@ def run_query(graph: Graph, query: str) -> list[dict[str, Any]]:
 
     rows.sort(key=lambda item: json.dumps(item, ensure_ascii=False, sort_keys=True))
     return rows
-
-
-def build_prompt(question: dict[str, Any]) -> str:
-    return (
-        "Generate one SPARQL query for this German question.\n"
-        f"Graph: {question['graph']}\n"
-        f"Question: {question['question_de']}\n"
-    )
-
-
-def generate_sparql(question: dict[str, Any]) -> str:
-    """Replace this with the actual prompt or pipeline strategy."""
-    _ = build_prompt(question)
-    return ""
 
 
 def solve_question(question: dict[str, Any], *, use_reference: bool) -> dict[str, Any]:
