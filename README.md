@@ -1,7 +1,5 @@
 # NLP Hackathon
 
-Private project for the FS26 Natural Language Processing hackathon.
-
 Final Moodle submission file: [`submission.json`](submission.json).
 
 ## Task
@@ -26,12 +24,49 @@ Course-provided templates and notes are kept in `course-materials/`.
 The verified submission pipeline is intentionally small and reproducible:
 
 ```text
-test_set_public.json
-  -> question_de + graph
-  -> nlp_hackathon.query_generation.generate_sparql()
-  -> graph-specific SPARQL query
-  -> RDFLib execution against the selected .ttl graph
-  -> submission.json entry with generated_sparql, execution_success, predicted_result
+NLP Hackathon Pipeline
+
++----------------------+
+| test_set_public.json |
+| question_de + graph  |
++----------+-----------+
+           |
+           v
++------------------------------+
+| Select RDF graph             |
+| superhero_universe or recipes|
++----------+-------------------+
+           |
+           v
++------------------------------+
+| Generate SPARQL              |
+| query_generation.generate_*  |
++----------+-------------------+
+           |
+           v
++------------------------------+
+| Execute query with RDFLib    |
+| against selected .ttl graph  |
++----------+-------------------+
+           |
+           v
++------------------------------+
+| Write submission.json entry  |
+| SPARQL + success + results   |
++------------------------------+
+
+Optional experiment path:
+
++------------------------------+
+| LM Studio / Gemma            |
+| prompt -> SPARQL -> cleanup  |
++------------------------------+
+           |
+           v
++------------------------------+
+| Same local RDFLib execution  |
+| same submission format       |
++------------------------------+
 ```
 
 For each question, the pipeline uses the `graph` field to choose the matching
