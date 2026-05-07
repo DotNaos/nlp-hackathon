@@ -101,12 +101,17 @@ with left:
     selected_label = st.selectbox("Sample question", labels)
     selected = questions[labels.index(selected_label)]
 
-    question_de = st.text_area("German question", value=selected["question_de"], height=110)
-    graph_name = st.selectbox(
-        "RDF graph",
-        ["superhero_universe", "recipes_100"],
-        index=["superhero_universe", "recipes_100"].index(selected["graph"]),
+    custom_question = st.toggle("Custom question", value=False)
+    question_de = st.text_area(
+        "German question",
+        value="" if custom_question else selected["question_de"],
+        height=110,
     )
+    if custom_question:
+        graph_name = st.selectbox("RDF graph", ["superhero_universe", "recipes_100"])
+    else:
+        graph_name = selected["graph"]
+        st.text_input("RDF graph", value=graph_name, disabled=True)
     mode = st.radio("Solver", ["Rule solver", "Gemma 4 via LM Studio"], horizontal=True)
     base_url = st.text_input("LM Studio URL on Spark", "http://127.0.0.1:1234")
     model = st.text_input("Model", "gemma-4-31b")
