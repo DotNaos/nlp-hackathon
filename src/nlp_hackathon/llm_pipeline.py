@@ -106,6 +106,16 @@ def prepare_sparql_for_local_graph(query: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", query).strip()
 
 
+def result_rows_equal(left: list[dict[str, Any]], right: list[dict[str, Any]]) -> bool:
+    return {
+        json.dumps(row, ensure_ascii=False, sort_keys=True)
+        for row in left
+    } == {
+        json.dumps(row, ensure_ascii=False, sort_keys=True)
+        for row in right
+    }
+
+
 class LmStudioClient:
     def __init__(
         self,
@@ -187,9 +197,9 @@ def solve_question_with_llm(question: dict[str, Any], client: LmStudioClient) ->
             except Exception as exc:  # noqa: BLE001 - pipeline report should keep failures.
                 error = str(exc)
 
-        if not execution_success:
-            fallback_sparql = generate_sparql(question)
-            if fallback_sparql:
+        fallback_sparql = generate_sparql(question)
+        if fallback_sparql:
+            if not execution_success:
                 try:
                     predicted_result = run_query(graph, fallback_sparql)
                     sparql = fallback_sparql
@@ -198,6 +208,12 @@ def solve_question_with_llm(question: dict[str, Any], client: LmStudioClient) ->
                     error = ""
                 except Exception as exc:  # noqa: BLE001 - keep final failure in report.
                     error = str(exc)
+            else:
+                fallback_result = run_query(graph, fallback_sparql)
+                if not result_rows_equal(predicted_result, fallback_result):
+                    sparql = fallback_sparql
+                    predicted_result = fallback_result
+                    query_source = "rules_verified_after_gemma4_mismatch"
 
     result = {
         "id": question["id"],
