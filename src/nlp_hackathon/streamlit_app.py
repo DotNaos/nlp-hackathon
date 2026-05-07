@@ -130,7 +130,7 @@ with right:
                 st.code(result["raw_sparql"], language="sparql")
 
         st.markdown("**Predicted rows**")
-        st.dataframe(result["predicted_result"], use_container_width=True)
+        st.dataframe(result["predicted_result"], width="stretch")
 
         if result["prompt"]:
             with st.expander("Prompt sent to Gemma 4"):
