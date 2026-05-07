@@ -132,6 +132,16 @@ with right:
         st.markdown("**Predicted rows**")
         st.dataframe(result["predicted_result"], width="stretch")
 
+        with st.expander("Full JSON response"):
+            st.json(
+                {
+                    "execution_success": result["execution_success"],
+                    "generated_sparql": result["generated_sparql"],
+                    "predicted_result": result["predicted_result"],
+                    "error": result["error"],
+                }
+            )
+
         if result["prompt"]:
             with st.expander("Prompt sent to Gemma 4"):
                 st.text(result["prompt"])
