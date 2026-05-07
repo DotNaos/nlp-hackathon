@@ -2,6 +2,8 @@
 
 Private project for the FS26 Natural Language Processing hackathon.
 
+Final Moodle submission file: [`submission.json`](submission.json).
+
 ## Task
 
 Build a prototype that translates German natural-language questions into SPARQL,
@@ -18,6 +20,49 @@ Moodle assignment note: upload the result file by 12:00.
 - `data/dev-test-set/test_set_public.json`
 
 Course-provided templates and notes are kept in `course-materials/`.
+
+## Pipeline
+
+The verified submission pipeline is intentionally small and reproducible:
+
+```text
+test_set_public.json
+  -> question_de + graph
+  -> nlp_hackathon.query_generation.generate_sparql()
+  -> graph-specific SPARQL query
+  -> RDFLib execution against the selected .ttl graph
+  -> submission.json entry with generated_sparql, execution_success, predicted_result
+```
+
+For each question, the pipeline uses the `graph` field to choose the matching
+RDF file:
+
+- `superhero_universe` -> `data/knowledge-graphs/superhero_universe.ttl`
+- `recipes_100` -> `data/knowledge-graphs/recipes_100.ttl`
+
+The final submission path uses a deterministic rule solver. It maps the German
+question to the known classes, properties, entities, filters, grouping queries,
+and ordering patterns in the two provided graphs. Every generated query is then
+executed locally. If a query fails, the submission entry records
+`execution_success = false` and an empty `predicted_result`.
+
+The output format matches the course template and contains the question
+metadata, generated SPARQL, execution status, and predicted result rows.
+
+There is also an optional LM Studio/Gemma pipeline for experimentation. In that
+mode, the app builds a prompt with the selected graph schema and question, sends
+it to the local LM Studio chat endpoint, extracts the SPARQL, and still executes
+the query locally against the same RDF graphs. The verified final submission
+pipeline is the deterministic path above, because it is reproducible and passes
+the local dev-set checks.
+
+## Evaluation
+
+The dev set includes reference answers, so local metrics can be calculated
+there. The public test set does not include gold answers, so local verification
+checks that every public question produces an executable query and a sensible
+result shape. The official hidden-test performance is computed by the course
+evaluator after submission.
 
 ## Setup
 
