@@ -123,6 +123,8 @@ class LmStudioClient:
             ],
             "temperature": self.temperature,
             "max_tokens": self.max_tokens,
+            "reasoning_effort": "none",
+            "stream": False,
         }
         data = json.dumps(payload).encode("utf-8")
         request = urllib.request.Request(
@@ -158,7 +160,7 @@ def solve_question_with_llm(question: dict[str, Any], client: LmStudioClient) ->
 
     duration_seconds = time.time() - started
     message = response_message(completion)
-    response_text = str(message.get("content") or "")
+    response_text = str(message.get("content") or message.get("reasoning_content") or "")
     sparql = extract_sparql(response_text)
 
     execution_success = False
@@ -225,13 +227,14 @@ def run_pipeline(
     traces: list[dict[str, Any]] = []
 
     for index, question in enumerate(questions, start=1):
-        print(f"[{index}/{len(questions)}] {question['id']} -> Gemma 4")
+        print(f"[{index}/{len(questions)}] {question['id']} -> Gemma 4", flush=True)
         result, trace = solve_question_with_llm(question, client)
         results.append(result)
         traces.append(trace)
         print(
             f"    success={trace['execution_success']} "
-            f"rows={trace['result_count']} seconds={trace['duration_seconds']}"
+            f"rows={trace['result_count']} seconds={trace['duration_seconds']}",
+            flush=True,
         )
 
     (output_dir / "submission.json").write_text(
